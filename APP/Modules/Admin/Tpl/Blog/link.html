@@ -1,0 +1,80 @@
+<!DOCTYPE html><!--友情链接设置-->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>友情链接设置</title>
+<css href='__PUBLIC__/Css/blog/base.css' />
+<css href='__PUBLIC__/Css/font-awesome.min.css' />
+<js href='__PUBLIC__/Js/jquery-1.8.2.min.js' />
+<script type="text/javascript">
+  $(function(){
+    $('#linkadd').hide();
+    $('.linkadd').click(function(){
+    $('#linkadd').toggle();
+    });
+  });
+
+
+</script>
+</head>
+<body>
+<div class="main-wrap">
+	<div class="crumb-wrap"><i class="icon-home"></i> 首页 <i class="icon-angle-right"></i> 友情链接设置</div>
+	
+	<div class="blog-wrap">
+		<div class="blog-content">
+            <table style="margin-bottom:10px" class="tab">
+                <tr style="background:#F9FCEF">
+                    <td style="padding-left:20px;">友情链接--<a href='javasript:vod();' class='linkadd'>添加友情链接</a></td>
+                </tr>
+                <form action="<{:U(GROUP_NAME.'/Blog/addlink')}>" method="post">
+                <tr id="linkadd">
+                    <td>
+                    <table>
+                        <tr>
+                            <td class="td-center">链接名称</td>
+                            <td class="td-left"><input type="text" name="name" style='width:80%' /></td>
+                        </tr>
+                        <tr> 
+                            <td class="td-center">链接地址</td>
+                            <td class="td-left"><input type="text" name="url" style='width:80%' /></td>
+                        </tr>
+                        <tr bgcolor="#F9FCEF" >
+                            <td colspan='4' align='center'>
+                                <input type="submit" name="submit" value=" 保存变量 " class="coolbg np" />
+                            </td>  
+                        </tr>
+                    </table>    
+                    </td>
+                </tr>
+                </form> 
+            </table>
+            
+			<table border="1">
+                <tr>
+                    <th>ID</th>
+                    <th>链接名称</th>
+                    <th>链接地址</th>
+                    <th>时间</th>
+                    <th>操作</th>
+                </tr>
+                <foreach name='link' item='vo'>
+                <tr class="hover">
+                    <td><{$vo.id}></td>
+                    <td><{$vo.name}></td>
+					<td><{$vo.url}></td>
+                    <td><{$vo.time|date='Y-m-d H:i:s',###}></td>
+                    <td>
+                        [<a href="<{:U(GROUP_NAME.'/Blog/editlink',array('id'=>$vo['id']))}>">修改</a>]
+                        [<a href="<{:U(GROUP_NAME.'/Blog/dellink',array('id'=>$vo['id']))}>">删除</a>]
+                    </td>
+                </tr>
+				</foreach>
+            </table>
+			</form>
+		</div>
+	</div>
+	
+</div>
+</body>
+</html>

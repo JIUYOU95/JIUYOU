@@ -1,0 +1,55 @@
+@charset "utf-8";
+*{margin:0;padding:0;}
+body{font:14px/1.5 '微软雅黑';}
+ul{list-style:none;}
+a{color:#428bca;text-decoration:none;}
+a:hover,a:active{color:#2a6496;text-decoration:none;}
+input,select,textarea{font-size:14px;color:#333;border:1px solid #ccc;}
+select,input[type="text"],input[type="password"],input[type='radio'],textarea{vertical-align:middle;margin:0 5px;padding:5px 10px;border-radius:5px;}
+input[type="submit"],input[type="reset"],input[type="button"]{cursor:pointer;padding:5px 10px;border-radius:5px;background:#008080;color:#fff;letter-spacing:2px;}
+table{width:100%;border-collapse:collapse;}
+table caption{font-size:1.5em;height:40px;line-height:40px;}
+table th,table td{height:35px;line-height:35px;font-weight:normal;border:1px solid #ccc;}
+h1,h2,h3,h4,h5,h6{font-size:100%}
+label{cursor:pointer;}
+.list-page{text-align:center;}
+/*
+ *Index-main 
+ */
+.main-wrap{}
+.main-wrap .crumb-wrap{height:50px;line-height:50px;background:#00688B;color:#fff;padding-left:10px;}
+.main-wrap .result-wrap{padding:10px 15px;}
+.main-wrap .result-wrap .result-title{height:30px;line-height:30px;}
+.main-wrap .sys ul{overflow:hidden;}
+.main-wrap .sys ul li{float:left;}
+.main-wrap .sys ul li a{display:block;padding:0 10px;}
+.sys-info-list li{line-height:35px;border-bottom:1px dashed #eaeaea;}
+.res-lab{display:inline-block;width:150px;padding-right:10px;text-align:right;color:#909090;}
+/*
+ * 
+ */
+.td-left{padding-left:20px;}
+.td-right{text-align:right;}
+.td-center{text-align:center;background:#E0EEEE;line-height:40px;}
+.hover{text-align:center;}
+/*
+ *RBAC-Node 
+ */
+.result-node{width:94%;height:auto;overflow:hidden;margin:20px auto;padding:10px 20px;border:1px solid #ccc;}
+.result-node .add-app{display:block;;width:100px;height:30px;line-height:30px;text-align:center;background:#670768;color:#fff;border-radius:4px;}
+.result-node .app{padding:10px;margin-top:20px;border:1px solid #f6f6f6;border-radius:4px;}
+.result-node .app p{height:30px;line-height:30px;}
+.result-node .app p strong{font-size:20px;color:#006888}
+.result-node .app dl{margin:10px 0;border:1px solid #dcdcdc;height:auto;overflow:hidden;}
+.result-node .app dl dt{display:block;height:36px;line-height:36px;background:#e6e6fa;text-indent:10px;}
+.result-node .app dl dt strong{font-size:15px;color:#61adfa;}
+.result-node .app dl dd{padding:10px;float:left;}
+/*
+ *Config
+ */
+.config input,.config textarea{border:0;}
+.config input:focus,.config textarea{
+	border:0;
+	outline: none;
+
+}

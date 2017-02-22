@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+<title>menu</title>
+<meta  charset="utf-8" />
+<load href='__PUBLIC__/Css/menu.css' />
+<load href='__PUBLIC__/Css/font-awesome.min.css' />
+<load href='__PUBLIC__/Js/jquery-1.8.2.min.js' />
+<base target="iframe"/>
+</head>
+<body>
+<div id="menu">
+	<dl>
+		<dt><i class="icon-folder-open"></i> 博客管理</dt>
+		<dd><a href="<{:U(GROUP_NAME.'/Blog/menu')}>"><i class="icon-reorder"></i> 博客栏目</a></dd>
+		<dd><a href="<{:U(GROUP_NAME.'/Blog/addmenu')}>"><i class="icon-plus"></i> 添加栏目</a></dd>
+		<dd><a href="<{:U(GROUP_NAME.'/Blog/blog')}>"><i class="icon-list"></i> 博客列表</a></dd>
+		<dd><a href="<{:U(GROUP_NAME.'/Blog/addblog')}>"><i class="icon-save"></i> 博客发布</a></dd>
+		<dd><a href="<{:U(GROUP_NAME.'/Blog/trach')}>"><i class="icon-save"></i> 回收站</a></dd>
+	</dl>
+	<dl>
+		<dt>博客属性</dt>
+		<dd><a href="<{:U(GROUP_NAME.'/Blog/attr')}>">属性列表</a></dd>
+		<dd><a href="<{:U(GROUP_NAME.'/Blog/addattr')}>">添加属性</a></dd>
+	</dl>
+	<dl>
+		<dt><i class="icon-cog"></i> 博客系统</dt>
+		<dd><a href="<{:U(GROUP_NAME.'/Blog/count')}>"><i class="icon-retweet"></i> 博客统计</a></dd>
+		<dd><a href="<{:U(GROUP_NAME.'/Blog/link')}>"><i class="icon-link"></i> 友情链接</a></dd>
+		<dd><a href="<{:U(GROUP_NAME.'/Blog/config')}>"><i class="icon-wrench"></i> 博客设置</a></dd>
+	</dl>
+	<dl>
+		<dt><i></i>留言管理</dt>
+		<dd><a href="<{:U(GROUP_NAME.'/Blog/feedback')}>">留言列表</a></dd>
+	</dl>
+</div>
+<div id="main">
+	<iframe src="<{:U(GROUP_NAME.'/Blog/menu')}>" name="iframe" scrolling="auto" noresize></iframe>
+</div>
+</body>
+</html>

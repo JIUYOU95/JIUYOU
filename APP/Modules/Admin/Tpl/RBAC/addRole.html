@@ -1,0 +1,44 @@
+<!DOCTYPE html><!--RBAC角色添加-->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>RBAC角色添加</title>
+<load href='__PUBLIC__/Css/main.css'/>
+<load href='__PUBLIC__/Css/font-awesome.min.css' />
+</head>
+<body>
+<div class="main-wrap">
+	<div class="crumb-wrap"><i class="icon-home"></i> 首页 <i class="icon-angle-right"></i> 添加角色</div>
+	
+	<div class="result-wrap">
+		<div class="result-content">
+            <form action="<{:U(GROUP_NAME.'/RBAC/addRole')}>" id="login_form" method="post">
+				<table class="config">
+					<tr>
+						<caption>新增角色</caption>
+					</tr>
+					<tr>
+						<td class="td-center">角色名称：</td>
+						<td class="td-left"><input id="name" value="" name="name" type="text" autocomplete="off" /></td>
+					</tr>
+					<tr>
+						<td class="td-center">角色描述：</td>
+						<td class="td-left"><input id="remark" value="" name="remark" type="text" autocomplete="off" /></td>
+					</tr>
+					<tr>
+						<td class="td-center">是否开启：</td>
+						<td class="td-left">
+							<input id="status" value="1" name="status" type="radio" checked="checked" />开启
+							<input id="status" value="0" name="status" type="radio" />关闭
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2" align="center"><input type="submit" value="添加" id="submit_btn" class="btn" /></td>
+					</tr>
+				</table>
+			</form>
+		</div>
+    </div>
+</div>
+</body>
+</html>

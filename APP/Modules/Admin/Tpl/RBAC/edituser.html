@@ -1,0 +1,75 @@
+<!DOCTYPE html><!--RBAC用户信息修改-->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>RBAC用户信息修改</title>
+<load href='__PUBLIC__/Css/main.css'/>
+<load href='__PUBLIC__/Css/font-awesome.min.css' />
+<load href='__PUBLIC__/Js/jquery-1.8.2.min.js' />
+<script type="text/javascript">
+	$(function(){
+		$('.add-role').click(function(){
+			var obj=$(this).parents('tr').clone();
+			obj.find('.add-role').remove();
+			$('.space').before(obj);
+		});
+	});
+</script>
+</head>
+<body>
+<div class="main-wrap">
+	<div class="crumb-wrap"><i class="icon-home"></i> 首页 <i class="icon-angle-right"></i> RBAC用户信息修改</div>
+	
+	<div class="result-wrap">
+		<div class="result-content">
+            <form action="<{:U(GROUP_NAME.'/RBAC/edituser')}>" id="login_form" method="post" autocomplete="off">
+				<table class="config">
+					<tr>
+						<caption>RBAC用户信息修改</caption>
+					</tr>
+					<foreach name='user' item='vo'>
+					<tr>
+						<td class="td-center"><label for="username">用账号户：</label></td>
+						<td class="td-left"><{$vo.username}></td>
+					</tr>
+					<tr>
+						<td class="td-center"><label for="nickname">昵称：</label></td>
+						<td class="td-left"><input id="nickname" value="<{$vo.nickname}>" name="nickname" type="text" style="width:200px" /></td>
+					</tr>
+					<tr>
+						<td class="td-center"><label for="pwd">原始密码：</label></td>
+						<td class="td-left"><input id="pwd" value="" size="16" name="pwd" type="password" style="width:200px" />&nbsp;密码留空，则不修改</td>
+					</tr>
+					<tr>
+						<td class="td-center"><label for="password">密码：</label></td>
+						<td class="td-left"><input id="password" value="" size="16" name="password" type="password" style="width:200px" />&nbsp;密码留空，则不修改</td>
+					</tr>
+					<tr>
+						<td class="td-center"><label for="repassword">确认密码：</label></td>
+						<td class="td-left"><input id="repassword" value="" size="16" name="repassword" type="password" style="width:200px" />&nbsp;密码留空，则不修改</td>
+					</tr>
+					<tr>
+						<td class="td-center"><label for="to">所属角色：</label></td>
+						<td class="td-left">
+							<select name="role_id[]" id="to">
+								<option value="">请选择角色</option>
+								<foreach name="role" item="v">
+									<option  value="<{$v['id']}>" <foreach name='vo.role' item='value'> <if condition="$v['id'] eq $value['id']">selected </if></foreach>><{$v.name}>(<{$v.remark}>)</option>
+								</foreach>
+							</select>
+							<span class="add-role" style="cursor:pointer;">添加一个角色</span>
+						</td>
+					</tr>
+					<tr class="space">
+						<input type="hidden" value="<{$vo.id}>" name='id' />
+						<td colspan="2" align="center"><input type="submit" value="修改" id="submit_btn" class="btn" /></td>
+					</tr>
+					</foreach>
+				</table>
+				
+			</form>
+		</div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html><!--博客设置修改-->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>博客设置修改</title>
+<css href='__PUBLIC__/Css/blog/base.css' />
+<css href='__PUBLIC__/Css/font-awesome.min.css' />
+<js href='__PUBLIC__/Js/jquery-1.8.2.min.js' />
+<script type="text/javascript">
+  $(function(){
+    $('#configadd').hide();
+    $('.configadd').click(function(){
+    $('#configadd').toggle();
+    });
+  });
+</script>
+</head>
+<body>
+<div class="main-wrap">
+	<div class="crumb-wrap"><i class="icon-home"></i> 首页 <i class="icon-angle-right"></i> 博客设置修改</div>
+
+	<div class="blog-wrap">
+		<div class="blog-content">
+			<form action="<{:U(GROUP_NAME.'/Blog/editconfig')}>" id="login_form" method="post">
+				<table class="tab">
+					<tr>
+						<caption>博客设置修改</caption>
+					</tr>
+					<tr>
+						<td class="td-center">变量名</td>
+						<td class="td-left"><input id="configname" value="<{$con.configname}>" name="configname" type="text" autocomplete="off" /></td>
+					</tr>
+					<tr>
+						<td class="td-center">参数说明</td>
+						<td class="td-left"><input id="info" value="<{$con.info}>" name="info" type="text" autocomplete="off" /></td>
+					</tr>
+					<tr>
+						<td class="td-center">参数值</td>
+						<td class="td-left"><input id="content" value="<{$con.content}>" name="content" type="text" autocomplete="off" /></td>
+					</tr>
+					<tr>
+						<td class="td-center">参数类型</td>
+						<td class="td-left" style="background:#ccc"><{$con.type}></td>
+					</tr>
+
+					<tr>
+						<input type="hidden" name="id" value="<{$con.id}>" />
+						<td colspan="2" class="hover"><input type="submit" value="修改" id="submit_btn" class="btn" /></td>
+					</tr>
+				</table>
+				
+			</form>
+		</div>
+	</div>
+</div>

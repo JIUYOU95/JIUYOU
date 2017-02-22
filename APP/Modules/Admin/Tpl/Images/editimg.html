@@ -1,0 +1,146 @@
+<!DOCTYPE html><!--图片修改-->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>图片修改</title>
+<css href='__PUBLIC__/Css/img.css' />
+<css href='__PUBLIC__/Css/font-awesome.min.css' />
+<js href='__PUBLIC__/Js/jquery-1.8.2.min.js' />
+
+<css href='__ROOT__/Public/kindeditor/plugins/code/prettify.css' />
+<js href='__ROOT__/Public/kindeditor/plugins/code/prettify.js' />
+
+<js href='__ROOT__/Public/kindeditor/kindeditor.js' />
+	<script>
+		KindEditor.ready(function(K) {
+			var editor1 = K.create('textarea[name="content"]', {
+				cssPath : '__ROOT__/Public/kindeditor/plugins/code/prettify.css',
+				uploadJson : '__ROOT__/Public/upload_json.php',
+				fileManagerJson : '__ROOT__/Public/file_manager_json.php',
+				allowFileManager : true,
+				afterCreate : function() {
+					var self = this;
+					K.ctrl(document, 13, function() {
+						self.sync();
+						K('form[name=imgadd]')[0].submit();
+					});
+					K.ctrl(self.edit.doc, 13, function() {
+						self.sync();
+						K('form[name=imgadd]')[0].submit();
+					});
+				}
+			});
+			prettyPrint();
+		});
+	</script>
+
+<js href='__ROOT__/Public/My97DatePicker/WdatePicker.js' />
+<script type="text/javascript">
+  $(function(){
+   $("#img >.add").click(function(){
+
+    var l=$('#img>p>input').length;
+     $('#img').append("<p id='file"+l+"'></p>");
+     $("<input>",{
+        type:'file',
+        name:'filename[]',
+        style:'width:200px',    
+     }).appendTo('#file'+l);
+     $('#file'+l).append("&nbsp;<i class=\"icon-minus\" onclick=\"refile('file"+l+"')\"></i>");
+   });
+   });
+  function refile(e){
+    $('#'+e).remove();
+  }
+  function refile_really(e,file){
+    $('#'+e).remove();
+    $.get('<{:U('remoefile')}>',{'file':file},function(data){
+      if(data){
+        alert(data);
+      }
+    });
+  }
+</script>
+</head>
+<body>
+<div class="main-wrap">
+	<div class="crumb-wrap"><i class="icon-home"></i> 首页 <i class="icon-angle-right"></i> 图片修改</div>
+	
+	<div class="img-wrap">
+		<div class="img-content">
+			 <form action="<{:U(GROUP_NAME.'/Images/editimg')}>" id="login_form" method="post" name="imgadd" enctype="multipart/form-data">
+				<table>
+					<tr>
+						<caption>图片修改</caption>
+					</tr>
+					<tr>
+						<td class="td-center">所属分类</td>
+						<td class="td-left">
+							<select name="typeid">
+								<option value="">==请选择分类==</option>
+								<foreach name='cate' item='v'>
+									<option <if condition="$v['id'] eq $data['typeid']"> selected </if> value="<{$v.id}>"><{$v.html}><{$v.typename}></option>
+								</foreach>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td class="td-center">图片状态</td>
+						<td class="td-left">
+							<input <if condition="$data['status'] eq 1">checked</if> id="status1" name="status" type="radio" value='1' checked/><label for="status1">开放浏览</label>
+               				<input <if condition="$data['status'] eq 0">checked</if> id="status0" name="status" type="radio" value='0'/><label for="status0">审核中</label>
+						</td>
+					</tr>
+					<tr>
+						<td class="td-center">图片标题</td>
+						<td class="td-left"><input id="title" value="<{$data.title}>" name="title" type="text" /></td>
+					</tr>
+					<tr>
+						<td class="td-center">点击次数</td>
+						<td class="td-left"><input id="hits" value="<{$data.hits}>" name="hits" type="text" /></td>
+					</tr>
+					<tr>
+						<td class="td-center">排序</td>
+						<td class="td-left"><input id="sort" value="<{$data.sort}>" name="sort" type="text" /></td>
+					</tr>
+					<tr>
+						<td class="td-center">图片</td>
+						<td class="td-left" id='img'>
+						<foreach name='pic' item='file'>
+						<p id='file<{$key}>'>
+		                  <input name='imgname[]' type='text' value='<{$file}>' accept="image/*"/> 
+		                  <i class="icon-minus" onclick="refile_really('file<{$key}>','<{$file}>')"></i>
+		                </p>
+						</foreach>
+						<foreach name="img" item="mg">
+							<input name='imgtit[]' type="hidden" value='<{$mg}>'/> 
+						</foreach>
+						<input name="pic[]" type="file" style="width:200px" accept="image/*" />&nbsp;<i class='icon-plus add'></i><br>
+						</td>
+					</tr>
+					<tr>
+						<td class="td-center">时间</td>
+						<td class="td-left"><input class="Wdate" type="text" onClick="WdatePicker()"  style="cursor:pointer;" name="time" value="<{$data.time|date='Y-m-d',###}>">&nbsp;</td>
+					</tr>
+						
+					
+					<tr><td class="td-center">描述</td><td></td></tr>
+					<tr>	
+					<td colspan="2">
+							<textarea name="content" id="content" style="width:100%;height:300px;visibility:hidden;"><{$data.content}></textarea>
+						</td>
+					</tr>
+
+					<tr>
+						<input type="hidden" name="id" value="<{$data.id}>" />
+						<td colspan="2" class="hover"><input type="submit" value="保存" id="submit_btn" class="btn" /></td>
+					</tr>
+				</table>
+				
+			</form>
+		</div>
+	</div>
+	
+</div>
+</body>
+</html>

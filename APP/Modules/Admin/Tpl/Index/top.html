@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>top</title>
+<style>
+*{padding:0px;margin:0px;}
+body{color:#FFFFFF;font-family:"微软雅黑";font-size:14px;background:#1c2b36;}
+li,ul,dl,dd{list-style:none;}
+a:link,a:visited{color:#FFFFFF;text-decoration:none;}
+a:hover{background:#008080;}
+#top{overflow:hidden;padding:0 20px;}
+.left{float:left;}
+.left a{display:block;width:100px;text-align:center;height:60px;line-height:60px;font-size:18px;float:left;}
+.right{float:right;}
+.right dl{overflow:hidden;height:30px;line-height:30px;}
+.right dl dd{float:left;}
+.right dl dd a{display:block;line-height:30px;padding:0 10px;}
+</style>
+</head>
+<body>
+<div id="top">
+	<div class="top left">
+    	<a href="<{:U(GROUP_NAME.'/Index/menu')}>" target="menu">系统首页</a>
+    	<a href="<{:U('Blog/Index/index')}>" target="_blank">网站首页</a>
+	</div>
+    <div class="top right">
+      <dl>
+	    <dd>您好：<span class="username"><{$nickname}></span>，欢迎使用内容管理系统！</dd>
+	    <dd><a href="<{:U(GROUP_NAME.'/RBAC/edituser',array('id'=>$_SESSION[C('USER_AUTH_KEY')]))}>" target="menu">修改密码</a></dd>
+	    <dd><a href="<{:U(GROUP_NAME.'/Cache/index')}>" target="menu">清除缓存</a></dd>
+	    <dd><a href="<{:U(GROUP_NAME.'/Index/loginout')}>" target="_top">注销退出</a></dd>
+      </dl>
+      <dl>
+      	<dd><a href="<{:U(GROUP_NAME.'/Images/index')}>" target="menu">图库</a></dd>
+      	<dd><a href="<{:U(GROUP_NAME.'/Blog/index')}>" target="menu">博客</a></dd>
+		<dd><a href="<{:U(GROUP_NAME.'/RBAC/index')}>" target="menu">权限管理</a></dd>
+		<dd><a href="<{:U(GROUP_NAME.'/Config/index')}>" target="menu">系统管理</a></dd>
+		</dl>
+      </dl>
+    </div>
+</div>
+</body>
+</html>

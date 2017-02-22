@@ -1,0 +1,51 @@
+<!DOCTYPE html><!--新增图片分类-->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>新增图片分类</title>
+<load href='__PUBLIC__/Css/img.css' />
+<load href='__PUBLIC__/Css/font-awesome.min.css' />
+</head>
+<body>
+<div class="main-wrap">
+	<div class="crumb-wrap"><i class="icon-home"></i> 首页 <i class="icon-angle-right"></i> 新增图片分类</div>
+	
+	<div class="img-wrap">
+		<div class="img-content">
+			 <form action="<{:U(GROUP_NAME.'/Images/addmenu')}>" id="login_form" method="post">
+				<table class="tab">
+					<tr>
+						<caption>新增图片分类</caption>
+					</tr>
+					<tr>
+						<td class="td-center">父级栏目名称</td>
+						<td class="td-left"><{$typename}></td>
+					</tr>
+					<tr>
+						<td class="td-center">栏目名称</td>
+						<td class="td-left"><input id="typename" value="" name="typename" type="text" autocomplete="off" /></td>
+					</tr>
+					<tr>
+						<td class="td-center">是否显示导航</td>
+						<td class="td-left">
+							<input id="is0" name="isshow" type="radio"  value="0" <if condition="$isshow eq 0">checked</if> /><label for="is0">隐藏</label> &nbsp;
+                <input id="is1" name="isshow" type="radio"  value="1"  <if condition="$isshow eq 1">checked</if> /><label for="is1">显示</label>
+						</td>
+					</tr>
+					<tr>
+						<td class="td-center">排序</td>
+						<td class="td-left"><input id="sort" value="1" name="sort" type="text" /></td>
+					</tr>
+					<tr>
+						<input type="hidden" name="reid" value="<{$reid}>" />
+						<td colspan="2" class="hover"><input type="submit" value="添加" id="submit_btn" class="btn" /></td>
+					</tr>
+				</table>
+				
+			</form>
+		</div>
+	</div>
+	
+</div>
+</body>
+</html>

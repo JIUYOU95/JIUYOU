@@ -1,0 +1,38 @@
+<!DOCTYPE html><!--图片统计-->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>图片统计</title>
+<load href='__PUBLIC__/Css/img.css' />
+<load href='__PUBLIC__/Css/font-awesome.min.css' />
+</head>
+<body>
+<div class="main-wrap">
+	<div class="crumb-wrap"><i class="icon-home"></i> 首页 <i class="icon-angle-right"></i> 图片统计</div>
+	
+	<div class="img-wrap">
+		<div class="img-content">
+			<table style="width:50%;text-align:center;margin:0 auto;">
+            	<tr><caption>图片统计</caption></tr>
+            	<tr>
+            		<td>博客数量</td>
+            		<td><{$img}>篇</td>
+            		<td>访问人数</td>
+            		<td><{$sumhits}>人</td>
+            	</tr>
+            	<foreach name='menu' item='vo'>
+            	<tr style="background:#E0EEE0">
+            		<td>ID:<{$vo.id}></td>
+            		<td><{$vo.typename}></td>
+            		<td><{$vo.num}>篇</td>
+            		<td><{$vo.optime|date='Y-m-d H:i:s',###}></td>
+            		
+            	</tr>
+            	</foreach>
+            </table>
+		</div>
+	</div>
+	
+</div>
+</body>
+</html>

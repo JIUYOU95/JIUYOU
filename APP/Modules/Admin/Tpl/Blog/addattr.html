@@ -1,0 +1,39 @@
+<!DOCTYPE html><!--新增博客属性-->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>新增博客属性</title>
+<load href='__PUBLIC__/Css/blog/base.css' />
+<load href='__PUBLIC__/Css/font-awesome.min.css' />
+</head>
+<body>
+<div class="main-wrap">
+	<div class="crumb-wrap"><i class="icon-home"></i> 首页 <i class="icon-angle-right"></i> 新增博客属性</div>
+	
+	<div class="blog-wrap">
+		<div class="blog-content">
+			 <form action="<{:U(GROUP_NAME.'/Blog/addattr')}>" id="login_form" method="post">
+				<table class="tab">
+					<tr>
+						<caption>新增博客属性</caption>
+					</tr>
+					<tr>
+						<td class="td-center">属性名称</td>
+						<td class="td-left"><input id="name" value="" name="name" type="text" autocomplete="off" /></td>
+					</tr>
+					<tr>
+						<td class="td-center">属性颜色</td>
+						<td class="td-left"><input id="color" value="" name="color" type="text" autocomplete="off" /></td>
+					</tr>
+					<tr>
+						<td colspan="2" class="hover"><input type="submit" value="保存" id="submit_btn" class="btn" /></td>
+					</tr>
+				</table>
+				
+			</form>
+		</div>
+	</div>
+	
+</div>
+</body>
+</html>

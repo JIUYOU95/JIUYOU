@@ -1,0 +1,68 @@
+<!DOCTYPE html><!--修改博客栏目-->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>修改博客栏目</title>
+<load href='__PUBLIC__/Css/blog/base.css' />
+<load href='__PUBLIC__/Css/font-awesome.min.css' />
+</head>
+<body>
+<div class="main-wrap">
+	<div class="crumb-wrap"><i class="icon-home"></i> 首页 <i class="icon-angle-right"></i> 修改博客栏目</div>
+	
+	<div class="blog-wrap">
+		<div class="blog-content">
+			 <form action="<{:U(GROUP_NAME.'/Blog/editmenu')}>" id="login_form" method="post">
+				<table class="tab">
+					<tr>
+						<caption>修改博客栏目</caption>
+					</tr>
+					<volist name='cate' id='vo'>
+					<tr>
+						<td class="td-center">所属分类</td>
+						<td class="td-left">
+							<select name="reid">
+								<option value="0" <if condition="0 eq $vo['reid']"> selected </if>>==请选择父类==</option>
+								<foreach name='category' item='v'>
+									<option value="<{$v.id}>" <if condition="$v['id'] eq $vo['reid']"> selected </if>><{$v.html}><{$v.typename}></option>
+								</foreach>
+							</select>
+						</td>
+					</tr>
+					
+					<tr>
+						<td class="td-center">ID</td>
+						<td class="td-left"><input type="hidden" name="id" value="<{$vo.id}>" /><{$vo.id}></td>
+					</tr>
+					<tr>
+						<td class="td-center">栏目名称</td>
+						<td class="td-left"><input id="typename" value="<{$vo.typename}>" name="typename" type="text" autocomplete="off" /></td>
+					</tr>
+					<tr>
+						<td class="td-center">栏目标识</td>
+						<td class="td-left"><input id="cmark" value="<{$vo.cmark}>" name="cmark" type="text" /></td>
+					</tr>
+					<tr>
+						<td class="td-center">是否显示导航</td>
+						<td class="td-left">
+							<input id="is0" name="isshow" type="radio"  value="0" <if condition="$vo['isshow'] eq 0"> checked </if>/><label for="is0">隐藏</label> &nbsp;
+                <input id="is1" name="isshow" type="radio"  value="1"  <if condition="$vo['isshow'] eq 1"> checked </if>/><label for="is1">显示</label>
+						</td>
+					</tr>
+					<tr>
+						<td class="td-center">排序</td>
+						<td class="td-left"><input id="sort" value="<{$vo.sort}>" name="sort" type="text" /></td>
+					</tr>
+					<tr>
+						<td colspan="2" class="hover"><input type="submit" value="修改" id="submit_btn" class="btn" /></td>
+					</tr>
+					</volist>
+				</table>
+				
+			</form>
+		</div>
+	</div>
+	
+</div>
+</body>
+</html>

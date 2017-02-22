@@ -1,0 +1,27 @@
+<!DOCTYPE HTML><!--RBAC首页-->
+<html lang="zh-cn">
+<head>
+<title>RBAC首页</title>
+<meta  charset="utf-8" />
+<load href='__PUBLIC__/Css/menu.css' />
+<load href='__PUBLIC__/Css/font-awesome.min.css' />
+<base target="iframe"/>
+</head>
+<body>
+<div id="menu">
+	<dl>
+		<dt><i class="icon-folder-open"></i> 权限管理</dt>
+		<dd><a href="<{:U(GROUP_NAME.'/RBAC/user')}>"><i class="icon-reorder"></i> 用户列表</a></dd>
+		<dd><a href="<{:U(GROUP_NAME.'/RBAC/role')}>"><i class="icon-plus"></i> 角色列表</a></dd>
+		<dd><a href="<{:U(GROUP_NAME.'/RBAC/node')}>"><i class="icon-list"></i> 节点列表</a></dd>
+		<dd><a href="<{:U(GROUP_NAME.'/RBAC/addUser')}>"><i class="icon-save"></i> 新增用户</a></dd>
+		<dd><a href="<{:U(GROUP_NAME.'/RBAC/addRole')}>"><i class="icon-save"></i> 新增角色</a></dd>
+		<dd><a href="<{:U(GROUP_NAME.'/RBAC/addNode')}>"><i class="icon-save"></i> 新增节点</a></dd>
+		
+	</dl>
+</div>
+<div id="main">
+	<iframe src="<{:U(GROUP_NAME.'/RBAC/user')}>" name="iframe" scrolling="yes" noresize></iframe>
+</div>
+</body>
+</html>

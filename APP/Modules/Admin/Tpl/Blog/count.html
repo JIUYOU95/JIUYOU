@@ -1,0 +1,45 @@
+<!DOCTYPE html><!--博客统计-->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>博客统计</title>
+<load href='__PUBLIC__/Css/blog/base.css' />
+<load href='__PUBLIC__/Css/font-awesome.min.css' />
+</head>
+<body>
+<div class="main-wrap">
+	<div class="crumb-wrap"><i class="icon-home"></i> 首页 <i class="icon-angle-right"></i> 博客统计</div>
+	
+	<div class="blog-wrap">
+		<div class="blog-content">
+			<table style="width:50%;text-align:center;margin:0 auto;">
+            	<tr><caption>博客统计</caption></tr>
+            	<tr>
+            		<td>博客数量</td>
+            		<td><{$blog}>篇</td>
+            		<td>访问人数</td>
+            		<td><{$sumhits}>人</td>
+            	</tr>
+            	<foreach name='menu' item='vo'>
+            	<tr style="background:#E0EEE0">
+            		<td>ID:<{$vo.id}></td>
+            		<td><{$vo.typename}></td>
+            		<td><{$vo.num}>篇</td>
+            		<td><{$vo.optime|date='Y-m-d H:i:s',###}></td>
+            		
+            	</tr>
+            	</foreach>
+            	<foreach name='attrcoun' item='attr'>
+            	<tr style="background:#E6E6FA">
+            		<td>ID:<{$attr.id}></td>
+            		<td><{$attr.name}></td>
+            		<td><{$attr.num}>篇</td>
+            	</tr>
+            	</foreach>
+            </table>
+		</div>
+	</div>
+	
+</div>
+</body>
+</html>

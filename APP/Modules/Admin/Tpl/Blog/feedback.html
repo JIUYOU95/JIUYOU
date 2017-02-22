@@ -1,0 +1,134 @@
+<!DOCTYPE html><!--留言列表-->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>留言列表</title>
+<load href='__PUBLIC__/Css/blog/base.css' />
+<load href='__PUBLIC__/Css/font-awesome.min.css' />
+<js href='__PUBLIC__/Js/jquery-1.8.2.min.js' />
+<script type="text/javascript">
+  $(function(){
+    $('.confirmdel').click(function(){
+        var url=$(this).attr('href');
+        if(window.confirm('你确定要删除吗？')){
+        window.location=url;
+        }
+      return false;
+    });
+    //全选和取消选择
+    $('input[name="all"]').click(function(){
+      if ($(this).attr("checked")) {  
+            $("input[name=id]").each(function() {  
+                $(this).attr("checked", true);  
+            });  
+        } else {  
+            $("input[name=id]").each(function() {  
+                $(this).attr("checked", false);  
+            });  
+        }  
+    });
+    //ajax删除
+    $('input[name="delfeedback"]').click(function(){
+        var text="";  
+        $("input[name=id]").each(function() {  
+            if ($(this).attr("checked")) {  
+                text += ","+$(this).val();  
+            }  
+        });  
+        $.get('<{:U('alldelFeedback','','')}>',{'id':text},function(data){
+            if(data==1){
+              alert('留言删除成功');
+              window.location='__ACTION__';
+            }else{
+              alert('留言删除失败');
+            }
+        });
+    });
+    //ajax审核
+    $('input[name="checkfeedback"]').click(function(){
+        var text="";  
+        $("input[name=id]").each(function() {  
+            if ($(this).attr("checked")) {  
+                text += ","+$(this).val();  
+            }
+        });  
+
+       $.get('<{:U('allchecked','status=1','')}>',{'id':text},function(data){
+            if(data==1){
+              alert('留言审核成功');
+              window.location='__ACTION__';
+            }else{
+              alert('留言审核失败');
+            }
+        }); 
+    });
+        $('input[name="dcheckfeedback"]').click(function(){
+        var text="";  
+        $("input[name=id]").each(function() {  
+            if ($(this).attr("checked")) {  
+                text += ","+$(this).val();  
+            }
+        });  
+
+       $.get('<{:U('allchecked','status=0','')}>',{'id':text},function(data){
+            if(data==1){
+              alert('留言删除审核成功');
+              window.location='__ACTION__';
+            }else{
+              alert('留言删除审核失败');
+            }
+        }); 
+    });
+  });
+</script>
+</head>
+<body>
+<div class="main-wrap">
+	<div class="crumb-wrap"><i class="icon-home"></i> 首页 <i class="icon-angle-right"></i> 留言列表</div>
+	
+	<div class="blog-wrap">
+		<div class="blog-content">
+
+			<table border="1" class="tab">
+            	<tr><caption>留言列表</caption></tr>
+                <tr>
+                    <th>ID</th>
+                    <th>留言标题</th>
+                    <th>用户名</th>
+                    <th>留言时间</th>
+                    <th>是否回复</th>
+                    <th>管理员账号</th>
+                    <th>是否显示</th>
+                    <th>操作</th>
+                </tr>
+                <foreach name='back' item='vo'>
+                <tr class="hover">
+                    <td><input type="checkbox" value='<{$vo['id']}>' name='id'/><{$vo.id}></td>
+                    <td><{$vo.title}></td>
+                    <td><{$vo.username}></td>
+                    <td><{$vo.time|date='Y-m-d H:i:s',###}></td>
+                    <td><if condition="$vo['reply']">已回复<else/>没有回复</if></td>
+                    <td><{$vo.uname}></td>
+                    <td> <if condition="$vo['status']">允许显示<else/>不显示</if></td>
+                    <td>
+                        [<a href='<{:U('editFeedback',array('id'=>$vo['id']),'','')}>' >回复</a>]
+                        [<a href='<{:U('delFeedback',array('id'=>$vo['id']),'','')}>' class='confirmdel' >删除</a>]
+                        [<a href='<{:U('creatFeedback',array('id'=>$vo['id']),'','')}>'>查看</a>]
+                    </td>
+                </tr>
+				</foreach>
+                <tr bgcolor="#FBFCE2">
+                  <td align="center"><input id="all" type='checkbox' name='all'><label for="all">全选</label></td>
+                  <td colspan='7' align='left'>
+                    <input type="button" name='checkfeedback' value='审核' />
+                    <input type="button" name='dcheckfeedback' value='删除审核' />
+                    <input type="button" name='delfeedback' value='删除' /></td>
+                </tr>
+                <tr><td colspan="8" class="hover"><{$page}></td></tr>
+            </table>
+		</div>
+	</div>
+	
+</div>
+</body>
+</html>

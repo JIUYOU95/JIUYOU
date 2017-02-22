@@ -1,0 +1,36 @@
+@charset "utf-8";
+*{margin:0;padding:0;}
+body{font:14px/1.5 '微软雅黑';}
+ul{list-style:none;}
+a{color:#428bca;text-decoration:none;}
+a:hover,a:active{color:#2a6496;text-decoration:none;}
+input,select,textarea{font-size:14px;color:#333;border:1px solid #ccc;font-family:'Microsoft Yahei';}
+select,input[type="text"],input[type="password"],input[type='radio'],textarea{vertical-align:middle;margin:0 5px;padding:5px 10px;border-radius:5px;}
+input[type="submit"],input[type="reset"],input[type="button"]{cursor:pointer;padding:5px 10px;border-radius:5px;background:#008080;color:#fff;letter-spacing:2px;}
+table{width:100%;border-collapse:collapse;}
+table caption{font-size:1.5em;height:40px;line-height:40px;}
+table th,table td{height:35px;line-height:35px;font-weight:normal;border:1px solid #ccc;}
+h1,h2,h3,h4,h5,h6{font-size:100%}
+label{cursor:pointer;}
+.list-page{text-align:center;}
+
+.main-wrap{}
+.crumb-wrap{height:50px;line-height:50px;background:#00688B;color:#fff;padding-left:10px;}
+.blog-wrap{padding:0 20px;}
+/*
+ * addcate
+ */
+.td-left{padding-left:20px;}
+.td-right{text-align:right;}
+.td-center{text-align:center;background:#E0EEEE;line-height:40px;}
+.hover{text-align:center;}
+
+/*
+ *Config
+ */
+ .tab input,.tab textarea{border:0;}
+ .tab input:focus,.tab textarea{
+	border:0;
+	outline: none;
+
+}

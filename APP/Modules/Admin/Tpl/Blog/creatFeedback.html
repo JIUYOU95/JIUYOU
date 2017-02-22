@@ -1,0 +1,68 @@
+<!DOCTYPE html><!--留言查看-->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>留言查看</title>
+<load href='__PUBLIC__/Css/blog/base.css' />
+<load href='__PUBLIC__/Css/font-awesome.min.css' />
+</head>
+<body>
+<div class="main-wrap">
+	<div class="crumb-wrap"><i class="icon-home"></i> 首页 <i class="icon-angle-right"></i> 留言查看</div>
+	
+	<div class="blog-wrap">
+		<div class="blog-content">
+			<table border="1" class="tab">
+            	<tr><caption>留言查看</caption></tr>
+                <tr>
+                    <td class="td-center">ID</td>
+                    <td class="td-left"><{$feedback['id']}></td>
+                </tr>
+                <tr>
+                    <td class="td-center">留言标题</td>
+                    <td class="td-left"><{$feedback.title}></td>
+                </tr>
+                <tr>
+                    <td class="td-center">留言内容</td>
+                    <td class="td-left"><{$feedback.content}></td>
+                </tr>
+                <tr>
+                    <td class="td-center">联系人</td>
+                    <td class="td-left"><{$feedback.username}></td>
+                </tr>
+				<tr>
+                    <td class="td-center">邮箱</td>
+                    <td class="td-left"><{$feedback.email}></td>
+                </tr>
+                <tr>
+                    <td class="td-center">留言时间</td>
+                    <td class="td-left"><{$feedback.time|date="Y-m-d H:i:s",###}></td>
+                </tr>
+                <tr>
+                    <td class="td-center">回复内容</td>
+                    <td class="td-left"><{$feedback['reply']}></td>
+                </tr>
+                <tr>
+                    <td class="td-center">显示</td>
+                    <td class="td-left">
+                        <if condition="$feedback['status'] eq 1">
+                        显示
+                        <else/>
+                        不显示
+                        </if>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td-center">回复时间</td>
+                    <td class="td-left"><{$feedback.retime|date='Y-m-d H:i:s',###}></td>
+                </tr>
+                <tr>
+                </tr>
+            </table>
+			</form>
+		</div>
+	</div>
+	
+</div>
+</body>
+</html>

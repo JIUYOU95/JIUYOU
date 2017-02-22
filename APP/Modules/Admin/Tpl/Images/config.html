@@ -1,0 +1,119 @@
+<!DOCTYPE html><!--图片设置-->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>图片设置</title>
+<css href='__PUBLIC__/Css/img.css' />
+<css href='__PUBLIC__/Css/font-awesome.min.css' />
+<js href='__PUBLIC__/Js/jquery-1.8.2.min.js' />
+<script type="text/javascript">
+  $(function(){
+    $('#configadd').hide();
+    $('.configadd').click(function(){
+    $('#configadd').toggle();
+    });
+  });
+</script>
+</head>
+<body>
+<div class="main-wrap">
+	<div class="crumb-wrap"><i class="icon-home"></i> 首页 <i class="icon-angle-right"></i> 图片设置</div>
+	
+	<div class="img-wrap">
+		<div class="img-content">
+            <table style="margin-bottom:10px;" class="tab">
+                <tr>
+                    <td>更改系统基本设置--<a href='javasript:vod();' class='configadd'>添加系统基本设置</a></td>
+                </tr>
+                <form action="<{:U(GROUP_NAME.'/Images/do_config')}>" method="post">
+                <tr id="configadd">
+                    <td>
+                    <table>
+                        <tr>
+                            <td class="td-center"><span class='red'>*</span>变量名</td>
+                            <td class="td-left"><input type="text" name="configname" style='width:80%' /></td>    
+                            <td class="td-center">参数值</td>
+                            <td class="td-left"><input type="text" name="content" style='width:80%' /></td>
+                        </tr>
+                        <tr>
+                            <td class="td-center"><span class='red'>*</span>参数说明</td>
+                            <td class="td-left"><input type="text" name="info" style='width:80%' /></td>
+                            <td class="td-center">参数类型</td>
+                            <td class="td-left">
+                            <input type="radio" name="type" value='string' id='string' checked/>&nbsp;<label for="string">文本</label>
+                            <input type="radio" name="type" value='bstring'id='bstring'/>&nbsp;<label for="bstring">多行文本</label>
+                            <input type="radio" name="type" value='bool' id='bool'/>&nbsp;<label for="bool">布尔(Y/N) </label>
+                            <input type="radio" name="type" value='number' id='number'/>&nbsp;<label for="number">数字</label>
+                            <input type="radio" name="type" value="file" id="file" />&nbsp;<label for="file">文件</label>
+                            </td>
+                        </tr>
+                        <tr bgcolor="#F9FCEF" >
+                            <td colspan='4' align='center'>
+                                <input type="submit" name="submit" value=" 保存变量 " class="coolbg np" />
+                            </td>  
+                        </tr>
+                    </table>    
+                    </td>
+                </tr>
+                </form> 
+            </table>
+            
+			<form action="<{:U(GROUP_NAME.'/Images/config')}>" method="post" enctype="multipart/form-data">
+			<table border="1" class="tab">
+                <tr>
+                    <th>ID</th>
+                    <th>参数说明</th>
+                    <th>参数值</th>
+                    <th>参数类型</th>
+                    <th>变量名</th>
+                    <th>操作</th>
+                </tr>
+                <foreach name='datalists' item='v'>
+                <tr class="hover">
+                    <td><{$v.id}></td>
+                    <td><{$v.info}></td>
+					<td align="left">
+						<if condition="$v['type'] eq 'string'">
+            				<input name="<{$v['configname']}>" type="text" id="<{$v['configname']}>"  value='<{$v['content']}>' style='width:80%'/> &nbsp;
+              			<elseif condition="$v['type'] eq 'number'"/>
+                			<input name="<{$v['configname']}>" type="text" id="<{$v['configname']}>"  value='<{$v['content']}>' style='width:80%'/> &nbsp;
+            			<elseif condition="$v['type'] eq 'bstring'"/>
+            				<textarea name='<{$v['configname']}>' id="<{$v['configname']}>" style='width:90%;height:50px'><{$v['content']}></textarea>&nbsp;
+            			<elseif condition="$v['type'] eq bool"/>
+            				<input type='radio' name='<{$v['configname']}>' value='Y' id="<{$v['configname']}>Y" <if condition="$v['content'] eq 'Y'"> checked  </if>><label for="<{$v['configname']}>Y">是</label>&nbsp;
+         		 			<input type='radio' name='<{$v['configname']}>' value='N' id="<{$v['configname']}>N" <if condition="$v['content'] eq 'N'">  checked </if>><label for="<{$v['configname']}>N">否</label>&nbsp;
+                       <elseif condition="$v['type'] eq 'file'"/>
+                            <input name="<{$v['configname']}>" type="file" id="<{$v['configname']}>"  value='<{$v['content']}>' style='width:30%'/><{$v['content']}> &nbsp;
+            			</if>
+					</td>
+                    <td>
+                        <if condition="$v['type'] eq 'string'">
+                            文本类型（string）
+                        <elseif condition="$v['type'] eq 'number'"/>
+                            数字类型（number）
+                        <elseif condition="$v['type'] eq 'bstring'"/>
+                            多行文本类型（bstring）
+                        <elseif condition="$v['type'] eq bool"/>
+                            布尔类型[Y/N]（bool）
+                        <elseif condition="$v['type'] eq file"/>
+                            文件类型（file）
+                        </if>
+                    </td>
+					<td align="center"><{$v.configname}></td>
+                    <td>
+                        [<a href="<{:U(GROUP_NAME.'/Images/editconfig',array('id'=>$v['id']))}>">修改</a>]
+                        [<a href="<{:U(GROUP_NAME.'/Images/delconfig',array('id'=>$v['id'],'configname'=>$v['configname']))}>">删除</a>]
+                    </td>
+                </tr>
+				</foreach>
+				<tr>
+					<td colspan="6" align="center"><input type="submit" value="更改信息" /></td>
+				</tr>
+            </table>
+			</form>
+		</div>
+	</div>
+	
+</div>
+</body>
+</html>

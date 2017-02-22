@@ -1,0 +1,44 @@
+<!DOCTYPE html><!--友情链接修改-->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>友情链接修改</title>
+<css href='__PUBLIC__/Css/blog/base.css' />
+<css href='__PUBLIC__/Css/font-awesome.min.css' />
+<js href='__PUBLIC__/Js/jquery-1.8.2.min.js' />
+</head>
+<body>
+<div class="main-wrap">
+	<div class="crumb-wrap"><i class="icon-home"></i> 首页 <i class="icon-angle-right"></i> 友情链接修改</div>
+	
+	<div class="blog-wrap">
+		<div class="blog-content">
+            <form action="<{:U(GROUP_NAME.'/Blog/link')}>" method="post">
+			<table class="tab">
+                <tr><caption>友情链接修改</caption></tr>
+                <foreach name='link' item='vo'>
+                <tr>
+                    <td class="td-center">ID：</td>
+                    <td class="td-left"><{$vo.id}></td>
+                </tr>
+                <tr>
+                    <td class="td-center"><label for="name">链接名称：</label></td>
+                    <td class="td-left"><input id="name" type="text" name="name" value="<{$vo.name}>" /></td>
+                </tr>
+                <tr>
+                    <td class="td-center"><label for="url">链接URL：</label></td>
+					<td class="td-left"><input id="url" type="text" name="url" value="<{$vo.url}>"  /></td>
+                </tr>
+                <tr>
+                    <input type="hidden" name="id" value="<{$vo.id}>" />
+                    <td colspan="2" class="hover"><input type="submit" value="修改" /></td>
+                </tr>
+                </foreach>
+            </table>
+			</form>
+		</div>
+	</div>
+	
+</div>
+</body>
+</html>

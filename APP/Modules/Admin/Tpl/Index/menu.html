@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+<title>menu</title>
+<meta  charset="utf-8" />
+<load href='__PUBLIC__/Css/menu.css' />
+<load href='__PUBLIC__/Css/font-awesome.min.css' />
+<load href='__PUBLIC__/Js/jquery-1.8.2.min.js' />
+<base target="iframe"/>
+</head>
+<body>
+<div id="menu">
+	<dl>
+		<dt><i class="icon-folder-open"></i> 博客管理</dt>
+		<dd><a href="<{:U(GROUP_NAME.'/Blog/blog')}>"><i class="icon-list"></i> 博客列表</a></dd>
+		<dd><a href="<{:U(GROUP_NAME.'/Blog/addblog')}>"><i class="icon-save"></i> 博客发布</a></dd>
+		<dd><a href="<{:U(GROUP_NAME.'/Blog/count')}>"><i class="icon-retweet"></i> 博客统计</a></dd>
+		<dd><a href="<{:U(GROUP_NAME.'/Blog/link')}>"><i class="icon-link"></i> 友情链接</a></dd>
+	</dl>
+		<dl>
+		<dt><i class="icon-cog"></i> 图片管理</dt>
+		<dd><a href="<{:U(GROUP_NAME.'/Images/menu')}>"><i class="icon-reorder"></i> 图片分类</a></dd>
+		<dd><a href="<{:U(GROUP_NAME.'/Images/img')}>"><i class="icon-list"></i> 图片列表</a></dd>
+		<dd><a href="<{:U(GROUP_NAME.'/Images/addimg')}>"><i class="icon-save"></i> 图片发布</a></dd>
+		<dd><a href="<{:U(GROUP_NAME.'/Images/count')}>"><i class="icon-retweet"></i> 图片统计</a></dd>
+	</dl>
+</div>
+<div id="main">
+	<iframe src="<{:U(GROUP_NAME.'/Index/main')}>" name="iframe"></iframe>
+</div>
+</body>
+</html>

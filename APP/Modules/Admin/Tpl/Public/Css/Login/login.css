@@ -1,0 +1,20 @@
+@charset "utf-8";
+/* CSS Document */
+* { margin:0; padding:0; }
+body{height:100%;background:url(../../Images/Login/3.jpg);font-family:'Microsoft Yahei'!important;}
+img{border:none;}
+
+.main_box{position:absolute;top:50%;left:50%;margin-top:-260px;margin-left:-300px;padding:30px;width:600px;height:460px;background:url(../../Images/1.png);border-radius: 10px;}
+.login_logo{margin-bottom:20px;height:85px;text-align:center;}
+.login_logo img{height:85px;}
+.login_form{padding-top:20px;font-size:16px;}
+.login_box .form-control{display:inline-block;*display:inline;zoom:1;width:auto;font-size:18px;}
+.login_box .form-control.x319{width:319px;}
+.login_box .form-control.x164{width:164px;}
+.login_box .form-group{margin-bottom:20px;}
+.login_box .form-group label.t{width:120px;text-align:right;cursor:pointer;font-weight:normal;}
+.login_box .form-group.space{padding-top:15px;border-top:1px #FFF dotted;}
+.login_box .form-group img{margin-top:1px;height:32px;vertical-align:top;cursor:pointer;}
+.login_box .m{cursor:pointer;font-weight:normal;}
+.bottom{text-align:center;font-size:12px;}
+

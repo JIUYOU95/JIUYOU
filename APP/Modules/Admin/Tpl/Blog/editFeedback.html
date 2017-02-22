@@ -1,0 +1,83 @@
+<!DOCTYPE html><!--留言回复-->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>留言回复</title>
+<load href='__PUBLIC__/Css/blog/base.css' />
+<load href='__PUBLIC__/Css/font-awesome.min.css' />
+<js href='__PUBLIC__/Js/jquery-1.8.2.min.js' />
+<script type="text/javascript">
+  $(function(){
+    $('.confirmdel').click(function(){
+        var url=$(this).attr('href');
+        if(window.confirm('你确定要删除吗？')){
+        window.location=url;
+        }
+      return false;
+    });
+  });
+</script>
+<js href='__ROOT__/Public/My97DatePicker/WdatePicker.js' />
+</head>
+<body>
+<div class="main-wrap">
+	<div class="crumb-wrap"><i class="icon-home"></i> 首页 <i class="icon-angle-right"></i> 留言回复</div>
+	
+	<div class="blog-wrap">
+		<div class="blog-content">
+			<form action="<{:U(GROUP_NAME.'/Blog/editFeedback')}>" method="post">
+			<table border="1" class="tab">
+            	<tr><caption>留言回复</caption></tr>
+                <input type="hidden" name="id" value="<{$data['id']}>" />
+                <tr>
+                    <td class="td-center">留言标题</td>
+                    <td class="td-left"><{$data.title}></td>
+                </tr>
+                <tr>
+                    <td class="td-center">留言内容</td>
+                    <td class="td-left"><{$data.content}></td>
+                </tr>
+                <tr>
+                    <td class="td-center">联系人</td>
+                    <td class="td-left"><{$data.username}></td>
+                </tr>
+				<tr>
+                    <td class="td-center">邮箱</td>
+                    <td class="td-left"><{$data.email}></td>
+                </tr>
+                <tr>
+                    <td class="td-center">留言时间</td>
+                    <td class="td-left"><{$data.time|date="Y-m-d H:i:s",###}></td>
+                </tr>
+                <tr>
+                    <td class="td-center">回复内容</td>
+                    <td class="td-left">
+                        <textarea name='reply' style='width:500px;height:100px'><{$data['reply']}></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td-center">显示</td>
+                    <td class="td-left">
+                        <input id="status1" type='radio' name='status' value='1' <if condition="$data['status'] eq 1">checked</if>/><label for="status1">允许显示</label>
+                        <input id="status0" type='radio' name='status' value='0' <if condition="$data['status'] eq 0">checked</if>/><label for="status0">不显示</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td-center">回复时间</td>
+                    <td class="td-left">
+                        <input class="Wdate" type="text" onClick="WdatePicker()"  style="width:200px" name="retime" value="<?php if($data['retime']) echo date('Y-m-d',$data['retime']);else echo date('Y-m-d',time()); ?>">
+                    </td>
+                </tr>
+                <tr>
+                <td colspan="8" class="hover">
+                    <input type="submit" value="回复" />    
+                </td>
+                </tr>
+            </table>
+			</form>
+		</div>
+	</div>
+	
+</div>
+</body>
+</html>

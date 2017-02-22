@@ -1,0 +1,165 @@
+<!DOCTYPE html><!--图片列表-->
+<html>
+<head>
+<meta charset="UTF-8">
+<title><if condition='ACTION_NAME eq "img"'>图片列表<else/>回收站</if></title>
+<load href='__PUBLIC__/Css/img.css' />
+<load href='__PUBLIC__/Css/font-awesome.min.css' />
+<js href='__PUBLIC__/Js/jquery-1.8.2.min.js' />
+<script type="text/javascript">
+function checkArc(aid){
+	var qstr=getCheckboxItem();
+	if(aid==0) aid = getOneItem();
+	location="__GROUP__?m=Images&a=ischeck&id="+qstr;
+	//location="<{:U(GROUP_NAME.'/Blog/ischeck',array('id'=>qstr))}>"
+}
+function checkArcd(aid){
+	var qstr=getCheckboxItem();
+	if(aid==0) aid = getOneItem();
+	location="__GROUP__?m=Images&a=ischeckd&id="+qstr;
+}
+function delArc(aid){
+	var qstr=getCheckboxItem();
+	if(aid==0) aid = getOneItem();
+	location="__GROUP__?m=Images&a=toTrach&type=1&id="+qstr;
+}
+function totrach(aid){
+	var qstr=getCheckboxItem();
+	if(aid==0) aid = getOneItem();
+	location="__GROUP__?m=Images&a=toTrach&type=0&id="+qstr;
+}
+function delblog(aid){
+	var qstr=getCheckboxItem();
+	if(aid==0) aid = getOneItem();
+	location="__GROUP__?m=Images&a=delimg&id="+qstr;
+}
+
+//获得选中文件的文件名
+function getCheckboxItem(){
+	var allSel="";
+	if(document.form2.id.value) return document.form2.id.value;
+	for(i=0;i<document.form2.id.length;i++){
+		if(document.form2.id[i].checked){
+			if(allSel=="")
+				allSel=document.form2.id[i].value;
+			else
+				allSel=allSel+","+document.form2.id[i].value;
+		}
+	}
+	return allSel;
+}
+
+//获得选中其中一个的id
+function getOneItem(){
+	var allSel="";
+	if(document.form2.id.value) return document.form2.id.value;
+	for(i=0;i<document.form2.id.length;i++){
+		if(document.form2.id[i].checked){
+				allSel = document.form2.id[i].value;
+				break;
+		}
+	}
+	return allSel;
+}
+
+function selAll(){
+	for(i=0;i<document.form2.id.length;i++){
+		if(!document.form2.id[i].checked){
+			document.form2.id[i].checked=true;
+		}
+	}
+}
+function noSelAll(){
+	for(i=0;i<document.form2.id.length;i++){
+		if(document.form2.id[i].checked){
+			document.form2.id[i].checked=false;
+		}
+	}
+}
+$(function(){
+	 $('.confirmdel').click(function(){
+	  var url=$(this).attr('href');
+	  if(window.confirm('你确定要删除吗？')){
+	  window.location=url;
+	  }
+      return false;
+  });
+});
+</script>
+</head>
+<body>
+<div class="main-wrap">
+	<div class="crumb-wrap"><i class="icon-home"></i> 首页 <i class="icon-angle-right"></i> <if condition='ACTION_NAME eq "img"'>图片列表<else/>回收站</if></div>
+	
+	<div class="img-wrap">
+		<div class="img-content">
+			<form name="form2" action="<{:U(GROUP_NAME.'/Images/')}>" method="post">
+			<table border="1">
+            	<tr><caption><if condition='ACTION_NAME eq "img"'>图片列表<else/>回收站</if></caption></tr>
+                <tr>
+                    <th>ID</th>
+                    <td>选择</td>
+                    <th>图片名称</th>
+                    <th>所属分类</th>
+                    <th>状态</th>
+                    <th>点击次数</th>
+                    <th>图片</th>
+                    <th>发布人</th>
+                    <th>操作时间</th>
+                    <th>操作</th>
+                </tr>
+                <foreach name='lists' item='v'>
+                <tr class="hover">
+                    <td><{$v.id}></td>
+                    <td><input name="id" type="checkbox" id="<{$v['id']}>" value="<{$v['id']}>" class="np"></td>
+                    <td style="text-align:left;padding:0 10px;"><{$v.title}><foreach name='v.attr' item='value'><strong style='color: <{$value.color}>;padding:0 5px;'>[<{$value.name}>]</strong></foreach></td>
+                    <td><{$v.cate}></td>
+                    <td>
+                    	<if condition='$v["status"]'>开放浏览
+						<else/>审核中
+						</if>
+                    </td>
+					<td><{$v.hits}></td>
+					<?php $img=explode("|",$v['pic']); ?>
+
+					<td><if condition='$img[0]'><img src='__ROOT__/Public/Uploads/Images/<{$img['0']}>' height='30' style="vertical-align:middle;"/><else/>没有图片</if></td>
+					<td><{$v.username}></td>
+					<td><{$v.optime|date='Y-m-d H:i:s',###}></td>
+					<td>
+						<if condition='ACTION_NAME eq "img"'>
+						[<a href="<{:U(GROUP_NAME.'/Images/editimg',array('id'=>$v['id']))}>">修改</a>]
+						[<a href="<{:U(GROUP_NAME.'/Images/toTrach',array('id'=>$v['id'],'type'=>1,'title'=>$v['title']))}>" class='confirmdel'>删除</a>]
+						<else/>
+						[<a href="<{:U(GROUP_NAME.'/Images/toTrach',array('id'=>$v['id'],'type'=>0))}>">还原</a>]
+						[<a href="<{:U(GROUP_NAME.'/Images/delimg',array('id'=>$v['id'],'title'=>$v['title']))}>" class='confirmdel'>彻底删除</a>]
+						</if>
+					</td>
+                </tr>
+				</foreach>
+				<tr>
+				<td colspan="10">
+					&nbsp;
+					<a href="javascript:selAll()" class="coolbg">全选</a>
+					<a href="javascript:noSelAll()" class="coolbg">取消</a>
+					<a href="javascript:checkArc(0)" class="coolbg">&nbsp;审核&nbsp;</a>
+					<a href="javascript:checkArcd(0)" class="coolbg">&nbsp;删除审核&nbsp;</a>
+					<if condition='ACTION_NAME eq "img"'>
+						<a href="javascript:delArc(0)" class="coolbg">&nbsp;删除&nbsp;</a>
+					<else/>
+						<a href="javascript:totrach(0)" class="coolbg">&nbsp;还原&nbsp;</a>
+						<a href="javascript:delblog(0)" class="coolbg">&nbsp;彻底删除&nbsp;</a>
+					</if>
+					
+				</td>
+				</tr>
+				<tr align="right" bgcolor="#EEF4EA">
+					<td height="36" colspan="10" align="center"><{$page}></td>
+				</tr>
+            </table>
+			</form>
+		</div>
+	</div>
+	
+</div>
+</body>
+</html>

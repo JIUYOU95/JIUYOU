@@ -1,0 +1,45 @@
+<!DOCTYPE html><!--RBAC角色列表-->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>RBAC角色列表</title>
+<load href='__PUBLIC__/Css/main.css'/>
+<load href='__PUBLIC__/Css/font-awesome.min.css' />
+</head>
+<body>
+<div class="main-wrap">
+	<div class="crumb-wrap"><i class="icon-home"></i> 首页 <i class="icon-angle-right"></i> 角色列表</div>
+	
+	<div class="result-wrap">
+        <div class="result-content">
+            <table border="1">
+            	<tr><caption>角色列表</caption></tr>
+                <tr>
+                    <th>ID</th>
+                    <th>角色名称</th>
+                    <th>角色描述</th>
+                    <th>开启状态</th>
+                    <th>操作</th>
+                </tr>
+                <foreach name='role' item='v'>
+                <tr class="hover">
+                    <td><{$v.id}></td>
+                    <td><{$v.name}></td>
+                    <td><{$v.remark}></td>
+                    <td>
+                        <if condition='$v["status"]'>开启<else/>关闭</if>
+                    </td>
+                    <td>
+                        [<a href="<{:U(GROUP_NAME.'/RBAC/access',array('rid' => $v['id']))}>">配置权限</a>]
+                        [<a href="<{:U(GROUP_NAME.'/RBAC/editrole',array('id' => $v['id']))}>">修改</a>]
+                        [<a href="<{:U(GROUP_NAME.'/RBAC/delrole',array('id' => $v['id'],'name'=>$v['name']))}>">删除</a>]
+                    </td>
+                </tr>
+				</foreach>
+                <tr><td colspan="5" class="list-page"><{$page}></td></tr>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+</html>

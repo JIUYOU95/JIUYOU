@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>main</title>
+<base target="_self">
+<load href='__PUBLIC__/Css/main.css'/>
+<load href='__PUBLIC__/Css/font-awesome.min.css' />
+<body>
+<div class="main-wrap">
+	<div class="crumb-wrap"><i class="icon-volume-up"></i> 欢迎使用内容管理系统，建站的首选工具</div>
+  
+	<div class="result-wrap">
+		<div class="result-title"><span>快捷操作</span></div>
+		<div class="result-content sys">
+			<ul>
+				<li><a href="<{:U(GROUP_NAME.'/Blog/addblog')}>">博客发布</a></li>
+				<li><a href="<{:U(GROUP_NAME.'/Images/addimg')}>">图片发布</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="result-wrap">
+		<div class="result-title"><span>系统基本信息</span></div>
+		<div class="result-content">
+			<ul class="sys-info-list">
+				<li>
+					<label class="res-lab">软件版本信息</label>
+					<span class="res-info">Cms_2009_UTF8</span>
+				</li>
+				<li>
+					<label class="res-lab">系统信息</label>
+					<span class="res-info"><{$sysdata['sysos']}></span>
+				</li>
+				<li>
+					<label class="res-lab">PHP版本</label>
+					<span class="res-info"><{$sysdata['sysversion']}></span>
+				</li>
+				<li>
+					<label class="res-lab">GD库版</label>
+					<span class="res-info"><{$sysdata['gdinfo']}></span>
+				</li>
+				<li>
+					<label class="res-lab">FreeType</label>
+					<span class="res-info"><{$sysdata['freetype']}></span>
+				</li>
+				<li>
+					<label class="res-lab">远程文件获取</label>
+					<span class="res-info"><{$sysdata['allowurl']}></span>
+				</li>
+				<li>
+					<label class="res-lab">最大上传限</label>
+					<span class="res-info"><{$sysdata['max_upload']}></span>
+				</li>
+				<li>
+					<label class="res-lab">最大执行时</label>
+					<span class="res-info"><{$sysdata['max_ex_time']}></span>
+				</li>
+				<li>
+					<label class="res-lab">服务器时</label>
+					<span class="res-info"><{$sysdata['systemtime']}></span>
+				</li>
+				
+			</ul>
+		</div>
+	</div>
+	<div class="result-wrap">
+		<div class="result-title"><span>官方交流网站</span></div>
+		<div class="result-content">
+			<ul class="sys-info-list">
+				<li>
+					<label class="res-lab">官方交流网站</label>
+					<span class="res-info">计算机网络技术专</span>
+				</li>
+				<li>
+					<label class="res-lab">官方交流QQ</label>
+					<span class="res-info"><img src='__PUBLIC__/Images/group.png'/></span>
+				</li>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

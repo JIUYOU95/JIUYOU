@@ -1,0 +1,107 @@
+<!DOCTYPE html><!--系统日志-->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>系统日志</title>
+<load href='__PUBLIC__/Css/main.css' />
+<load href='__PUBLIC__/Css/font-awesome.min.css' />
+<js href='__PUBLIC__/Js/jquery-1.8.2.min.js' />
+    <script type="text/javascript">
+  $(function(){
+    $('.confirmdel').click(function(){
+        var url=$(this).attr('href');
+        if(window.confirm('你确定要删除吗？')){
+        window.location=url;
+        }
+      return false;
+    });
+    //全选和取消选择
+    $('input[name="all"]').click(function(){
+      if ($(this).attr("checked")) {  
+            $("input[name=id]").each(function() {  
+                $(this).attr("checked", true);  
+            });  
+        } else {  
+            $("input[name=id]").each(function() {  
+                $(this).attr("checked", false);  
+            });  
+        }  
+    });
+    //ajax删除
+    $('input[type="button"]').click(function(){
+      var text="";  
+        $("input[name=id]").each(function() {  
+            if ($(this).attr("checked")) {  
+                text += ","+$(this).val();  
+            }  
+        });  
+        $.get('<{:U('alldel')}>',{'id':text},function(data){
+         if(data)
+            {
+              alert('日志删除成功');
+              window.location='__ACTION__';
+            }
+            else
+            {
+              alert('日志删除失败');
+            }
+        });
+    });
+});
+</script>
+</head>
+<body>
+<div class="main-wrap">
+	<div class="crumb-wrap"><i class="icon-home"></i> 首页 <i class="icon-angle-right"></i> 系统日志</div>
+	
+	<div class="result-wrap">
+		<table >
+			<tr style="height:35px;">
+				<td>
+					<form action="<{:U(GROUP_NAME.'/Config/log')}>" method='get'>
+			          查看指定用户的日志
+			          <input type="text" name='username' style='width:200px'/>
+			          <input type="submit" value='搜索' />
+			        </form>
+				</td>
+				<td>
+				<!-- <if condition="$search"> -->
+		            <a href="<{:U(GROUP_NAME.'/Config/log',array('uid'=>$userid))}>">查自己的的操作记录</a>
+		        <!-- </if> -->
+           		</td>
+
+			</tr>
+		</table>
+		
+		<div class="result-content">
+			<table border="1" class="tab">
+                <tr>
+                    <th>ID</th>
+                    <th>操作内容</th>
+                    <th>用户</th>
+                    <th>操作时间</th>
+                    <th>管理</th>
+                </tr>
+                <foreach name='lists' item='vo'>
+                <tr>
+                    <td align="center"><input type="checkbox" value="<{$vo['id']}>" name='id'/><{$vo.id}></td>
+                    <td style="padding-left:10px;"><{$vo.logtext}></td>
+					<td align="center"><{$vo.username}></td>
+					<td align="center"><{$vo.time|date='Y-d-m H:i:s',###}></td>
+					<td align="center">
+						[<a href="<{:U(GROUP_NAME.'/Config/dellog',array('id'=>$vo['id']))}>" class='confirmdel'>删除</a>]
+					</td>
+                </tr>
+				</foreach>
+				<tr bgcolor="#FBFCE2">
+			      <td  align="center"><input type='checkbox' name='all' id="all"><label for="all">全选</label></td>
+			      <td colspan='4' align='left'><input type="button" value='删除' /></td>
+			    </tr>
+				<tr><td colspan="5" class="list-page"><{$page}></td></tr>
+            </table>		
+		</div>
+	</div>
+	
+</div>
+</body>
+</html>

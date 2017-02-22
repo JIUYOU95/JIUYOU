@@ -1,0 +1,21 @@
+@charset "utf-8";
+*{margin:0;padding:0;}
+html,body{height:100%;width:100%;}
+body{font:14px/1.5 '微软雅黑';}
+iframe{width:100%;height:100%;border:none;}
+ul{list-style:none;}
+a{color:#FFF;text-decoration:none;}
+a:hover,a:active{text-decoration:none;}
+input,select,textarea{font-size:14px;color:#333}
+select,input[type="text"],input[type="password"]{vertical-align:middle;margin:0;padding:5px 10px;border-radius:5px;}
+input[type="submit"],input[type="reset"]{margin:20px auto;cursor:pointer;padding:5px 10px;border-radius:5px;}
+h1,h2,h3,h4,h5,h6{font-size:100%}
+
+#main{height:100%;width:90%;float:left;}
+#menu{height:100%;width:10%;float:left;background:#00688B;}
+#menu dl{}
+#menu dl dt,.menu dl dd{border-bottom:1px solid #008B8B;}
+#menu dl dt{height:50px;line-height:50px;padding-left:20px;color:#fff;}
+#menu dl a{display:block;height:40px;line-height:40px;padding-left:30px;}
+
+

@@ -1,0 +1,56 @@
+<!DOCTYPE html><!--博客栏目-->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>博客栏目</title>
+<load href='__PUBLIC__/Css/blog/base.css' />
+<load href='__PUBLIC__/Css/font-awesome.min.css' />
+</head>
+<body>
+<div class="main-wrap">
+	<div class="crumb-wrap"><i class="icon-home"></i> 首页 <i class="icon-angle-right"></i> 博客栏目</div>
+	
+	<div class="blog-wrap">
+		<div class="blog-content">
+			<form action="<{:U(GROUP_NAME.'/Blog/sortHandle')}>" method="post">
+			<table border="1">
+            	<tr><caption>博客栏目</caption></tr>
+                <tr>
+                    <th>ID</th>
+                    <th>栏目名称</th>
+                    <th>级别</th>
+                    <th>是否显示导航</th>
+                    <th>排序</th>
+                    <th>添加时间</th>
+                    <th>操作</th>
+                </tr>
+                <foreach name='cate' item='v'>
+                <tr class="hover">
+                    <td><{$v.id}></td>
+                    <td style="text-align:left;padding:0 10px;"><a href="<{:U(GROUP_NAME.'/Blog/blog',array('typeid'=>$v['id']))}>"><{$v.html}><{$v.typename}></a></td>
+					<td><{$v.level}></td>
+					<td>
+						<if condition='$v["isshow"]'>显示
+						<else/>隐藏
+						</if>
+					</td>
+					<td><input type="text" name="<{$v.id}>" value="<{$v.sort}>" /></td>
+					<td><{$v.optime|date='Y-m-d H:i:s',###}></td>
+					<td>
+						[<a href="<{:U(GROUP_NAME.'/Blog/addmenu',array('reid'=>$v['id'],'typename'=>$v['typename']))}>">添加子分类</a>]
+						[<a href="<{:U(GROUP_NAME.'/Blog/editmenu',array('id'=>$v['id'],'typename'=>$v['typename']))}>">修改</a>]
+						[<a href="<{:U(GROUP_NAME.'/Blog/delmenu',array('id'=>$v['id']))}>">删除</a>]
+					</td>
+                </tr>
+				</foreach>
+				<tr>
+					<td colspan="7" align="center"><input type="submit" value="排序" /></td>
+				</tr>
+            </table>
+			</form>
+		</div>
+	</div>
+	
+</div>
+</body>
+</html>

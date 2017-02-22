@@ -1,0 +1,40 @@
+<!DOCTYPE html><!--博客属性-->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>博客属性</title>
+<load href='__PUBLIC__/Css/blog/base.css' />
+<load href='__PUBLIC__/Css/font-awesome.min.css' />
+</head>
+<body>
+<div class="main-wrap">
+	<div class="crumb-wrap"><i class="icon-home"></i> 首页 <i class="icon-angle-right"></i> 博客属性</div>
+	
+	<div class="blog-wrap">
+		<div class="blog-content">
+			<table border="1">
+            	<tr><caption>博客属性</caption></tr>
+                <tr>
+                    <th>ID</th>
+                    <th>属性名称名称</th>
+                    <th>颜色</th>
+                    <th>操作</th>
+                </tr>
+                <foreach name='attr' item='v'>
+                <tr class="hover">
+                    <td><{$v.id}></td>
+                    <td><{$v.name}></td>
+					<td><div style="width:20px;height:20px;margin:0 auto;background:<{$v.color}>"></div></td>
+					<td>
+						[<a href="<{:U(GROUP_NAME.'/Blog/editattr',array('id'=>$v['id']))}>">修改</a>]
+						[<a href="<{:U(GROUP_NAME.'/Blog/delattr',array('id'=>$v['id'],'name'=>$v['name']))}>">删除</a>]
+					</td>
+                </tr>
+				</foreach>
+            </table>
+		</div>
+	</div>
+	
+</div>
+</body>
+</html>

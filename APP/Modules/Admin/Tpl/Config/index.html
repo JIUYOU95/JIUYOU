@@ -1,0 +1,24 @@
+<!DOCTYPE HTML><!--系统管理-->
+<html lang="zh-cn">
+<head>
+<title>系统管理</title>
+<meta  charset="utf-8" />
+<load href='__PUBLIC__/Css/menu.css' />
+<load href='__PUBLIC__/Css/font-awesome.min.css' />
+<base target="iframe"/>
+</head>
+<body>
+<div id="menu">
+	<dl>
+		<dt><i class="icon-cog"></i> 系统管理</dt>
+		<dd><a href="<{:U(GROUP_NAME.'/Config/config')}>"><i class="icon-wrench"></i> 系统设置</a></dd>
+		<dd><a href="<{:U(GROUP_NAME.'/Config/log')}>"><i class="icon-folder-close-alt"></i> 系统日志</a></dd>
+
+		
+	</dl>
+</div>
+<div id="main">
+	<iframe src="<{:U(GROUP_NAME.'/Config/config')}>" name="iframe" scrolling="no" noresize></iframe>
+</div>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html><!--博客发布-->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>博客发布</title>
+<css href='__PUBLIC__/Css/blog/base.css' />
+<css href='__PUBLIC__/Css/font-awesome.min.css' />
+<js href='__PUBLIC__/Js/jquery-1.8.2.min.js' />
+
+<css href='__ROOT__/Public/kindeditor/plugins/code/prettify.css' />
+<js href='__ROOT__/Public/kindeditor/plugins/code/prettify.js' />
+
+<js href='__ROOT__/Public/kindeditor/kindeditor.js' />
+	<script>
+		KindEditor.ready(function(K) {
+			var editor1 = K.create('textarea[name="content"]', {
+				cssPath : '__ROOT__/Public/kindeditor/plugins/code/prettify.css',
+				uploadJson : '__ROOT__/Public/upload_json.php',
+				fileManagerJson : '__ROOT__/Public/file_manager_json.php',
+				allowFileManager : true,
+				afterCreate : function() {
+					var self = this;
+					K.ctrl(document, 13, function() {
+						self.sync();
+						K('form[name=blogadd]')[0].submit();
+					});
+					K.ctrl(self.edit.doc, 13, function() {
+						self.sync();
+						K('form[name=blogadd]')[0].submit();
+					});
+				}
+			});
+			prettyPrint();
+		});
+	</script>
+
+
+<js href='__ROOT__/Public/My97DatePicker/WdatePicker.js' />
+
+</head>
+<body>
+<div class="main-wrap">
+	<div class="crumb-wrap"><i class="icon-home"></i> 首页 <i class="icon-angle-right"></i> 博客发布</div>
+	
+	<div class="blog-wrap">
+		<div class="blog-content">
+			 <form action="<{:U(GROUP_NAME.'/Blog/addblog')}>" id="login_form" method="post" name="blogadd">
+				<table>
+					<tr>
+						<caption>博客发布</caption>
+					</tr>
+					<tr>
+						<td class="td-center">所属分类</td>
+						<td class="td-left">
+							<select name="typeid">
+								<option value="">==请选择分类==</option>
+								<foreach name='cate' item='v'>
+									<option value="<{$v.id}>"><{$v.html}><{$v.typename}></option>
+								</foreach>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td class="td-center">博文属性</td>
+						<td class="td-left">
+							<foreach name='attr' item='v'>
+								<input type="checkbox" name="aid[]" id="<{$v.id}>" value="<{$v.id}>" />&nbsp;<label for="<{$v.id}>"><{$v.name}></label>&nbsp;&nbsp;
+							</foreach>
+						</td>
+					</tr>
+					<tr>
+						<td class="td-center">博文状态</td>
+						<td class="td-left">
+							<input id="status1" name="status" type="radio" value='1' checked/><label for="status1">开放浏览</label>
+               				<input id="status0" name="status" type="radio" value='0'/><label for="status0">审核中</label>
+						</td>
+					</tr>
+					<tr>
+						<td class="td-center">博客标题</td>
+						<td class="td-left"><input id="title" value="" name="title" type="text" /></td>
+					</tr>
+					<tr>
+						<td class="td-center">关键字</td>
+						<td class="td-left"><input id="keywords" value="" name="keywords" type="text" /></td>
+					</tr>
+					<tr>
+						<td class="td-center">tag</td>
+						<td class="td-left"><input id="tag" value="" name="tag" type="text" /></td>
+					</tr>
+					<tr>
+						<td class="td-center">点击次数</td>
+						<td class="td-left"><input id="hits" value="100" name="hits" type="text" /></td>
+					</tr>
+					<tr>
+						<td class="td-center">排序</td>
+						<td class="td-left"><input id="sort" value="1" name="sort" type="text" /></td>
+					</tr>
+					<tr>
+						<td class="td-center">来源</td>
+						<td class="td-left"><input id="resources" value="本站原创" name="resources" type="text" /></td>
+					</tr>
+					<tr>
+						<td class="td-center">作者</td>
+						<td class="td-left"><input id="author" value="JIUYOU" name="author" type="text" /></td>
+					</tr>
+					<tr>
+						<td class="td-center">时间</td>
+						<td class="td-left"><input class="Wdate" type="text" onClick="WdatePicker()"  style="cursor:pointer;" name="time" value="<?php echo date('Y-m-d',time());?>">&nbsp;</td>
+					</tr>
+						
+					
+					<tr><td class="td-center">内容添加</td><td></td></tr>
+					<tr>
+						<td colspan="2"><textarea name="content" id="content" style="width:100%;height:300px;visibility:hidden;"></textarea></td>
+					</tr>
+					<tr >
+						<td colspan="2" class="hover"><input type="submit" value="保存" id="submit_btn" class="btn" /></td>
+					</tr>
+				</table>
+				
+			</form>
+		</div>
+	</div>
+	
+</div>
+</body>
+</html>

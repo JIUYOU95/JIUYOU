@@ -1,0 +1,99 @@
+<!DOCTYPE html><!--RBAC用户列表-->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>RBAC用户列表</title>
+<load href='__PUBLIC__/Css/main.css'/>
+<load href='__PUBLIC__/Css/font-awesome.min.css' />
+<load href='__PUBLIC__/Js/jquery-1.8.2.min.js' />
+<script type="text/javascript">
+	$(function(){
+		$('.nodel').click(function(){
+			alert('不允许删除id为1的管理员帐号！');
+			return false;
+		});
+    $('.confirmdel').click(function(){
+     if (!$(this).hasClass("nodel")){
+        var url=$(this).attr('href');
+        if(window.confirm('你确定要删除吗？')){
+        window.location=url;
+        }
+      }
+      return false;
+    });
+		$('.nopurview').click(function(){
+			alert('不允许锁定id为1的管理员帐号！');
+			return false;
+		});
+		$('.hover').hover(function(){
+		
+		$(this).css("background" , "#DCDCDC")
+
+		},
+		function(){
+			$(this).css("background" , "#fff")
+			});
+	});
+</script>
+</head>
+<body>
+<div class="main-wrap">
+	<div class="crumb-wrap"><i class="icon-home"></i> 首页 <i class="icon-angle-right"></i> 用户列表</div>
+	
+	<div class="result-wrap">
+        <div class="result-content">
+            <table border="1">
+            	<tr><caption>用户列表</caption></tr>
+                <tr>
+                    <th>ID</th>
+                    <th>用户名</th>
+                    <th>昵称</th>
+                    <th>上一次登录时间</th>
+                    <th>上一次登录IP</th>
+                    <th>锁定状态</th>
+                    <th>用户所属组别</th>
+                    <th>添加时间</th>
+                    <th>操作</th>
+                </tr>
+                <foreach name='user' item='v'>
+                <tr class="hover">
+                    <td><{$v.id}></td>
+                    <td><{$v.username}></td>
+                    <td><{$v.nickname}></td>
+                    <td><{$v.logintime|date='Y-m-d H:i:s',###}></td>
+                    <td><{$v.loginip}></td>
+                    <td>
+                    	<if condition='$v["lock"]'>锁定
+						<else/>未锁定
+						</if>
+                    </td>
+                    <td>
+                    	<if condition='$v["username"] eq C("RBAC_SUPERADMIN")'>
+								超级管理员
+						<else/>
+                    	<ul>
+                    		<foreach name='v.role' item='value'>
+                    			<li><{$value.name}>(<{$value.remark}>)</li>
+                    		</foreach>
+                    	</ul>
+                    	</if>
+                    </td>
+                    <td><{$v.regtime|date='Y-m-d H:i:s',###}></td>
+                    <td>
+						[<if condition='$v["lock"]'><a href="<{:U(GROUP_NAME.'/RBAC/lockHandle',array('id'=>$v['id'],'lock'=>0))}>">解锁</a>
+						<else/><a href="<{:U(GROUP_NAME.'/RBAC/lockHandle',array('id'=>$v['id'],'lock'=>1))}>" class='<if condition="$v['id'] eq 1">nopurview</if>'>锁定</a>
+						</if>]
+						[<a href="<{:U(GROUP_NAME.'/RBAC/edituser',array('id'=>$v['id']))}>">修改</a>]
+						[<a href="<{:U(GROUP_NAME.'/RBAC/deluser',array('id'=>$v['id']))}>" class='<if condition="$v['id'] eq 1">nodel</if> confirmdel'>删除</a>]
+						
+					</td>
+                </tr>
+
+				</foreach>
+                <tr><td colspan="9" class="list-page"><{$page}></td></tr>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html><!--RBAC用户添加-->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>RBAC用户添加</title>
+<load href='__PUBLIC__/Css/main.css'/>
+<load href='__PUBLIC__/Css/font-awesome.min.css' />
+<load href='__PUBLIC__/Js/jquery-1.8.2.min.js' />
+<script type="text/javascript">
+	$(function(){
+		$('.add-role').click(function(){
+			var obj=$(this).parents('tr').clone();
+			obj.find('.add-role').remove();
+			$('.space').before(obj);
+		});
+	});
+</script>
+</head>
+<body>
+<div class="main-wrap">
+	<div class="crumb-wrap"><i class="icon-home"></i> 首页 <i class="icon-angle-right"></i> 添加用户</div>
+	
+	<div class="result-wrap">
+		<div class="result-content">
+            <form autocomplete="off" action="<{:U(GROUP_NAME.'/RBAC/addUser')}>" id="login_form" method="post" >
+				<table class="config">
+					<tr>
+						<caption>新增用户</caption>
+					</tr>
+					<tr>
+						<td class="td-center"><label for="username">用账号户：</label></td>
+						<td class="td-left"><input id="username" value="" name="username" type="text" /></td>
+					</tr>
+					<tr>
+						<td class="td-center"><label for="nickname">昵称：</label></td>
+						<td class="td-left"><input id="nickname" value="" name="nickname" type="text" /></td>
+					</tr>
+					<tr>
+						<td class="td-center"><label for="password">密码：</label></td>
+						<td class="td-left"><input id="password" value="" size="16" name="password" type="password" /></td>
+					</tr>
+					<tr>
+						<td class="td-center"><label for="repassword">确认密码：</label></td>
+						<td class="td-left"><input id="repassword" value="" size="16" name="repassword" type="password" /></td>
+					</tr>
+					<tr>
+						<td class="td-center"><label for="to">所属角色：</label></td>
+						<td class="td-left">
+							<select name="role_id[]" id="to">
+								<option value="">请选择角色</option>
+								<foreach name="role" item="v">
+									<option value="<{$v['id']}>"><{$v.name}>(<{$v.remark}>)</option>
+								</foreach>
+							</select>
+							<span class="add-role" style="cursor:pointer;">添加一个角色</span>
+						</td>
+					</tr>
+					<tr class="space">
+						<td colspan="2" align="center"><input type="submit" value="添加" id="submit_btn" class="btn" /></td>
+					</tr>
+				</table>
+				
+			</form>
+		</div>
+    </div>
+</div>
+</body>
+</html>
