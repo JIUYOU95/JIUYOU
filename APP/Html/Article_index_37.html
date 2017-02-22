@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<title>九幽的博客</title>
+<meta property="wb:webmaster" content="012433c3abb5c9f4" />
+<meta name="keywords" content="博客，九幽，JIUYOU,IT技术，程序,thinkphp,框架">
+<meta name="description" content="这是一个基于ThinkPHP框架的博客">
+<meta name="author" content="JIUYOU">
+
+<link rel="stylesheet" type="text/css" href="/APP/Modules/Blog/Tpl/Public/Css/base.css" />
+<!--<link rel="stylesheet" type="text/css" href="/APP/Modules/Blog/Tpl/Public/Css/style.css" />-->
+<link rel="stylesheet" type="text/css" href="/APP/Modules/Blog/Tpl/Public/Css/font-awesome.min.css" />
+<script type="text/javascript" src="/APP/Modules/Blog/Tpl/Public/Js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="/APP/Modules/Blog/Tpl/Public/Js/jquery.nicescroll.js"></script>
+<script type="text/javascript" src="/APP/Modules/Blog/Tpl/Public/Js/style.js"></script>
+<link href="/Public/favicon.png" rel="icon" type="image/x-icon" />
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+</head>
+<body>
+<header>
+	<div class="hdbg"></div>
+	<div class="hdbg2"></div>
+	<div class="head_about">
+		<div class="logo">
+			<!-- <div class="player">
+				<div id="pic" center="center"></div>
+
+			</div>
+			<audio src="/Pulic/Music/嘲笑鸟.mp3" controls="controls" preload="auto"></audio> -->
+			 <!DOCTYPE html>  
+<html>  
+<head>  
+<meta charset="UTF-8">  
+<title>HTML5环形音乐播放器</title>    
+</head>
+<style type="text/css">
+@keyframes spin{
+    0%{transform:rotate(0deg);}
+    100%{transform:rotate(-360deg);}
+}
+button:hover{color: #26C5CB;}
+#container:hover .cover{opacity: .9;  }  
+#container{margin:0 auto 15px;width:180px;height:180px;perspective:550px;
+    -webkit-perspective:550px;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+}
+#player{width:180px;height:180px;background:#fff;border-radius:50%;overflow:hidden;
+    box-shadow:2px 2px 20px 0 rgba(0,0,0,.3);z-index:300;backface-visibility:hidden;
+    -webkit-backface-visibility: hidden;
+    transition: transform .5s ease-in-out;
+    -webkit-transition: -webkit-transform .5s ease-in-out;}
+#player img{width:180px;height:180px;}
+ #player,.cover{position:absolute; margin:auto;top:0;left:0;right:0;bottom:0;}
+}
+.cover{opacity: .3;transition:all .5s ease-in-out;-webkit-transition:all .5s ease-in-out;}
+.controls{position:relative;top:68px;width:100%;color:#fff;text-align:center;margin:auto;}
+#play-pause {width:46px;height:46px;
+    transition:all .5s ease-in-out;
+    -webkit-transition:all .5s ease-in-out;}
+button{color:#fff;background:transparent;border:0;outline:0;cursor:pointer;text-align:center;
+    text-shadow:1px 1px 3px #000;
+    transition:all .3s ease-in-out;
+    -webkit-transition:all .3s ease-in-out;}
+</style>
+<body>  
+<div id="container">  
+    <div id="player">  
+        <audio id="audio" controls loop>  
+            <source src="/Public/Music/嘲笑鸟.mp3" type="audio/mpeg" codecs="mp3"></source>
+            <source src="Here To Stay.mp3" type="audio/mpeg" codecs="mp3"></source>          
+        </audio>  
+        <img src="/Public/Uploads/thumb_576a228bdaccb.jpg">   
+        <div class="cover">  
+            <div class="controls">               
+                <!-- 暂停 -->  
+                <button id="play-pause" title="暂停" onclick="togglePlayPause()"><i class="icon-play icon-3x"></i></button>  
+            </div>  
+        </div> 
+    </div>
+</div>  
+<script type="text/javascript" src="/APP/Modules/Blog/Tpl/Public/Js/music.js"></script>
+</body>
+</html>  
+		</div>
+		<div class="title"><a href="http://www.itnetve.top/">九幽的博客</a></div>
+		<div class="about">分享音乐，分享心情！</div>
+	</div>
+	<div class="head_nav" id="head_nav">
+		<ul class="nav">
+			<li><a href="http://www.itnetve.top/">首页</a></li>
+			<li><a href="/nav16.html">HTML/CSS</a>
+					<ul>
+						<li><a href="/nav1.html">HTML</a></li><li><a href="/nav2.html">CSS</a></li>					</ul>
+				</li><li><a href="/nav3.html">JavaScritp</a>
+					<ul>
+						<li><a href="/nav13.html">JQuery</a></li>					</ul>
+				</li><li><a href="/nav4.html">PHP</a>
+					<ul>
+						<li><a href="/nav8.html">ThinkPHP</a></li><li><a href="/nav9.html">Wordpress</a></li>					</ul>
+				</li><li><a href="/nav14.html">MySql</a>
+					<ul>
+											</ul>
+				</li><li><a href="/nav17.html">System</a>
+					<ul>
+						<li><a href="/nav5.html">Windows</a></li><li><a href="/nav6.html">Linux</a></li>					</ul>
+				</li><li><a href="/nav7.html">Game</a>
+					<ul>
+						<li><a href="/nav10.html">逆战</a></li><li><a href="/nav11.html">英雄联盟</a></li>					</ul>
+				</li><li><a href="/nav15.html">下载</a>
+					<ul>
+											</ul>
+				</li><li><a href="/nav12.html">其他</a>
+					<ul>
+											</ul>
+				</li>			<li><a href="/Message.html">留言板</a></li>
+		</ul>
+		<!-- <div class="sign">
+			<span><a href="/login.html" style="color:#fff;">登录&nbsp;<i class="icon-signin"></i></a></span>
+				</li>
+					</div> -->
+	</div>
+</header>
+<script type="text/javascript">
+$.fn.smartFloat = function() {
+	var position = function(element) {
+		var top = element.position().top, pos = element.css("position");
+		$(window).scroll(function() {
+			var scrolls = $(this).scrollTop();
+			if (scrolls > top) {
+				if (window.XMLHttpRequest) {
+					element.css({
+						position:"fixed",
+						top:0,
+						width:"100%",
+					});	
+				} else {
+					element.css({
+						top:scrolls,
+
+
+					});	
+				}
+			}else {
+				element.css({
+					position:pos,				
+				});	
+			}
+		});
+};
+	return $(this).each(function() {
+		position($(this));						 
+	});
+};
+//绑定
+$("#head_nav").smartFloat();
+</script>
+
+<link rel="stylesheet" type="text/css" href="/Public/kindeditor/plugins/code/shCoreDefault.css" />
+<script type="text/javascript" src="/Public/kindeditor/plugins/code/shCoreDefault.js"></script>
+<script type="text/javascript">
+	SyntaxHighlighter.all();
+</script>
+
+
+<div class="content">
+	
+<aside class="left">
+	<!--头部名称-->
+	<div class="cblogo">
+		<div class="avatar"><a href="http://www.itnetve.top/" title=""><span>九幽的博客</span></a></div>
+	</div>
+	<div class="m-nav">
+		<ul class="nav">
+			<li><a href="http://www.itnetve.top/">首页</a></li>
+			<li><a href="/nav16.html">HTML/CSS</a>
+				<ul>
+					<li><a href="/nav1.html">HTML</a></li><li><a href="/nav2.html">CSS</a></li>				</ul>
+			</li><li><a href="/nav3.html">JavaScritp</a>
+				<ul>
+					<li><a href="/nav13.html">JQuery</a></li>				</ul>
+			</li><li><a href="/nav4.html">PHP</a>
+				<ul>
+					<li><a href="/nav8.html">ThinkPHP</a></li><li><a href="/nav9.html">Wordpress</a></li>				</ul>
+			</li><li><a href="/nav14.html">MySql</a>
+				<ul>
+									</ul>
+			</li><li><a href="/nav17.html">System</a>
+				<ul>
+					<li><a href="/nav5.html">Windows</a></li><li><a href="/nav6.html">Linux</a></li>				</ul>
+			</li><li><a href="/nav7.html">Game</a>
+				<ul>
+					<li><a href="/nav10.html">逆战</a></li><li><a href="/nav11.html">英雄联盟</a></li>				</ul>
+			</li><li><a href="/nav15.html">下载</a>
+				<ul>
+									</ul>
+			</li><li><a href="/nav12.html">其他</a>
+				<ul>
+									</ul>
+			</li>		</ul>
+	</div>
+	<div class="sidebar">
+		<!--座右铭-->
+		<section class="topspaceinfo">
+			<h1>我的座右铭</h1>
+			<p>人生的价值，并不是用时间，而是用深度去衡量的。 —JIUYOU</p>
+		</section>
+		<!--公告-->
+		<div class="userinfo">
+			<p class="notice">公告：嗨！欢迎来到九幽的博客。</p>
+		</div>
+		<!--搜索-->
+		<section class="widget widget_search">
+			<form role="search" id="search-form" action="/keywords.html" method="get">
+				<div class="input-group">
+					<input type="text" id="s" name="keywords" placeholder />
+					<span class="input-group-btn">
+						<input type="submit" value="查询" class="so-input" style="margin-top:10px;" />
+					</span>
+				</div>
+			</form>
+		</section>
+		<!--近期文章-->
+		<section class="widget widget_recent_entries">
+
+			<h2><i class="icon-list"></i>近期文章</h2>
+			<ul>
+				<li><a href="/Article/94.html" title="URL中文乱码问题解决">URL中文乱码问题解决</a><time>2017/02/07</time></li><li><a href="/Article/93.html" title="考题时间限制及自动提交">考题时间限制及自动提交</a><time>2017/01/09</time></li><li><a href="/Article/89.html" title="html5 video控件制作：一">html5 video控件制作：一</a><time>2017/01/02</time></li><li><a href="/Article/90.html" title="html5 video控件制作：二">html5 video控件制作：二</a><time>2017/01/02</time></li><li><a href="/Article/91.html" title="html5 video控件制作：三">html5 video控件制作：三</a><time>2017/01/02</time></li><li><a href="/Article/92.html" title="Ajax将成功后的二维数组在前台显示">Ajax将成功后的二维数组在前台显示</a><time>2017/01/02</time></li><li><a href="/Article/88.html" title="Js浏览器兼容">Js浏览器兼容</a><time>2016/12/12</time></li><li><a href="/Article/87.html" title="多维数组转换为一维数组">多维数组转换为一维数组</a><time>2016/12/10</time></li><li><a href="/Article/86.html" title="简单生成二维码图片-phpqrcode">简单生成二维码图片-phpqrcode</a><time>2016/12/08</time></li><li><a href="/Article/83.html" title="CentOS下Mysql导入导出命令">CentOS下Mysql导入导出命令</a><time>2016/11/05</time></li><li><a href="/Article/85.html" title="CentOS6.5安装LAMP安装包">CentOS6.5安装LAMP安装包</a><time>2016/11/05</time></li><li><a href="/Article/84.html" title="CentOS下mysql数据库常用命令总结">CentOS下mysql数据库常用命令总结</a><time>2016/11/05</time></li><li><a href="/Article/81.html" title="CentOS 6.5编译搭建LAMP环境（四，Mysql篇）">CentOS 6.5编译搭建LAMP环境（四，Mysql篇）</a><time>2016/11/03</time></li><li><a href="/Article/78.html" title="CentOS 6.5编译搭建LAMP环境（一，环境准备篇）">CentOS 6.5编译搭建LAMP环境（一，环境准备篇）</a><time>2016/11/03</time></li><li><a href="/Article/79.html" title="CentOS 6.5编译搭建LAMP环境（二，环境安装篇）">CentOS 6.5编译搭建LAMP环境（二，环境安装篇）</a><time>2016/11/03</time></li>			</ul>
+		</section>
+		<section class="widget widget_recent_comments">
+			<h2><i class="icon-comment"></i>评论</h2>
+<!-- 多说最新评论 start -->
+	<div class="ds-recent-comments" data-num-items="10" data-show-avatars="0" data-show-time="1" data-show-title="1" data-show-admin="0" data-excerpt-length="20"></div>
+<!-- 多说最新评论 end -->
+		</section>
+		<!--文章归档-->
+		<section class="widget widget_archive">
+			<h2><i class="icon-list-alt"></i>文章归档</h2>
+			<ul>
+				<li><a href="/Data/2017/02.html" title="2017年02月(1)">2017年02月(1)</a></li><li><a href="/Data/2017/01.html" title="2017年01月(5)">2017年01月(5)</a></li><li><a href="/Data/2016/12.html" title="2016年12月(3)">2016年12月(3)</a></li><li><a href="/Data/2016/11.html" title="2016年11月(10)">2016年11月(10)</a></li><li><a href="/Data/2016/10.html" title="2016年10月(10)">2016年10月(10)</a></li><li><a href="/Data/2016/09.html" title="2016年09月(6)">2016年09月(6)</a></li><li><a href="/Data/2016/08.html" title="2016年08月(9)">2016年08月(9)</a></li><li><a href="/Data/2016/07.html" title="2016年07月(30)">2016年07月(30)</a></li><li><a href="/Data/2016/06.html" title="2016年06月(18)">2016年06月(18)</a></li>			</ul>
+		</section>
+		<!--分类目录-->
+		<section class="widget widget_categories">
+			<h2><i class="icon-list-ul"></i>分类目录</h2>
+			<ul>
+				<li><a href="/nav1.html" title="HTML(2)">HTML(2)</a></li><li><a href="/nav2.html" title="CSS(7)">CSS(7)</a></li><li><a href="/nav3.html" title="JavaScritp(12)">JavaScritp(12)</a></li><li><a href="/nav4.html" title="PHP(10)">PHP(10)</a></li><li><a href="/nav5.html" title="Windows(1)">Windows(1)</a></li><li><a href="/nav6.html" title="Linux(11)">Linux(11)</a></li><li><a href="/nav8.html" title="ThinkPHP(15)">ThinkPHP(15)</a></li><li><a href="/nav9.html" title="Wordpress(7)">Wordpress(7)</a></li><li><a href="/nav10.html" title="逆战(2)">逆战(2)</a></li><li><a href="/nav11.html" title="英雄联盟(1)">英雄联盟(1)</a></li><li><a href="/nav12.html" title="其他(10)">其他(10)</a></li><li><a href="/nav13.html" title="JQuery(3)">JQuery(3)</a></li><li><a href="/nav14.html" title="MySql(9)">MySql(9)</a></li><li><a href="/nav15.html" title="下载(2)">下载(2)</a></li>			</ul>
+		</section>
+		
+		<!--日历-->
+		<!--<section class="widget widget_calender">
+			<div class="calender-wrap"></div>
+		</section>-->
+		<!--标签-->
+		<section class="widget widget_tag_cloud">
+			<h2><i class="icon-bookmark"></i>标签</h2>
+			<div class="tagcloud" id="tagcloud">
+				<a href="/tags/乱码解决.html">乱码解决</a><a href="/tags/Ajax.html">Ajax</a><a href="/tags/video.html">video</a><a href="/tags/二维码.html">二维码</a><a href="/tags/命令.html">命令</a><a href="/tags/导入导出.html">导入导出</a><a href="/tags/office.html">office</a><a href="/tags/CentOS.html">CentOS</a><a href="/tags/编码.html">编码</a><a href="/tags/数据合并.html">数据合并</a><a href="/tags/数组转换.html">数组转换</a><a href="/tags/Error信息.html">Error信息</a><a href="/tags/数据转换.html">数据转换</a><a href="/tags/电子文档.html">电子文档</a><a href="/tags/表单.html">表单</a><a href="/tags/循环嵌套.html">循环嵌套</a><a href="/tags/动态时间.html">动态时间</a><a href="/tags/key与value.html">key与value</a><a href="/tags/方法.html">方法</a><a href="/tags/文件上传.html">文件上传</a><a href="/tags/类的引用.html">类的引用</a><a href="/tags/效果.html">效果</a><a href="/tags/登录.html">登录</a><a href="/tags/状态机制.html">状态机制</a><a href="/tags/编程语言.html">编程语言</a><a href="/tags/瀑布流.html">瀑布流</a><a href="/tags/环境搭建.html">环境搭建</a><a href="/tags/API.html">API</a><a href="/tags/第三方登录.html">第三方登录</a><a href="/tags/传值.html">传值</a><a href="/tags/下载.html">下载</a><a href="/tags/框架.html">框架</a><a href="/tags/统计.html">统计</a><a href="/tags/主题.html">主题</a><a href="/tags/分类.html">分类</a><a href="/tags/自定义页面.html">自定义页面</a><a href="/tags/菜单.html">菜单</a><a href="/tags/图片输出.html">图片输出</a><a href="/tags/html5.html">html5</a><a href="/tags/数组合并.html">数组合并</a><a href="/tags/猎场BOSS.html">猎场BOSS</a><a href="/tags/存储过程.html">存储过程</a><a href="/tags/触发器.html">触发器</a><a href="/tags/动画.html">动画</a><a href="/tags/浏览器兼容.html">浏览器兼容</a><a href="/tags/自适应.html">自适应</a><a href="/tags/文本控制.html">文本控制</a><a href="/tags/截取字符.html">截取字符</a><a href="/tags/代码高亮.html">代码高亮</a><a href="/tags/无限级分类.html">无限级分类</a><a href="/tags/JS验证.html">JS验证</a><a href="/tags/jquery.html">jquery</a><a href="/tags/五杀.html">五杀</a><a href="/tags/Kindeditor.html">Kindeditor</a><a href="/tags/逆战BUG.html">逆战BUG</a><a href="/tags/Explorer.html">Explorer</a><a href="/tags/分级递归.html">分级递归</a><a href="/tags/模糊查询.html">模糊查询</a><a href="/tags/独立分组.html">独立分组</a><a href="/tags/字符分割.html">字符分割</a><a href="/tags/分页.html">分页</a><a href="/tags/数据库连接.html">数据库连接</a>			</div>
+		</section>
+		
+	</div>
+</aside>
+
+	<div class="right">
+		<div class="m-header">
+			<a class="m-menu jsc-sidebar-trigger" id="showLeftPush"></a>
+			<a href="">九幽的博客</a>
+			<a href="" class="m-admin"></a>
+		</div>
+		<div class="blogitem">
+			<div class="place">
+				<a href=""><i class="icon-home"></i>&nbsp首页</a>&nbsp<i class="icon-angle-right"></i>
+								<a href="/nav4.html">PHP</a>&nbsp<i class="icon-angle-right"></i><a href="/nav8.html">ThinkPHP</a>&nbsp			</div>
+			<article>
+				<h2 class="btitle">thinkphp框架了解</h2>
+				<div class="textfoot">
+					<p style="float:left;"><i class=" icon-user"></i><span>JIUYOU</span></p>
+					<span><time datetime="">2016/07/11</time></span>
+					<span>浏览：<script type="text/javascript" src="/Blog/Article/ClinkNum/id/37.html"></script>人</span>
+					<span>评论<span class="ds-thread-count" data-thread-key="37" data-count-type="comments"></span>
+				</div>
+				<div class="text">
+					<span style="color:#E53333;">简介</span><br />
+<p>
+	ThinkPHP是一个快速、简单的基于MVC和面向对象的轻量级PHP开发框架，遵循Apache2开源协议发布，从诞生以来一直秉承简洁实用的设计原则，在保持出色的性能和至简的代码的同时，尤其注重开发体验和易用性，并且拥有众多的原创功能和特性，为WEB应用开发提供了强有力的支持。
+</p>
+<p>
+	<span style="color:#E53333;">目录结构</span><br />
+ThinkPHP最新版本可以在官方网站（http://thinkphp.cn/down/framework.html）或者Github（https://github.com/liu21st/thinkphp/downloads）下载。<br />
+把下载后的压缩文件解压到你的WEB目录（或者任何目录都可以），框架的目录结构为：
+</p>
+<pre class="brush:php;toolbar:false">├─ThinkPHP.php 框架入口文件
+├─Common 框架公共文件
+├─Conf 框架配置文件
+├─Extend 框架扩展目录
+├─Lang 核心语言包目录
+├─Lib 核心类库目录
+│ ├─Behavior 核心行为类库
+│ ├─Core 核心基类库
+│ ├─Driver 内置驱动
+│ │ ├─Cache 内置缓存驱动
+│ │ ├─Db 内置数据库驱动
+│ │ ├─TagLib 内置标签驱动
+│ │ └─Template 内置模板引擎驱动
+│ └─Template 内置模板引擎
+└─Tpl 系统模板目录</pre>
+注意，框架的公共入口文件ThinkPHP.php是不能直接执行的，该文件只能在项目入口文件中调用才能正常运行（后面会讲到），这是很多新手很容易犯的一个错误。
+<p>
+	<br />
+</p>
+<p>
+	<span style="color:#E53333;"></span><span style="color:#E53333;">入口文件</span><br />
+在开始之前，你需要一个Web服务器和PHP运行环境，如果你暂时还没有，我们推荐使用集成开发环境WAMPServer（是一个集成了Apache、PHP和MySQL的开发套件，而且支持多个PHP版本、MySQL版本和Apache版本的切换）来使用ThinkPHP进行本地开发和测试。<br />
+接下来我们先在WEB根目录下面创建一个app子目录（这个app就是我们的项目名），然后在该目录下面创建一个index.php文件，添加一行简单的代码：
+</p>
+<pre class="brush:js;toolbar:false">&lt;?php
+require ‘/ThinkPHP框架所在目录/ThinkPHP.php';
+?&gt;</pre>
+这行代码的作用就是加载ThinkPHP框架的入口文件ThinkPHP.php，这是所有基于ThinkPHP开发应用的第一步。<br />
+然后，在浏览器中访问这个入口文件。<br />
+<pre class="brush:html;toolbar:false">http://localhost/app/</pre>
+一般Web服务器的默认文件是index.php，所以我们可以不需要在URL地址中加上index.php。运行后我们会看到欢迎页面，而且已经自动生成了项目目录，目录结构如下：
+<p>
+	<br />
+</p>
+<p>
+	<br />
+</p>
+<pre class="brush:php;toolbar:false">├─index.php 项目入口文件
+├─Common 项目公共文件目录
+├─Conf 项目配置目录
+├─Lang 项目语言目录
+├─Lib 项目类库目录
+│ ├─Action Action类库目录
+│ ├─Behavior 行为类库目录
+│ ├─Model 模型类库目录
+│ └─Widget Widget类库目录
+├─Runtime 项目运行时目录
+│ ├─Cache 模板缓存目录
+│ ├─Data 数据缓存目录
+│ ├─Logs 日志文件目录
+│ └─Temp 临时缓存目录
+└─Tpl 项目模板目录</pre>
+如果你希望项目的入口文件移动到app目录的外面，那么只需要修改入口文件index.php的内容为：
+<p>
+	<br />
+</p>
+<p>
+	<br />
+</p>
+<pre class="brush:php;toolbar:false">&lt;?php
+define(‘APP_NAME’,’app’);
+define(‘APP_PATH’,’./app/’);
+require ‘/ThinkPHP框架所在目录/ThinkPHP.php';</pre>
+APP_NAME和APP_PATH分部用于定义项目名和项目目录，项目名通常就是指项目的目录名称。<br />
+移动并修改完项目的入口文件后，我们就可以通过<br />
+<pre class="brush:html;toolbar:false">http://localhost/</pre>
+访问app项目了。当然你也可以在Web根目录下面创建多个子目录来部署多个项目。
+<p>
+	<br />
+</p>
+<p>
+	<span style="color:#E53333;"></span><span style="color:#E53333;">调试模式</span><br />
+ThinkPHP的运行模式包括调试模式和部署模式，默认情况下是运行在部署模式下面。部署模式下面性能优先，并且尽可能少地抛出错误信息，调试模式则以除错方便优先，关闭任何缓存，而且尽可能多的抛出错误信息，所以对性能有一定的影响。部署模式采用了项目编译机制，第一次运行会对核心和项目相关文件进行编译缓存，由于编译后会影响开发过程中对配置文件、函数文件和数据库修改的生效（除非你修改后手动清空Runtime下面的缓存文件）。因此为了避免以上问题，我们强烈建议新手在使用ThinkPHP开发的过程中使用调试模式，这样可以更好的获取错误提示和避免一些不必要的问题和烦恼。<br />
+开启调试模式很简单，我们只需要在入口文件的开头加上一行常量定义代码：
+</p>
+<pre class="brush:php;toolbar:false">&lt;?php
+define(‘APP_DEBUG’,TRUE); // 开启调试模式
+require ‘/ThinkPHP框架所在目录/ThinkPHP.php';</pre>
+开发完成后，我们实际进行项目部署的时候，删除这行常量定义代码即可，或者改成：
+<p>
+	<br />
+</p>
+<p>
+	<br />
+</p>
+<pre class="brush:php;toolbar:false">define(‘APP_DEBUG’,false); // 关闭调试模式</pre>
+配置<br />
+每个项目都有一个独立的配置文件（位于项目目录的Conf/config.php），配置文件的定义格式均采用PHP返回数组的方式，例如：<br />
+<pre class="brush:php;toolbar:false">// 项目配置文件
+return array(
+‘配置参数’ =&gt; ‘配置值’,
+// 更多配置参数
+//…
+);</pre>
+一旦有需要，我们就可以在项目配置文件中添加相关配置项目。通常我们提到的添加配置项目，就是指在项目配置文件中添加：
+<p>
+	<br />
+</p>
+<p>
+	<br />
+</p>
+<pre class="brush:php;toolbar:false">‘配置参数’ =&gt; ‘配置值’,</pre>
+<span style="color:#3F3E3C;font-family:&quot;line-height:24px;background-color:#FFFFFF;">配置值可以支持包括字符串、数字、布尔值和数组在内的数据，通常我们建议配置参数均使用大写定义。如果有需要，我们还可以为项目定义其他的配置文件。</span> 
+<p>
+	<br />
+</p>
+<p>
+	<span style="color:#E53333;"></span><span style="color:#E53333;">控制器</span><br />
+需要为每个模块定义一个控制器类，控制器类的命名规范是：<br />
+模块名+Action.class.php （模块名采用驼峰法并且首字母大写）<br />
+系统的默认模块是Index，对应的控制器就是项目目录下面的Lib/Action/IndexAction.class.php，类名和文件名一致。默认操作是index，也就是控制器的一个public方法。初次生成项目目录结构的时候，系统已经默认生成了一个默认控制器（就是之前看到的欢迎页面），我们把index方法改成下面的代码：
+</p>
+<pre class="brush:php;toolbar:false">class IndexAction extends Action {
+public function index(){
+echo ‘hello,world!';
+}
+}</pre>
+控制器必须继承Action类，一个模块可以包括多个操作方法。如果你的操作方法是protected或者private类型的话，是无法直接通过URL访问到该操作的。<br />
+<br />
+<span style="color:#E53333;">URL请求</span><br />
+入口文件是项目的单一入口，对项目的所有请求都定向到项目的入口文件，系统会从URL参数中解析当前请求的模块和操作，我们之前访问的URL地址中没有任何参数，因此系统会访问默认模块（Index）的默认操作（index），因此下面的访问和之前是等效的：<br />
+<pre class="brush:html;toolbar:false">http://localhost/app/index.php/Index/index</pre>
+这种URL模式就是系统默认的PATHINFO模式，不同的URL模式获取模块和操作的方法不同，ThinkPHP支持的URL模式有四种：普通模式、PATHINFO、REWRITE和兼容模式。<br />
+<span style="color:#337FE5;">普通模式</span>：也就是传统的GET传参方式来指定当前访问的模块和操作，例如：<br />
+<pre class="brush:html;toolbar:false">http://localhost/app/?m=module&amp;a=action&amp;var=value</pre>
+m参数表示模块，a操作表示操作（模块和操作的URL参数名称是可以配置的），后面的表示其他GET参数。<br />
+<br />
+<span style="color:#337FE5;">PATHINFO模式</span>：是系统的默认URL模式，提供了最好的SEO支持，系统内部已经做了环境的兼容处理，所以能够支持大多数的主机环境。对应上面的URL模式，PATHINFO模式下面的URL访问地址是：<br />
+<pre class="brush:html;toolbar:false">http://localhost/app/index.php/module/action/var/value/</pre>
+PATHINFO地址的第一个参数表示模块，第二个参数表示操作。<br />
+PATHINFO模式下面，URL是可定制的，例如，通过下面的配置：<br />
+‘URL_PATHINFO_DEPR’=&gt;’-‘, // 更改PATHINFO参数分隔符<br />
+<br />
+我们还可以支持下面的URL访问：<br />
+<pre class="brush:html;toolbar:false">http://localhost/app/index.php/module-action-var-value/</pre>
+<span style="color:#337FE5;">REWRITE模式</span>：是在PATHINFO模式的基础上添加了重写规则的支持，可以去掉URL地址里面的入口文件index.php，但是需要额外配置WEB服务器的重写规则。<br />
+如果是Apache则需要在入口文件的同级添加.htaccess文件，内容如下：<br />
+<pre class="brush:html;toolbar:false">&lt;IfModule mod_rewrite.c&gt;
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ index.php/$1 [QSA,PT,L]
+&lt;/IfModule&gt;</pre>
+接下来，就可以用下面的URL地址访问了：
+<p>
+	<br />
+</p>
+<p>
+	<br />
+</p>
+<pre class="brush:html;toolbar:false">http://localhost/app/module/action/var/value/</pre>
+<span style="color:#337FE5;"></span><span style="color:#337FE5;">兼容模式</span>：是用于不支持PATHINFO的特殊环境，URL地址是：
+<p>
+	<br />
+</p>
+<p>
+	<br />
+</p>
+<pre class="brush:html;toolbar:false">http://localhost/app/?s=/module/action/var/value/</pre>
+兼容模式配合Web服务器重写规则的定义，可以达到和REWRITE模式一样的URL效果。<br />
+<br />
+<span style="color:#E53333;">视图</span><br />
+ThinkPHP内置了一个编译型模板引擎，也支持原生的PHP模板，并且还提供了包括Smarty在内的模板引擎驱动。和Smarty不同，ThinkPHP在渲染模板的时候如果不指定模板，则会采用系统默认的定位规则，其定义规范是 Tpl/模块名/操作名.html，所以，Index模块的index操作的默认模板文件位于项目目录下面的Tpl/Index/index.html。<br />
+例如：<br />
+<pre class="brush:php;toolbar:false">&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;hello {$name}&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+hello, {$name}!
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+要输出视图，必须在控制器方法中进行模板渲染输出操作，例如：
+<p>
+	<br />
+</p>
+<p>
+	<br />
+</p>
+<pre class="brush:php;toolbar:false">class IndexAction extends Action {
+public function index(){
+$this-&gt;name = ‘thinkphp'; // 进行模板变量赋值
+$this-&gt;display();
+}
+}</pre>
+display方法中我们没有指定任何模板，所以按照系统默认的规则输出了Index/index.html模板文件。<br />
+接下来，我们在浏览器中输入<br />
+<pre class="brush:html;toolbar:false">http://localhost/app/</pre>
+浏览器中会输出
+<p>
+	<br />
+</p>
+<p>
+	<br />
+</p>
+<pre class="brush:html;toolbar:false">hello,thinkphp!</pre>
+<span style="color:#E53333;"></span><span style="color:#E53333;">读取数据</span><br />
+在开始之前，我们首先在数据库thinkphp中创建一个think_data数据表（以mysql数据库为例）：<br />
+<pre class="brush:php;toolbar:false">CREATE TABLE IF NOT EXISTS `think_data` (
+`id` int(8) unsigned NOT NULL AUTO_INCREMENT,
+`data` varchar(255) NOT NULL,
+PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 ;
+INSERT INTO `think_data` (`id`, `data`) VALUES
+(1, ‘thinkphp’),
+(2, ‘php’),
+(3, ‘framework’);</pre>
+如果我们需要读取数据库中的数据，就需要在项目配置文件中添加数据库连接信息如下：<br />
+// 添加数据库配置信息<br />
+<pre class="brush:php;toolbar:false">‘DB_TYPE’ =&gt; ‘mysql’, // 数据库类型
+‘DB_HOST’ =&gt; ‘localhost’, // 服务器地址
+‘DB_NAME’ =&gt; ‘thinkphp’, // 数据库名
+‘DB_USER’ =&gt; ‘root’, // 用户名
+‘DB_PWD’ =&gt; ”, // 密码
+‘DB_PORT’ =&gt; 3306, // 端口
+‘DB_PREFIX’ =&gt; ‘think_’, // 数据库表前缀</pre>
+或者采用如下配置
+<p>
+	<br />
+</p>
+<p>
+	<br />
+</p>
+<p>
+	<br />
+</p>
+<pre class="brush:php;toolbar:false">‘DB_DSN’ =&gt; ‘mysql://root@localhost:3306/thinkphp’</pre>
+使用DB_DSN方式定义可以简化配置参数，DSN参数格式为：<br />
+数据库类型://用户名:密码@数据库地址:数据库端口/数据库名<br />
+如果两种配置参数同时存在的话，DB_DSN配置参数优先。<br />
+<br />
+接下来，我们修改下控制器方法，添加读取数据的代码：<br />
+<pre class="brush:php;toolbar:false">class IndexAction extends Action {
+public function index(){
+$Data = M(‘Data’); // 实例化Data数据模型
+$this-&gt;data = $Data-&gt;select();
+$this-&gt;display();
+}
+}</pre>
+这里用到了M函数，是ThinkPHP内置的实例化模型的方法，而且用M方法实例化模型不需要创建对应的模型类，你可以理解为M方法是直接在操作底层的Model类，而Model类具备基本的CURD操作方法。<br />
+M(‘Data’) 实例化后，就可以对think_data数据表（think_ 是我们在项目配置文件中定义的数据表前缀）进行操作（包括CURD）了，M函数的用法还有很多，我们以后会深入了解。<br />
+定义好控制器后，我们修改模板文件，添加数据输出标签如下：<br />
+<pre class="brush:html;toolbar:false">&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Select Data&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;volist name=”data” id=”vo”&gt;
+{$vo.id}–{$vo.data}&lt;br/&gt;
+&lt;/volist&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+volist标签是内置模板引擎用于输出数据集的标签。{$vo.id} 和 {$vo.data} 的用法和Smarty类似，就是用于输出数据的字段，这里就表示输出think_data表的id和data字段的值。<br />
+我们访问<br />
+<pre class="brush:html;toolbar:false">http://localhost/app/</pre>
+会输出
+<p>
+	<br />
+</p>
+<p>
+	<br />
+</p>
+<pre class="brush:html;toolbar:false">1–thinkphp
+2–php
+3–framework</pre>
+如果发生错误，检查你是否开启了调试模式或者清空Runtime目录下面的缓存文件。
+<p>
+	<br />
+</p>					<div class="zhuanzai">
+						<p>转载请注明：<a href="http://www.itnetve.top/">九幽的博客</a>»<a href="">thinkphp框架了解</a></p>
+						<p>本文地址：http://www.itnetve.top/Article/37.html</p>
+						<p style="color:#008b8b;">关键字：thinkphp,框架</p>
+						<p style="color:red;">类型：本站原创</p>
+					</div>
+					<div class="move">
+						<a href="/Article/36.html"><span>上一篇</span>WordPress 获取文章的评论人数</a>
+												<a href="/Article/94.html"><span>下一篇</span>URL中文乱码问题解决</a>
+											</div>
+				</div>
+				<div class="textfoot"><span></span></div>
+			</article>
+			<div id="comments">
+<div class="ds-thread" data-thread-key="37" data-title="thinkphp框架了解" data-url="http://www.itnetve.top/Article/37.html"></div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div id="back-to-top" class="red" data-scroll="body" style="display:none;">
+	<svg id="point-up" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
+		<path d="M23.588 17.637c-0.359-0.643-0.34-1.056-2.507-3.057 0.012-7.232-4.851-12.247-5.152-12.55 0-0.010 0-0.015 0-0.015s-0.003 0.003-0.007 0.007l-0.007-0.007c0 0 0 0.005 0 0.015-0.299 0.305-5.141 5.342-5.097 12.575-2.158 2.010-2.138 2.423-2.493 3.068-0.65 1.178-0.481 5.888 0.132 6.957 0.613 1.069 1.629 0.293 1.977-0.004 0.348-0.298 1.885-2.264 2.263-2.176 0 0 0.465-0.090 0.989 0.414 0.518 0.498 1.462 0.966 2.27 1.033 0 0.001 0 0.002-0 0.003 0.005-0.001 0.010-0.001 0.015-0.002 0.005 0 0.010 0.001 0.015 0.001 0-0.001-0-0.002 0-0.003 0.808-0.070 1.749-0.543 2.265-1.043 0.522-0.507 0.988-0.419 0.988-0.419 0.378-0.090 1.923 1.869 2.272 2.165 0.35 0.296 1.369 1.067 1.977-0.005 0.608-1.072 0.756-5.783 0.101-6.958v0 0zM15.95 14.86c-1.349 0.003-2.445-1.112-2.448-2.492-0.003-1.38 1.088-2.5 2.437-2.503 1.349-0.003 2.445 1.112 2.448 2.492 0.003 1.379-1.088 2.5-2.437 2.503v0 0zM17.76 24.876c-0.615 0.474-1.236 0.633-1.801 0.626-0.566 0.009-1.187-0.147-1.804-0.617-0.553-0.403-1.047-0.348-1.308 0.003-0.261 0.351-0.169 2.481 0.152 2.939 0.321 0.458 0.697-0.298 1.249-0.327 0.552-0.028 1.011 1.103 1.221 1.75 0.107 0.331 0.274 0.633 0.5 0.654 0.226-0.023 0.392-0.326 0.497-0.657 0.207-0.648 0.661-1.781 1.213-1.756 0.553 0.026 0.932 0.78 1.251 0.321 0.319-0.459 0.401-2.59 0.139-2.94-0.262-0.35-0.757-0.403-1.308 0.003v0 0z" fill="#CCCCCC" />
+	</svg>
+</div>
+<div class="link">
+	<ul>
+		<h2>友情链接</h2>
+		<li><a href="https://ruke.xyz/" title="ruke驿站" target="_blank">ruke驿站</a></li><li><a href="http://images.itnetve.top/" title="九幽的图片" target="_blank">九幽的图片</a></li><li><a href="http://www.jhjlwang.com/" title="饥荒交流网 " target="_blank">饥荒交流网 </a></li><li><a href="http://www.hostusvps.com/" title="hostus优惠码" target="_blank">hostus优惠码</a></li>	</ul>
+</div>
+<footer>
+	<section class="visitor">
+		<h2>最近访客</h2>
+		<ul class="ds-recent-visitors" data-num-items="20"></ul>
+	</section>
+	<div class="Copyright">
+		<p>CopyRight &copy 2016 九幽IT 版权所有 <a href="http://www.miitbeian.gov.cn/" target="_blank">粤ICP备16060013号-1</a><span><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1259858691'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1259858691%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script></span></p>
+	</div>
+</footer>
+<div class="m-footer">
+	<div class="Copyright">
+		<p>CopyRight &copy 2016 九幽IT 版权所有 <a href="http://www.miitbeian.gov.cn/" target="_blank">粤ICP备16060013号-1</a><span><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1259858691'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1259858691%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script></span></p>
+	</div>
+</div>
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"itwoyou"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
+<script type="text/javascript" src="/APP/Modules/Blog/Tpl/Public/Js/niceScroll.js"></script>
+</body>
+</html>

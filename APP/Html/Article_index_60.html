@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<title>九幽的博客</title>
+<meta property="wb:webmaster" content="012433c3abb5c9f4" />
+<meta name="keywords" content="博客，九幽，JIUYOU,IT技术，程序,chm,easy chm,电子文档">
+<meta name="description" content="这是一个基于ThinkPHP框架的博客">
+<meta name="author" content="JIUYOU">
+
+<link rel="stylesheet" type="text/css" href="/APP/Modules/Blog/Tpl/Public/Css/base.css" />
+<!--<link rel="stylesheet" type="text/css" href="/APP/Modules/Blog/Tpl/Public/Css/style.css" />-->
+<link rel="stylesheet" type="text/css" href="/APP/Modules/Blog/Tpl/Public/Css/font-awesome.min.css" />
+<script type="text/javascript" src="/APP/Modules/Blog/Tpl/Public/Js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="/APP/Modules/Blog/Tpl/Public/Js/jquery.nicescroll.js"></script>
+<script type="text/javascript" src="/APP/Modules/Blog/Tpl/Public/Js/style.js"></script>
+<link href="/Public/favicon.png" rel="icon" type="image/x-icon" />
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+</head>
+<body>
+<header>
+	<div class="hdbg"></div>
+	<div class="hdbg2"></div>
+	<div class="head_about">
+		<div class="logo">
+			<!-- <div class="player">
+				<div id="pic" center="center"></div>
+
+			</div>
+			<audio src="/Pulic/Music/嘲笑鸟.mp3" controls="controls" preload="auto"></audio> -->
+			 <!DOCTYPE html>  
+<html>  
+<head>  
+<meta charset="UTF-8">  
+<title>HTML5环形音乐播放器</title>    
+</head>
+<style type="text/css">
+@keyframes spin{
+    0%{transform:rotate(0deg);}
+    100%{transform:rotate(-360deg);}
+}
+button:hover{color: #26C5CB;}
+#container:hover .cover{opacity: .9;  }  
+#container{margin:0 auto 15px;width:180px;height:180px;perspective:550px;
+    -webkit-perspective:550px;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+}
+#player{width:180px;height:180px;background:#fff;border-radius:50%;overflow:hidden;
+    box-shadow:2px 2px 20px 0 rgba(0,0,0,.3);z-index:300;backface-visibility:hidden;
+    -webkit-backface-visibility: hidden;
+    transition: transform .5s ease-in-out;
+    -webkit-transition: -webkit-transform .5s ease-in-out;}
+#player img{width:180px;height:180px;}
+ #player,.cover{position:absolute; margin:auto;top:0;left:0;right:0;bottom:0;}
+}
+.cover{opacity: .3;transition:all .5s ease-in-out;-webkit-transition:all .5s ease-in-out;}
+.controls{position:relative;top:68px;width:100%;color:#fff;text-align:center;margin:auto;}
+#play-pause {width:46px;height:46px;
+    transition:all .5s ease-in-out;
+    -webkit-transition:all .5s ease-in-out;}
+button{color:#fff;background:transparent;border:0;outline:0;cursor:pointer;text-align:center;
+    text-shadow:1px 1px 3px #000;
+    transition:all .3s ease-in-out;
+    -webkit-transition:all .3s ease-in-out;}
+</style>
+<body>  
+<div id="container">  
+    <div id="player">  
+        <audio id="audio" controls loop>  
+            <source src="/Public/Music/嘲笑鸟.mp3" type="audio/mpeg" codecs="mp3"></source>
+            <source src="Here To Stay.mp3" type="audio/mpeg" codecs="mp3"></source>          
+        </audio>  
+        <img src="/Public/Uploads/thumb_576a228bdaccb.jpg">   
+        <div class="cover">  
+            <div class="controls">               
+                <!-- 暂停 -->  
+                <button id="play-pause" title="暂停" onclick="togglePlayPause()"><i class="icon-play icon-3x"></i></button>  
+            </div>  
+        </div> 
+    </div>
+</div>  
+<script type="text/javascript" src="/APP/Modules/Blog/Tpl/Public/Js/music.js"></script>
+</body>
+</html>  
+		</div>
+		<div class="title"><a href="http://www.itnetve.top/">九幽的博客</a></div>
+		<div class="about">分享音乐，分享心情！</div>
+	</div>
+	<div class="head_nav" id="head_nav">
+		<ul class="nav">
+			<li><a href="http://www.itnetve.top/">首页</a></li>
+			<li><a href="/nav16.html">HTML/CSS</a>
+					<ul>
+						<li><a href="/nav1.html">HTML</a></li><li><a href="/nav2.html">CSS</a></li>					</ul>
+				</li><li><a href="/nav3.html">JavaScritp</a>
+					<ul>
+						<li><a href="/nav13.html">JQuery</a></li>					</ul>
+				</li><li><a href="/nav4.html">PHP</a>
+					<ul>
+						<li><a href="/nav8.html">ThinkPHP</a></li><li><a href="/nav9.html">Wordpress</a></li>					</ul>
+				</li><li><a href="/nav14.html">MySql</a>
+					<ul>
+											</ul>
+				</li><li><a href="/nav17.html">System</a>
+					<ul>
+						<li><a href="/nav5.html">Windows</a></li><li><a href="/nav6.html">Linux</a></li>					</ul>
+				</li><li><a href="/nav7.html">Game</a>
+					<ul>
+						<li><a href="/nav10.html">逆战</a></li><li><a href="/nav11.html">英雄联盟</a></li>					</ul>
+				</li><li><a href="/nav15.html">下载</a>
+					<ul>
+											</ul>
+				</li><li><a href="/nav12.html">其他</a>
+					<ul>
+											</ul>
+				</li>			<li><a href="/Message.html">留言板</a></li>
+		</ul>
+		<!-- <div class="sign">
+			<span><a href="/login.html" style="color:#fff;">登录&nbsp;<i class="icon-signin"></i></a></span>
+				</li>
+					</div> -->
+	</div>
+</header>
+<script type="text/javascript">
+$.fn.smartFloat = function() {
+	var position = function(element) {
+		var top = element.position().top, pos = element.css("position");
+		$(window).scroll(function() {
+			var scrolls = $(this).scrollTop();
+			if (scrolls > top) {
+				if (window.XMLHttpRequest) {
+					element.css({
+						position:"fixed",
+						top:0,
+						width:"100%",
+					});	
+				} else {
+					element.css({
+						top:scrolls,
+
+
+					});	
+				}
+			}else {
+				element.css({
+					position:pos,				
+				});	
+			}
+		});
+};
+	return $(this).each(function() {
+		position($(this));						 
+	});
+};
+//绑定
+$("#head_nav").smartFloat();
+</script>
+
+<link rel="stylesheet" type="text/css" href="/Public/kindeditor/plugins/code/shCoreDefault.css" />
+<script type="text/javascript" src="/Public/kindeditor/plugins/code/shCoreDefault.js"></script>
+<script type="text/javascript">
+	SyntaxHighlighter.all();
+</script>
+
+
+<div class="content">
+	
+<aside class="left">
+	<!--头部名称-->
+	<div class="cblogo">
+		<div class="avatar"><a href="http://www.itnetve.top/" title=""><span>九幽的博客</span></a></div>
+	</div>
+	<div class="m-nav">
+		<ul class="nav">
+			<li><a href="http://www.itnetve.top/">首页</a></li>
+			<li><a href="/nav16.html">HTML/CSS</a>
+				<ul>
+					<li><a href="/nav1.html">HTML</a></li><li><a href="/nav2.html">CSS</a></li>				</ul>
+			</li><li><a href="/nav3.html">JavaScritp</a>
+				<ul>
+					<li><a href="/nav13.html">JQuery</a></li>				</ul>
+			</li><li><a href="/nav4.html">PHP</a>
+				<ul>
+					<li><a href="/nav8.html">ThinkPHP</a></li><li><a href="/nav9.html">Wordpress</a></li>				</ul>
+			</li><li><a href="/nav14.html">MySql</a>
+				<ul>
+									</ul>
+			</li><li><a href="/nav17.html">System</a>
+				<ul>
+					<li><a href="/nav5.html">Windows</a></li><li><a href="/nav6.html">Linux</a></li>				</ul>
+			</li><li><a href="/nav7.html">Game</a>
+				<ul>
+					<li><a href="/nav10.html">逆战</a></li><li><a href="/nav11.html">英雄联盟</a></li>				</ul>
+			</li><li><a href="/nav15.html">下载</a>
+				<ul>
+									</ul>
+			</li><li><a href="/nav12.html">其他</a>
+				<ul>
+									</ul>
+			</li>		</ul>
+	</div>
+	<div class="sidebar">
+		<!--座右铭-->
+		<section class="topspaceinfo">
+			<h1>我的座右铭</h1>
+			<p>人生的价值，并不是用时间，而是用深度去衡量的。 —JIUYOU</p>
+		</section>
+		<!--公告-->
+		<div class="userinfo">
+			<p class="notice">公告：嗨！欢迎来到九幽的博客。</p>
+		</div>
+		<!--搜索-->
+		<section class="widget widget_search">
+			<form role="search" id="search-form" action="/keywords.html" method="get">
+				<div class="input-group">
+					<input type="text" id="s" name="keywords" placeholder />
+					<span class="input-group-btn">
+						<input type="submit" value="查询" class="so-input" style="margin-top:10px;" />
+					</span>
+				</div>
+			</form>
+		</section>
+		<!--近期文章-->
+		<section class="widget widget_recent_entries">
+
+			<h2><i class="icon-list"></i>近期文章</h2>
+			<ul>
+				<li><a href="/Article/94.html" title="URL中文乱码问题解决">URL中文乱码问题解决</a><time>2017/02/07</time></li><li><a href="/Article/93.html" title="考题时间限制及自动提交">考题时间限制及自动提交</a><time>2017/01/09</time></li><li><a href="/Article/89.html" title="html5 video控件制作：一">html5 video控件制作：一</a><time>2017/01/02</time></li><li><a href="/Article/90.html" title="html5 video控件制作：二">html5 video控件制作：二</a><time>2017/01/02</time></li><li><a href="/Article/91.html" title="html5 video控件制作：三">html5 video控件制作：三</a><time>2017/01/02</time></li><li><a href="/Article/92.html" title="Ajax将成功后的二维数组在前台显示">Ajax将成功后的二维数组在前台显示</a><time>2017/01/02</time></li><li><a href="/Article/88.html" title="Js浏览器兼容">Js浏览器兼容</a><time>2016/12/12</time></li><li><a href="/Article/87.html" title="多维数组转换为一维数组">多维数组转换为一维数组</a><time>2016/12/10</time></li><li><a href="/Article/86.html" title="简单生成二维码图片-phpqrcode">简单生成二维码图片-phpqrcode</a><time>2016/12/08</time></li><li><a href="/Article/83.html" title="CentOS下Mysql导入导出命令">CentOS下Mysql导入导出命令</a><time>2016/11/05</time></li><li><a href="/Article/85.html" title="CentOS6.5安装LAMP安装包">CentOS6.5安装LAMP安装包</a><time>2016/11/05</time></li><li><a href="/Article/84.html" title="CentOS下mysql数据库常用命令总结">CentOS下mysql数据库常用命令总结</a><time>2016/11/05</time></li><li><a href="/Article/81.html" title="CentOS 6.5编译搭建LAMP环境（四，Mysql篇）">CentOS 6.5编译搭建LAMP环境（四，Mysql篇）</a><time>2016/11/03</time></li><li><a href="/Article/78.html" title="CentOS 6.5编译搭建LAMP环境（一，环境准备篇）">CentOS 6.5编译搭建LAMP环境（一，环境准备篇）</a><time>2016/11/03</time></li><li><a href="/Article/79.html" title="CentOS 6.5编译搭建LAMP环境（二，环境安装篇）">CentOS 6.5编译搭建LAMP环境（二，环境安装篇）</a><time>2016/11/03</time></li>			</ul>
+		</section>
+		<section class="widget widget_recent_comments">
+			<h2><i class="icon-comment"></i>评论</h2>
+<!-- 多说最新评论 start -->
+	<div class="ds-recent-comments" data-num-items="10" data-show-avatars="0" data-show-time="1" data-show-title="1" data-show-admin="0" data-excerpt-length="20"></div>
+<!-- 多说最新评论 end -->
+		</section>
+		<!--文章归档-->
+		<section class="widget widget_archive">
+			<h2><i class="icon-list-alt"></i>文章归档</h2>
+			<ul>
+				<li><a href="/Data/2017/02.html" title="2017年02月(1)">2017年02月(1)</a></li><li><a href="/Data/2017/01.html" title="2017年01月(5)">2017年01月(5)</a></li><li><a href="/Data/2016/12.html" title="2016年12月(3)">2016年12月(3)</a></li><li><a href="/Data/2016/11.html" title="2016年11月(10)">2016年11月(10)</a></li><li><a href="/Data/2016/10.html" title="2016年10月(10)">2016年10月(10)</a></li><li><a href="/Data/2016/09.html" title="2016年09月(6)">2016年09月(6)</a></li><li><a href="/Data/2016/08.html" title="2016年08月(9)">2016年08月(9)</a></li><li><a href="/Data/2016/07.html" title="2016年07月(30)">2016年07月(30)</a></li><li><a href="/Data/2016/06.html" title="2016年06月(18)">2016年06月(18)</a></li>			</ul>
+		</section>
+		<!--分类目录-->
+		<section class="widget widget_categories">
+			<h2><i class="icon-list-ul"></i>分类目录</h2>
+			<ul>
+				<li><a href="/nav1.html" title="HTML(2)">HTML(2)</a></li><li><a href="/nav2.html" title="CSS(7)">CSS(7)</a></li><li><a href="/nav3.html" title="JavaScritp(12)">JavaScritp(12)</a></li><li><a href="/nav4.html" title="PHP(10)">PHP(10)</a></li><li><a href="/nav5.html" title="Windows(1)">Windows(1)</a></li><li><a href="/nav6.html" title="Linux(11)">Linux(11)</a></li><li><a href="/nav8.html" title="ThinkPHP(15)">ThinkPHP(15)</a></li><li><a href="/nav9.html" title="Wordpress(7)">Wordpress(7)</a></li><li><a href="/nav10.html" title="逆战(2)">逆战(2)</a></li><li><a href="/nav11.html" title="英雄联盟(1)">英雄联盟(1)</a></li><li><a href="/nav12.html" title="其他(10)">其他(10)</a></li><li><a href="/nav13.html" title="JQuery(3)">JQuery(3)</a></li><li><a href="/nav14.html" title="MySql(9)">MySql(9)</a></li><li><a href="/nav15.html" title="下载(2)">下载(2)</a></li>			</ul>
+		</section>
+		
+		<!--日历-->
+		<!--<section class="widget widget_calender">
+			<div class="calender-wrap"></div>
+		</section>-->
+		<!--标签-->
+		<section class="widget widget_tag_cloud">
+			<h2><i class="icon-bookmark"></i>标签</h2>
+			<div class="tagcloud" id="tagcloud">
+				<a href="/tags/乱码解决.html">乱码解决</a><a href="/tags/Ajax.html">Ajax</a><a href="/tags/video.html">video</a><a href="/tags/二维码.html">二维码</a><a href="/tags/命令.html">命令</a><a href="/tags/导入导出.html">导入导出</a><a href="/tags/office.html">office</a><a href="/tags/CentOS.html">CentOS</a><a href="/tags/编码.html">编码</a><a href="/tags/数据合并.html">数据合并</a><a href="/tags/数组转换.html">数组转换</a><a href="/tags/Error信息.html">Error信息</a><a href="/tags/数据转换.html">数据转换</a><a href="/tags/电子文档.html">电子文档</a><a href="/tags/表单.html">表单</a><a href="/tags/循环嵌套.html">循环嵌套</a><a href="/tags/动态时间.html">动态时间</a><a href="/tags/key与value.html">key与value</a><a href="/tags/方法.html">方法</a><a href="/tags/文件上传.html">文件上传</a><a href="/tags/类的引用.html">类的引用</a><a href="/tags/效果.html">效果</a><a href="/tags/登录.html">登录</a><a href="/tags/状态机制.html">状态机制</a><a href="/tags/编程语言.html">编程语言</a><a href="/tags/瀑布流.html">瀑布流</a><a href="/tags/环境搭建.html">环境搭建</a><a href="/tags/API.html">API</a><a href="/tags/第三方登录.html">第三方登录</a><a href="/tags/传值.html">传值</a><a href="/tags/下载.html">下载</a><a href="/tags/框架.html">框架</a><a href="/tags/统计.html">统计</a><a href="/tags/主题.html">主题</a><a href="/tags/分类.html">分类</a><a href="/tags/自定义页面.html">自定义页面</a><a href="/tags/菜单.html">菜单</a><a href="/tags/图片输出.html">图片输出</a><a href="/tags/html5.html">html5</a><a href="/tags/数组合并.html">数组合并</a><a href="/tags/猎场BOSS.html">猎场BOSS</a><a href="/tags/存储过程.html">存储过程</a><a href="/tags/触发器.html">触发器</a><a href="/tags/动画.html">动画</a><a href="/tags/浏览器兼容.html">浏览器兼容</a><a href="/tags/自适应.html">自适应</a><a href="/tags/文本控制.html">文本控制</a><a href="/tags/截取字符.html">截取字符</a><a href="/tags/代码高亮.html">代码高亮</a><a href="/tags/无限级分类.html">无限级分类</a><a href="/tags/JS验证.html">JS验证</a><a href="/tags/jquery.html">jquery</a><a href="/tags/五杀.html">五杀</a><a href="/tags/Kindeditor.html">Kindeditor</a><a href="/tags/逆战BUG.html">逆战BUG</a><a href="/tags/Explorer.html">Explorer</a><a href="/tags/分级递归.html">分级递归</a><a href="/tags/模糊查询.html">模糊查询</a><a href="/tags/独立分组.html">独立分组</a><a href="/tags/字符分割.html">字符分割</a><a href="/tags/分页.html">分页</a><a href="/tags/数据库连接.html">数据库连接</a>			</div>
+		</section>
+		
+	</div>
+</aside>
+
+	<div class="right">
+		<div class="m-header">
+			<a class="m-menu jsc-sidebar-trigger" id="showLeftPush"></a>
+			<a href="">九幽的博客</a>
+			<a href="" class="m-admin"></a>
+		</div>
+		<div class="blogitem">
+			<div class="place">
+				<a href=""><i class="icon-home"></i>&nbsp首页</a>&nbsp<i class="icon-angle-right"></i>
+								<a href="/nav12.html">其他</a>&nbsp			</div>
+			<article>
+				<h2 class="btitle">chm制作工具</h2>
+				<div class="textfoot">
+					<p style="float:left;"><i class=" icon-user"></i><span>JIUYOU</span></p>
+					<span><time datetime="">2016/09/06</time></span>
+					<span>浏览：<script type="text/javascript" src="/Blog/Article/ClinkNum/id/60.html"></script>人</span>
+					<span>评论<span class="ds-thread-count" data-thread-key="60" data-count-type="comments"></span>
+				</div>
+				<div class="text">
+					<p>
+	学习的chm手册网上有许多，对于开发者而言，chm手册用处很大，给了我们很多帮助，然而这个chm手册其实就是一个网页浏览的功能，相当于自己做个软件，然后将网页显示，简单方便，我在网上搜到基本使用Easy chm这款软件制作chm手册的，网上基本都可以下得到。
+</p>
+<p>
+	<img src="/Public/Uploads/image/20160906/20160906110523_68463.png" alt="" /> 
+</p>
+<p>
+	1，<span style="line-height:1.5;">新建会新建一个项目，这个项目里面写入许多html静态文件，这些文件就是手册需要浏览的内容，可以先将需要制作的内容全部做成静态网页，做成一个项目，然后添加就是</span> 
+</p>
+<p>
+	2，打开是打开已经保存的未完成的chm项目
+</p>
+<p>
+	3，当制作完成后点击编译就行了，自己可以修改chm配置然后生成chm手册，自己可以看到自己想要的效果
+</p>
+<p>
+	<img src="/Public/Uploads/image/20160906/20160906111005_45328.png" alt="" /> 
+</p>
+<p>
+	<img src="/Public/Uploads/image/20160906/20160906111115_76297.png" alt="" /> 
+</p>					<div class="zhuanzai">
+						<p>转载请注明：<a href="http://www.itnetve.top/">九幽的博客</a>»<a href="">chm制作工具</a></p>
+						<p>本文地址：http://www.itnetve.top/Article/60.html</p>
+						<p style="color:#008b8b;">关键字：chm,easy chm,电子文档</p>
+						<p style="color:red;">类型：本站原创</p>
+					</div>
+					<div class="move">
+						<a href="/Article/59.html"><span>上一篇</span>表单不可编辑状态</a>
+												<a href="/Article/94.html"><span>下一篇</span>URL中文乱码问题解决</a>
+											</div>
+				</div>
+				<div class="textfoot"><span></span></div>
+			</article>
+			<div id="comments">
+<div class="ds-thread" data-thread-key="60" data-title="chm制作工具" data-url="http://www.itnetve.top/Article/60.html"></div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div id="back-to-top" class="red" data-scroll="body" style="display:none;">
+	<svg id="point-up" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
+		<path d="M23.588 17.637c-0.359-0.643-0.34-1.056-2.507-3.057 0.012-7.232-4.851-12.247-5.152-12.55 0-0.010 0-0.015 0-0.015s-0.003 0.003-0.007 0.007l-0.007-0.007c0 0 0 0.005 0 0.015-0.299 0.305-5.141 5.342-5.097 12.575-2.158 2.010-2.138 2.423-2.493 3.068-0.65 1.178-0.481 5.888 0.132 6.957 0.613 1.069 1.629 0.293 1.977-0.004 0.348-0.298 1.885-2.264 2.263-2.176 0 0 0.465-0.090 0.989 0.414 0.518 0.498 1.462 0.966 2.27 1.033 0 0.001 0 0.002-0 0.003 0.005-0.001 0.010-0.001 0.015-0.002 0.005 0 0.010 0.001 0.015 0.001 0-0.001-0-0.002 0-0.003 0.808-0.070 1.749-0.543 2.265-1.043 0.522-0.507 0.988-0.419 0.988-0.419 0.378-0.090 1.923 1.869 2.272 2.165 0.35 0.296 1.369 1.067 1.977-0.005 0.608-1.072 0.756-5.783 0.101-6.958v0 0zM15.95 14.86c-1.349 0.003-2.445-1.112-2.448-2.492-0.003-1.38 1.088-2.5 2.437-2.503 1.349-0.003 2.445 1.112 2.448 2.492 0.003 1.379-1.088 2.5-2.437 2.503v0 0zM17.76 24.876c-0.615 0.474-1.236 0.633-1.801 0.626-0.566 0.009-1.187-0.147-1.804-0.617-0.553-0.403-1.047-0.348-1.308 0.003-0.261 0.351-0.169 2.481 0.152 2.939 0.321 0.458 0.697-0.298 1.249-0.327 0.552-0.028 1.011 1.103 1.221 1.75 0.107 0.331 0.274 0.633 0.5 0.654 0.226-0.023 0.392-0.326 0.497-0.657 0.207-0.648 0.661-1.781 1.213-1.756 0.553 0.026 0.932 0.78 1.251 0.321 0.319-0.459 0.401-2.59 0.139-2.94-0.262-0.35-0.757-0.403-1.308 0.003v0 0z" fill="#CCCCCC" />
+	</svg>
+</div>
+<div class="link">
+	<ul>
+		<h2>友情链接</h2>
+		<li><a href="https://ruke.xyz/" title="ruke驿站" target="_blank">ruke驿站</a></li><li><a href="http://images.itnetve.top/" title="九幽的图片" target="_blank">九幽的图片</a></li><li><a href="http://www.jhjlwang.com/" title="饥荒交流网 " target="_blank">饥荒交流网 </a></li><li><a href="http://www.hostusvps.com/" title="hostus优惠码" target="_blank">hostus优惠码</a></li>	</ul>
+</div>
+<footer>
+	<section class="visitor">
+		<h2>最近访客</h2>
+		<ul class="ds-recent-visitors" data-num-items="20"></ul>
+	</section>
+	<div class="Copyright">
+		<p>CopyRight &copy 2016 九幽IT 版权所有 <a href="http://www.miitbeian.gov.cn/" target="_blank">粤ICP备16060013号-1</a><span><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1259858691'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1259858691%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script></span></p>
+	</div>
+</footer>
+<div class="m-footer">
+	<div class="Copyright">
+		<p>CopyRight &copy 2016 九幽IT 版权所有 <a href="http://www.miitbeian.gov.cn/" target="_blank">粤ICP备16060013号-1</a><span><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1259858691'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1259858691%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script></span></p>
+	</div>
+</div>
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"itwoyou"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
+<script type="text/javascript" src="/APP/Modules/Blog/Tpl/Public/Js/niceScroll.js"></script>
+</body>
+</html>

@@ -1,0 +1,3245 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<title>九幽的博客</title>
+<meta property="wb:webmaster" content="012433c3abb5c9f4" />
+<meta name="keywords" content="博客，九幽，JIUYOU,IT技术，程序,颜色，RGB">
+<meta name="description" content="这是一个基于ThinkPHP框架的博客">
+<meta name="author" content="JIUYOU">
+
+<link rel="stylesheet" type="text/css" href="/APP/Modules/Blog/Tpl/Public/Css/base.css" />
+<!--<link rel="stylesheet" type="text/css" href="/APP/Modules/Blog/Tpl/Public/Css/style.css" />-->
+<link rel="stylesheet" type="text/css" href="/APP/Modules/Blog/Tpl/Public/Css/font-awesome.min.css" />
+<script type="text/javascript" src="/APP/Modules/Blog/Tpl/Public/Js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="/APP/Modules/Blog/Tpl/Public/Js/jquery.nicescroll.js"></script>
+<script type="text/javascript" src="/APP/Modules/Blog/Tpl/Public/Js/style.js"></script>
+<link href="/Public/favicon.png" rel="icon" type="image/x-icon" />
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+</head>
+<body>
+<header>
+	<div class="hdbg"></div>
+	<div class="hdbg2"></div>
+	<div class="head_about">
+		<div class="logo">
+			<!-- <div class="player">
+				<div id="pic" center="center"></div>
+
+			</div>
+			<audio src="/Pulic/Music/嘲笑鸟.mp3" controls="controls" preload="auto"></audio> -->
+			 <!DOCTYPE html>  
+<html>  
+<head>  
+<meta charset="UTF-8">  
+<title>HTML5环形音乐播放器</title>    
+</head>
+<style type="text/css">
+@keyframes spin{
+    0%{transform:rotate(0deg);}
+    100%{transform:rotate(-360deg);}
+}
+button:hover{color: #26C5CB;}
+#container:hover .cover{opacity: .9;  }  
+#container{margin:0 auto 15px;width:180px;height:180px;perspective:550px;
+    -webkit-perspective:550px;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+}
+#player{width:180px;height:180px;background:#fff;border-radius:50%;overflow:hidden;
+    box-shadow:2px 2px 20px 0 rgba(0,0,0,.3);z-index:300;backface-visibility:hidden;
+    -webkit-backface-visibility: hidden;
+    transition: transform .5s ease-in-out;
+    -webkit-transition: -webkit-transform .5s ease-in-out;}
+#player img{width:180px;height:180px;}
+ #player,.cover{position:absolute; margin:auto;top:0;left:0;right:0;bottom:0;}
+}
+.cover{opacity: .3;transition:all .5s ease-in-out;-webkit-transition:all .5s ease-in-out;}
+.controls{position:relative;top:68px;width:100%;color:#fff;text-align:center;margin:auto;}
+#play-pause {width:46px;height:46px;
+    transition:all .5s ease-in-out;
+    -webkit-transition:all .5s ease-in-out;}
+button{color:#fff;background:transparent;border:0;outline:0;cursor:pointer;text-align:center;
+    text-shadow:1px 1px 3px #000;
+    transition:all .3s ease-in-out;
+    -webkit-transition:all .3s ease-in-out;}
+</style>
+<body>  
+<div id="container">  
+    <div id="player">  
+        <audio id="audio" controls loop>  
+            <source src="/Public/Music/嘲笑鸟.mp3" type="audio/mpeg" codecs="mp3"></source>
+            <source src="Here To Stay.mp3" type="audio/mpeg" codecs="mp3"></source>          
+        </audio>  
+        <img src="/Public/Uploads/thumb_576a228bdaccb.jpg">   
+        <div class="cover">  
+            <div class="controls">               
+                <!-- 暂停 -->  
+                <button id="play-pause" title="暂停" onclick="togglePlayPause()"><i class="icon-play icon-3x"></i></button>  
+            </div>  
+        </div> 
+    </div>
+</div>  
+<script type="text/javascript" src="/APP/Modules/Blog/Tpl/Public/Js/music.js"></script>
+</body>
+</html>  
+		</div>
+		<div class="title"><a href="http://www.itnetve.top/">九幽的博客</a></div>
+		<div class="about">分享音乐，分享心情！</div>
+	</div>
+	<div class="head_nav" id="head_nav">
+		<ul class="nav">
+			<li><a href="http://www.itnetve.top/">首页</a></li>
+			<li><a href="/nav16.html">HTML/CSS</a>
+					<ul>
+						<li><a href="/nav1.html">HTML</a></li><li><a href="/nav2.html">CSS</a></li>					</ul>
+				</li><li><a href="/nav3.html">JavaScritp</a>
+					<ul>
+						<li><a href="/nav13.html">JQuery</a></li>					</ul>
+				</li><li><a href="/nav4.html">PHP</a>
+					<ul>
+						<li><a href="/nav8.html">ThinkPHP</a></li><li><a href="/nav9.html">Wordpress</a></li>					</ul>
+				</li><li><a href="/nav14.html">MySql</a>
+					<ul>
+											</ul>
+				</li><li><a href="/nav17.html">System</a>
+					<ul>
+						<li><a href="/nav5.html">Windows</a></li><li><a href="/nav6.html">Linux</a></li>					</ul>
+				</li><li><a href="/nav7.html">Game</a>
+					<ul>
+						<li><a href="/nav10.html">逆战</a></li><li><a href="/nav11.html">英雄联盟</a></li>					</ul>
+				</li><li><a href="/nav15.html">下载</a>
+					<ul>
+											</ul>
+				</li><li><a href="/nav12.html">其他</a>
+					<ul>
+											</ul>
+				</li>			<li><a href="/Message.html">留言板</a></li>
+		</ul>
+		<!-- <div class="sign">
+			<span><a href="/login.html" style="color:#fff;">登录&nbsp;<i class="icon-signin"></i></a></span>
+				</li>
+					</div> -->
+	</div>
+</header>
+<script type="text/javascript">
+$.fn.smartFloat = function() {
+	var position = function(element) {
+		var top = element.position().top, pos = element.css("position");
+		$(window).scroll(function() {
+			var scrolls = $(this).scrollTop();
+			if (scrolls > top) {
+				if (window.XMLHttpRequest) {
+					element.css({
+						position:"fixed",
+						top:0,
+						width:"100%",
+					});	
+				} else {
+					element.css({
+						top:scrolls,
+
+
+					});	
+				}
+			}else {
+				element.css({
+					position:pos,				
+				});	
+			}
+		});
+};
+	return $(this).each(function() {
+		position($(this));						 
+	});
+};
+//绑定
+$("#head_nav").smartFloat();
+</script>
+
+<link rel="stylesheet" type="text/css" href="/Public/kindeditor/plugins/code/shCoreDefault.css" />
+<script type="text/javascript" src="/Public/kindeditor/plugins/code/shCoreDefault.js"></script>
+<script type="text/javascript">
+	SyntaxHighlighter.all();
+</script>
+
+
+<div class="content">
+	
+<aside class="left">
+	<!--头部名称-->
+	<div class="cblogo">
+		<div class="avatar"><a href="http://www.itnetve.top/" title=""><span>九幽的博客</span></a></div>
+	</div>
+	<div class="m-nav">
+		<ul class="nav">
+			<li><a href="http://www.itnetve.top/">首页</a></li>
+			<li><a href="/nav16.html">HTML/CSS</a>
+				<ul>
+					<li><a href="/nav1.html">HTML</a></li><li><a href="/nav2.html">CSS</a></li>				</ul>
+			</li><li><a href="/nav3.html">JavaScritp</a>
+				<ul>
+					<li><a href="/nav13.html">JQuery</a></li>				</ul>
+			</li><li><a href="/nav4.html">PHP</a>
+				<ul>
+					<li><a href="/nav8.html">ThinkPHP</a></li><li><a href="/nav9.html">Wordpress</a></li>				</ul>
+			</li><li><a href="/nav14.html">MySql</a>
+				<ul>
+									</ul>
+			</li><li><a href="/nav17.html">System</a>
+				<ul>
+					<li><a href="/nav5.html">Windows</a></li><li><a href="/nav6.html">Linux</a></li>				</ul>
+			</li><li><a href="/nav7.html">Game</a>
+				<ul>
+					<li><a href="/nav10.html">逆战</a></li><li><a href="/nav11.html">英雄联盟</a></li>				</ul>
+			</li><li><a href="/nav15.html">下载</a>
+				<ul>
+									</ul>
+			</li><li><a href="/nav12.html">其他</a>
+				<ul>
+									</ul>
+			</li>		</ul>
+	</div>
+	<div class="sidebar">
+		<!--座右铭-->
+		<section class="topspaceinfo">
+			<h1>我的座右铭</h1>
+			<p>人生的价值，并不是用时间，而是用深度去衡量的。 —JIUYOU</p>
+		</section>
+		<!--公告-->
+		<div class="userinfo">
+			<p class="notice">公告：嗨！欢迎来到九幽的博客。</p>
+		</div>
+		<!--搜索-->
+		<section class="widget widget_search">
+			<form role="search" id="search-form" action="/keywords.html" method="get">
+				<div class="input-group">
+					<input type="text" id="s" name="keywords" placeholder />
+					<span class="input-group-btn">
+						<input type="submit" value="查询" class="so-input" style="margin-top:10px;" />
+					</span>
+				</div>
+			</form>
+		</section>
+		<!--近期文章-->
+		<section class="widget widget_recent_entries">
+
+			<h2><i class="icon-list"></i>近期文章</h2>
+			<ul>
+				<li><a href="/Article/94.html" title="URL中文乱码问题解决">URL中文乱码问题解决</a><time>2017/02/07</time></li><li><a href="/Article/93.html" title="考题时间限制及自动提交">考题时间限制及自动提交</a><time>2017/01/09</time></li><li><a href="/Article/89.html" title="html5 video控件制作：一">html5 video控件制作：一</a><time>2017/01/02</time></li><li><a href="/Article/90.html" title="html5 video控件制作：二">html5 video控件制作：二</a><time>2017/01/02</time></li><li><a href="/Article/91.html" title="html5 video控件制作：三">html5 video控件制作：三</a><time>2017/01/02</time></li><li><a href="/Article/92.html" title="Ajax将成功后的二维数组在前台显示">Ajax将成功后的二维数组在前台显示</a><time>2017/01/02</time></li><li><a href="/Article/88.html" title="Js浏览器兼容">Js浏览器兼容</a><time>2016/12/12</time></li><li><a href="/Article/87.html" title="多维数组转换为一维数组">多维数组转换为一维数组</a><time>2016/12/10</time></li><li><a href="/Article/86.html" title="简单生成二维码图片-phpqrcode">简单生成二维码图片-phpqrcode</a><time>2016/12/08</time></li><li><a href="/Article/83.html" title="CentOS下Mysql导入导出命令">CentOS下Mysql导入导出命令</a><time>2016/11/05</time></li><li><a href="/Article/85.html" title="CentOS6.5安装LAMP安装包">CentOS6.5安装LAMP安装包</a><time>2016/11/05</time></li><li><a href="/Article/84.html" title="CentOS下mysql数据库常用命令总结">CentOS下mysql数据库常用命令总结</a><time>2016/11/05</time></li><li><a href="/Article/81.html" title="CentOS 6.5编译搭建LAMP环境（四，Mysql篇）">CentOS 6.5编译搭建LAMP环境（四，Mysql篇）</a><time>2016/11/03</time></li><li><a href="/Article/78.html" title="CentOS 6.5编译搭建LAMP环境（一，环境准备篇）">CentOS 6.5编译搭建LAMP环境（一，环境准备篇）</a><time>2016/11/03</time></li><li><a href="/Article/79.html" title="CentOS 6.5编译搭建LAMP环境（二，环境安装篇）">CentOS 6.5编译搭建LAMP环境（二，环境安装篇）</a><time>2016/11/03</time></li>			</ul>
+		</section>
+		<section class="widget widget_recent_comments">
+			<h2><i class="icon-comment"></i>评论</h2>
+<!-- 多说最新评论 start -->
+	<div class="ds-recent-comments" data-num-items="10" data-show-avatars="0" data-show-time="1" data-show-title="1" data-show-admin="0" data-excerpt-length="20"></div>
+<!-- 多说最新评论 end -->
+		</section>
+		<!--文章归档-->
+		<section class="widget widget_archive">
+			<h2><i class="icon-list-alt"></i>文章归档</h2>
+			<ul>
+				<li><a href="/Data/2017/02.html" title="2017年02月(1)">2017年02月(1)</a></li><li><a href="/Data/2017/01.html" title="2017年01月(5)">2017年01月(5)</a></li><li><a href="/Data/2016/12.html" title="2016年12月(3)">2016年12月(3)</a></li><li><a href="/Data/2016/11.html" title="2016年11月(10)">2016年11月(10)</a></li><li><a href="/Data/2016/10.html" title="2016年10月(10)">2016年10月(10)</a></li><li><a href="/Data/2016/09.html" title="2016年09月(6)">2016年09月(6)</a></li><li><a href="/Data/2016/08.html" title="2016年08月(9)">2016年08月(9)</a></li><li><a href="/Data/2016/07.html" title="2016年07月(30)">2016年07月(30)</a></li><li><a href="/Data/2016/06.html" title="2016年06月(18)">2016年06月(18)</a></li>			</ul>
+		</section>
+		<!--分类目录-->
+		<section class="widget widget_categories">
+			<h2><i class="icon-list-ul"></i>分类目录</h2>
+			<ul>
+				<li><a href="/nav1.html" title="HTML(2)">HTML(2)</a></li><li><a href="/nav2.html" title="CSS(7)">CSS(7)</a></li><li><a href="/nav3.html" title="JavaScritp(12)">JavaScritp(12)</a></li><li><a href="/nav4.html" title="PHP(10)">PHP(10)</a></li><li><a href="/nav5.html" title="Windows(1)">Windows(1)</a></li><li><a href="/nav6.html" title="Linux(11)">Linux(11)</a></li><li><a href="/nav8.html" title="ThinkPHP(15)">ThinkPHP(15)</a></li><li><a href="/nav9.html" title="Wordpress(7)">Wordpress(7)</a></li><li><a href="/nav10.html" title="逆战(2)">逆战(2)</a></li><li><a href="/nav11.html" title="英雄联盟(1)">英雄联盟(1)</a></li><li><a href="/nav12.html" title="其他(10)">其他(10)</a></li><li><a href="/nav13.html" title="JQuery(3)">JQuery(3)</a></li><li><a href="/nav14.html" title="MySql(9)">MySql(9)</a></li><li><a href="/nav15.html" title="下载(2)">下载(2)</a></li>			</ul>
+		</section>
+		
+		<!--日历-->
+		<!--<section class="widget widget_calender">
+			<div class="calender-wrap"></div>
+		</section>-->
+		<!--标签-->
+		<section class="widget widget_tag_cloud">
+			<h2><i class="icon-bookmark"></i>标签</h2>
+			<div class="tagcloud" id="tagcloud">
+				<a href="/tags/乱码解决.html">乱码解决</a><a href="/tags/Ajax.html">Ajax</a><a href="/tags/video.html">video</a><a href="/tags/二维码.html">二维码</a><a href="/tags/命令.html">命令</a><a href="/tags/导入导出.html">导入导出</a><a href="/tags/office.html">office</a><a href="/tags/CentOS.html">CentOS</a><a href="/tags/编码.html">编码</a><a href="/tags/数据合并.html">数据合并</a><a href="/tags/数组转换.html">数组转换</a><a href="/tags/Error信息.html">Error信息</a><a href="/tags/数据转换.html">数据转换</a><a href="/tags/电子文档.html">电子文档</a><a href="/tags/表单.html">表单</a><a href="/tags/循环嵌套.html">循环嵌套</a><a href="/tags/动态时间.html">动态时间</a><a href="/tags/key与value.html">key与value</a><a href="/tags/方法.html">方法</a><a href="/tags/文件上传.html">文件上传</a><a href="/tags/类的引用.html">类的引用</a><a href="/tags/效果.html">效果</a><a href="/tags/登录.html">登录</a><a href="/tags/状态机制.html">状态机制</a><a href="/tags/编程语言.html">编程语言</a><a href="/tags/瀑布流.html">瀑布流</a><a href="/tags/环境搭建.html">环境搭建</a><a href="/tags/API.html">API</a><a href="/tags/第三方登录.html">第三方登录</a><a href="/tags/传值.html">传值</a><a href="/tags/下载.html">下载</a><a href="/tags/框架.html">框架</a><a href="/tags/统计.html">统计</a><a href="/tags/主题.html">主题</a><a href="/tags/分类.html">分类</a><a href="/tags/自定义页面.html">自定义页面</a><a href="/tags/菜单.html">菜单</a><a href="/tags/图片输出.html">图片输出</a><a href="/tags/html5.html">html5</a><a href="/tags/数组合并.html">数组合并</a><a href="/tags/猎场BOSS.html">猎场BOSS</a><a href="/tags/存储过程.html">存储过程</a><a href="/tags/触发器.html">触发器</a><a href="/tags/动画.html">动画</a><a href="/tags/浏览器兼容.html">浏览器兼容</a><a href="/tags/自适应.html">自适应</a><a href="/tags/文本控制.html">文本控制</a><a href="/tags/截取字符.html">截取字符</a><a href="/tags/代码高亮.html">代码高亮</a><a href="/tags/无限级分类.html">无限级分类</a><a href="/tags/JS验证.html">JS验证</a><a href="/tags/jquery.html">jquery</a><a href="/tags/五杀.html">五杀</a><a href="/tags/Kindeditor.html">Kindeditor</a><a href="/tags/逆战BUG.html">逆战BUG</a><a href="/tags/Explorer.html">Explorer</a><a href="/tags/分级递归.html">分级递归</a><a href="/tags/模糊查询.html">模糊查询</a><a href="/tags/独立分组.html">独立分组</a><a href="/tags/字符分割.html">字符分割</a><a href="/tags/分页.html">分页</a><a href="/tags/数据库连接.html">数据库连接</a>			</div>
+		</section>
+		
+	</div>
+</aside>
+
+	<div class="right">
+		<div class="m-header">
+			<a class="m-menu jsc-sidebar-trigger" id="showLeftPush"></a>
+			<a href="">九幽的博客</a>
+			<a href="" class="m-admin"></a>
+		</div>
+		<div class="blogitem">
+			<div class="place">
+				<a href=""><i class="icon-home"></i>&nbsp首页</a>&nbsp<i class="icon-angle-right"></i>
+								<a href="/nav16.html">HTML/CSS</a>&nbsp<i class="icon-angle-right"></i><a href="/nav2.html">CSS</a>&nbsp			</div>
+			<article>
+				<h2 class="btitle">RGB颜色查询</h2>
+				<div class="textfoot">
+					<p style="float:left;"><i class=" icon-user"></i><span>JIUYOU</span></p>
+					<span><time datetime="">2016/07/05</time></span>
+					<span>浏览：<script type="text/javascript" src="/Blog/Article/ClinkNum/id/22.html"></script>人</span>
+					<span>评论<span class="ds-thread-count" data-thread-key="22" data-count-type="comments"></span>
+				</div>
+				<div class="text">
+					<div>
+	<table width="550" cellspacing="3">
+		<tbody>
+			<tr>
+				<td bgcolor="#ffffff" height="30" width="30">
+				</td>
+				<td>
+					#FFFFFF
+				</td>
+				<td bgcolor="#fffff0" height="30" width="30">
+				</td>
+				<td>
+					#FFFFF0
+				</td>
+				<td bgcolor="#ffffe0" height="30" width="30">
+				</td>
+				<td>
+					#FFFFE0
+				</td>
+				<td bgcolor="#ffff00" height="30" width="30">
+				</td>
+				<td>
+					#FFFF00
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#fffafa" height="30" width="30">
+				</td>
+				<td>
+					#FFFAFA
+				</td>
+				<td bgcolor="#fffaf0" height="30" width="30">
+				</td>
+				<td>
+					#FFFAF0
+				</td>
+				<td bgcolor="#fffacd" height="30" width="30">
+				</td>
+				<td>
+					#FFFACD
+				</td>
+				<td bgcolor="#fff8dc" height="30" width="30">
+				</td>
+				<td>
+					#FFF8DC
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#fff68f" height="30" width="30">
+				</td>
+				<td>
+					#FFF68F
+				</td>
+				<td bgcolor="#fff5ee" height="30" width="30">
+				</td>
+				<td>
+					#FFF5EE
+				</td>
+				<td bgcolor="#fff0f5" height="30" width="30">
+				</td>
+				<td>
+					#FFF0F5
+				</td>
+				<td bgcolor="#ffefdb" height="30" width="30">
+				</td>
+				<td>
+					#FFEFDB
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#ffefd5" height="30" width="30">
+				</td>
+				<td>
+					#FFEFD5
+				</td>
+				<td bgcolor="#ffec8b" height="30" width="30">
+				</td>
+				<td>
+					#FFEC8B
+				</td>
+				<td bgcolor="#ffebcd" height="30" width="30">
+				</td>
+				<td>
+					#FFEBCD
+				</td>
+				<td bgcolor="#ffe7ba" height="30" width="30">
+				</td>
+				<td>
+					#FFE7BA
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#ffe4e1" height="30" width="30">
+				</td>
+				<td>
+					#FFE4E1
+				</td>
+				<td bgcolor="#ffe4c4" height="30" width="30">
+				</td>
+				<td>
+					#FFE4C4
+				</td>
+				<td bgcolor="#ffe4b5" height="30" width="30">
+				</td>
+				<td>
+					#FFE4B5
+				</td>
+				<td bgcolor="#ffe1ff" height="30" width="30">
+				</td>
+				<td>
+					#FFE1FF
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#ffdead" height="30" width="30">
+				</td>
+				<td>
+					#FFDEAD
+				</td>
+				<td bgcolor="#ffdab9" height="30" width="30">
+				</td>
+				<td>
+					#FFDAB9
+				</td>
+				<td bgcolor="#ffd700" height="30" width="30">
+				</td>
+				<td>
+					#FFD700
+				</td>
+				<td bgcolor="#ffd39b" height="30" width="30">
+				</td>
+				<td>
+					#FFD39B
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#ffc1c1" height="30" width="30">
+				</td>
+				<td>
+					#FFC1C1
+				</td>
+				<td bgcolor="#ffc125" height="30" width="30">
+				</td>
+				<td>
+					#FFC125
+				</td>
+				<td bgcolor="#ffc0cb" height="30" width="30">
+				</td>
+				<td>
+					#FFC0CB
+				</td>
+				<td bgcolor="#ffbbff" height="30" width="30">
+				</td>
+				<td>
+					#FFBBFF
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#ffb90f" height="30" width="30">
+				</td>
+				<td>
+					#FFB90F
+				</td>
+				<td bgcolor="#ffb6c1" height="30" width="30">
+				</td>
+				<td>
+					#FFB6C1
+				</td>
+				<td bgcolor="#ffb5c5" height="30" width="30">
+				</td>
+				<td>
+					#FFB5C5
+				</td>
+				<td bgcolor="#ffaeb9" height="30" width="30">
+				</td>
+				<td>
+					#FFAEB9
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#ffa54f" height="30" width="30">
+				</td>
+				<td>
+					#FFA54F
+				</td>
+				<td bgcolor="#ffa500" height="30" width="30">
+				</td>
+				<td>
+					#FFA500
+				</td>
+				<td bgcolor="#ffa07a" height="30" width="30">
+				</td>
+				<td>
+					#FFA07A
+				</td>
+				<td bgcolor="#ff8c69" height="30" width="30">
+				</td>
+				<td>
+					#FF8C69
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#ff8c00" height="30" width="30">
+				</td>
+				<td>
+					#FF8C00
+				</td>
+				<td bgcolor="#ff83fa" height="30" width="30">
+				</td>
+				<td>
+					#FF83FA
+				</td>
+				<td bgcolor="#ff82ab" height="30" width="30">
+				</td>
+				<td>
+					#FF82AB
+				</td>
+				<td bgcolor="#ff8247" height="30" width="30">
+				</td>
+				<td>
+					#FF8247
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#ff7f50" height="30" width="30">
+				</td>
+				<td>
+					#FF7F50
+				</td>
+				<td bgcolor="#ff7f24" height="30" width="30">
+				</td>
+				<td>
+					#FF7F24
+				</td>
+				<td bgcolor="#ff7f00" height="30" width="30">
+				</td>
+				<td>
+					#FF7F00
+				</td>
+				<td bgcolor="#ff7256" height="30" width="30">
+				</td>
+				<td>
+					#FF7256
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#ff6eb4" height="30" width="30">
+				</td>
+				<td>
+					#FF6EB4
+				</td>
+				<td bgcolor="#ff6a6a" height="30" width="30">
+				</td>
+				<td>
+					#FF6A6A
+				</td>
+				<td bgcolor="#ff69b4" height="30" width="30">
+				</td>
+				<td>
+					#FF69B4
+				</td>
+				<td bgcolor="#ff6347" height="30" width="30">
+				</td>
+				<td>
+					#FF6347
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#ff4500" height="30" width="30">
+				</td>
+				<td>
+					#FF4500
+				</td>
+				<td bgcolor="#ff4040" height="30" width="30">
+				</td>
+				<td>
+					#FF4040
+				</td>
+				<td bgcolor="#ff3e96" height="30" width="30">
+				</td>
+				<td>
+					#FF3E96
+				</td>
+				<td bgcolor="#ff34b3" height="30" width="30">
+				</td>
+				<td>
+					#FF34B3
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#ff3030" height="30" width="30">
+				</td>
+				<td>
+					#FF3030
+				</td>
+				<td bgcolor="#ff1493" height="30" width="30">
+				</td>
+				<td>
+					#FF1493
+				</td>
+				<td bgcolor="#ff00ff" height="30" width="30">
+				</td>
+				<td>
+					#FF00FF
+				</td>
+				<td bgcolor="#ff0000" height="30" width="30">
+				</td>
+				<td>
+					#FF0000
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#fdf5e6" height="30" width="30">
+				</td>
+				<td>
+					#FDF5E6
+				</td>
+				<td bgcolor="#fcfcfc" height="30" width="30">
+				</td>
+				<td>
+					#FCFCFC
+				</td>
+				<td bgcolor="#fafafa" height="30" width="30">
+				</td>
+				<td>
+					#FAFAFA
+				</td>
+				<td bgcolor="#fafad2" height="30" width="30">
+				</td>
+				<td>
+					#FAFAD2
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#faf0e6" height="30" width="30">
+				</td>
+				<td>
+					#FAF0E6
+				</td>
+				<td bgcolor="#faebd7" height="30" width="30">
+				</td>
+				<td>
+					#FAEBD7
+				</td>
+				<td bgcolor="#fa8072" height="30" width="30">
+				</td>
+				<td>
+					#FA8072
+				</td>
+				<td bgcolor="#f8f8ff" height="30" width="30">
+				</td>
+				<td>
+					#F8F8FF
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#f7f7f7" height="30" width="30">
+				</td>
+				<td>
+					#F7F7F7
+				</td>
+				<td bgcolor="#f5fffa" height="30" width="30">
+				</td>
+				<td>
+					#F5FFFA
+				</td>
+				<td bgcolor="#f5f5f5" height="30" width="30">
+				</td>
+				<td>
+					#F5F5F5
+				</td>
+				<td bgcolor="#f5f5dc" height="30" width="30">
+				</td>
+				<td>
+					#F5F5DC
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#f5deb3" height="30" width="30">
+				</td>
+				<td>
+					#F5DEB3
+				</td>
+				<td bgcolor="#f4f4f4" height="30" width="30">
+				</td>
+				<td>
+					#F4F4F4
+				</td>
+				<td bgcolor="#f4a460" height="30" width="30">
+				</td>
+				<td>
+					#F4A460
+				</td>
+				<td bgcolor="#f2f2f2" height="30" width="30">
+				</td>
+				<td>
+					#F2F2F2
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#f0ffff" height="30" width="30">
+				</td>
+				<td>
+					#F0FFFF
+				</td>
+				<td bgcolor="#f0fff0" height="30" width="30">
+				</td>
+				<td>
+					#F0FFF0
+				</td>
+				<td bgcolor="#f0f8ff" height="30" width="30">
+				</td>
+				<td>
+					#F0F8FF
+				</td>
+				<td bgcolor="#f0f0f0" height="30" width="30">
+				</td>
+				<td>
+					#F0F0F0
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#f0e68c" height="30" width="30">
+				</td>
+				<td>
+					#F0E68C
+				</td>
+				<td bgcolor="#f08080" height="30" width="30">
+				</td>
+				<td>
+					#F08080
+				</td>
+				<td bgcolor="#eeeee0" height="30" width="30">
+				</td>
+				<td>
+					#EEEEE0
+				</td>
+				<td bgcolor="#eeeed1" height="30" width="30">
+				</td>
+				<td>
+					#EEEED1
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#eeee00" height="30" width="30">
+				</td>
+				<td>
+					#EEEE00
+				</td>
+				<td bgcolor="#eee9e9" height="30" width="30">
+				</td>
+				<td>
+					#EEE9E9
+				</td>
+				<td bgcolor="#eee9bf" height="30" width="30">
+				</td>
+				<td>
+					#EEE9BF
+				</td>
+				<td bgcolor="#eee8cd" height="30" width="30">
+				</td>
+				<td>
+					#EEE8CD
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#eee8aa" height="30" width="30">
+				</td>
+				<td>
+					#EEE8AA
+				</td>
+				<td bgcolor="#eee685" height="30" width="30">
+				</td>
+				<td>
+					#EEE685
+				</td>
+				<td bgcolor="#eee5de" height="30" width="30">
+				</td>
+				<td>
+					#EEE5DE
+				</td>
+				<td bgcolor="#eee0e5" height="30" width="30">
+				</td>
+				<td>
+					#EEE0E5
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#eedfcc" height="30" width="30">
+				</td>
+				<td>
+					#EEDFCC
+				</td>
+				<td bgcolor="#eedc82" height="30" width="30">
+				</td>
+				<td>
+					#EEDC82
+				</td>
+				<td bgcolor="#eed8ae" height="30" width="30">
+				</td>
+				<td>
+					#EED8AE
+				</td>
+				<td bgcolor="#eed5d2" height="30" width="30">
+				</td>
+				<td>
+					#EED5D2
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#eed5b7" height="30" width="30">
+				</td>
+				<td>
+					#EED5B7
+				</td>
+				<td bgcolor="#eed2ee" height="30" width="30">
+				</td>
+				<td>
+					#EED2EE
+				</td>
+				<td bgcolor="#eecfa1" height="30" width="30">
+				</td>
+				<td>
+					#EECFA1
+				</td>
+				<td bgcolor="#eecbad" height="30" width="30">
+				</td>
+				<td>
+					#EECBAD
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#eec900" height="30" width="30">
+				</td>
+				<td>
+					#EEC900
+				</td>
+				<td bgcolor="#eec591" height="30" width="30">
+				</td>
+				<td>
+					#EEC591
+				</td>
+				<td bgcolor="#eeb4b4" height="30" width="30">
+				</td>
+				<td>
+					#EEB4B4
+				</td>
+				<td bgcolor="#eeb422" height="30" width="30">
+				</td>
+				<td>
+					#EEB422
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#eeaeee" height="30" width="30">
+				</td>
+				<td>
+					#EEAEEE
+				</td>
+				<td bgcolor="#eead0e" height="30" width="30">
+				</td>
+				<td>
+					#EEAD0E
+				</td>
+				<td bgcolor="#eea9b8" height="30" width="30">
+				</td>
+				<td>
+					#EEA9B8
+				</td>
+				<td bgcolor="#eea2ad" height="30" width="30">
+				</td>
+				<td>
+					#EEA2AD
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#ee9a49" height="30" width="30">
+				</td>
+				<td>
+					#EE9A49
+				</td>
+				<td bgcolor="#ee9a00" height="30" width="30">
+				</td>
+				<td>
+					#EE9A00
+				</td>
+				<td bgcolor="#ee9572" height="30" width="30">
+				</td>
+				<td>
+					#EE9572
+				</td>
+				<td bgcolor="#ee82ee" height="30" width="30">
+				</td>
+				<td>
+					#EE82EE
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#ee8262" height="30" width="30">
+				</td>
+				<td>
+					#EE8262
+				</td>
+				<td bgcolor="#ee7ae9" height="30" width="30">
+				</td>
+				<td>
+					#EE7AE9
+				</td>
+				<td bgcolor="#ee799f" height="30" width="30">
+				</td>
+				<td>
+					#EE799F
+				</td>
+				<td bgcolor="#ee7942" height="30" width="30">
+				</td>
+				<td>
+					#EE7942
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#ee7621" height="30" width="30">
+				</td>
+				<td>
+					#EE7621
+				</td>
+				<td bgcolor="#ee7600" height="30" width="30">
+				</td>
+				<td>
+					#EE7600
+				</td>
+				<td bgcolor="#ee6aa7" height="30" width="30">
+				</td>
+				<td>
+					#EE6AA7
+				</td>
+				<td bgcolor="#ee6a50" height="30" width="30">
+				</td>
+				<td>
+					#EE6A50
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#ee6363" height="30" width="30">
+				</td>
+				<td>
+					#EE6363
+				</td>
+				<td bgcolor="#ee5c42" height="30" width="30">
+				</td>
+				<td>
+					#EE5C42
+				</td>
+				<td bgcolor="#ee4000" height="30" width="30">
+				</td>
+				<td>
+					#EE4000
+				</td>
+				<td bgcolor="#ee3b3b" height="30" width="30">
+				</td>
+				<td>
+					#EE3B3B
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#ee3a8c" height="30" width="30">
+				</td>
+				<td>
+					#EE3A8C
+				</td>
+				<td bgcolor="#ee30a7" height="30" width="30">
+				</td>
+				<td>
+					#EE30A7
+				</td>
+				<td bgcolor="#ee2c2c" height="30" width="30">
+				</td>
+				<td>
+					#EE2C2C
+				</td>
+				<td bgcolor="#ee1289" height="30" width="30">
+				</td>
+				<td>
+					#EE1289
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#ee00ee" height="30" width="30">
+				</td>
+				<td>
+					#EE00EE
+				</td>
+				<td bgcolor="#ee0000" height="30" width="30">
+				</td>
+				<td>
+					#EE0000
+				</td>
+				<td bgcolor="#ededed" height="30" width="30">
+				</td>
+				<td>
+					#EDEDED
+				</td>
+				<td bgcolor="#ebebeb" height="30" width="30">
+				</td>
+				<td>
+					#EBEBEB
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#eaeaea" height="30" width="30">
+				</td>
+				<td>
+					#EAEAEA
+				</td>
+				<td bgcolor="#e9967a" height="30" width="30">
+				</td>
+				<td>
+					#E9967A
+				</td>
+				<td bgcolor="#e8e8e8" height="30" width="30">
+				</td>
+				<td>
+					#E8E8E8
+				</td>
+				<td bgcolor="#e6e6fa" height="30" width="30">
+				</td>
+				<td>
+					#E6E6FA
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#e5e5e5" height="30" width="30">
+				</td>
+				<td>
+					#E5E5E5
+				</td>
+				<td bgcolor="#e3e3e3" height="30" width="30">
+				</td>
+				<td>
+					#E3E3E3
+				</td>
+				<td bgcolor="#e0ffff" height="30" width="30">
+				</td>
+				<td>
+					#E0FFFF
+				</td>
+				<td bgcolor="#e0eeee" height="30" width="30">
+				</td>
+				<td>
+					#E0EEEE
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#e0eee0" height="30" width="30">
+				</td>
+				<td>
+					#E0EEE0
+				</td>
+				<td bgcolor="#e0e0e0" height="30" width="30">
+				</td>
+				<td>
+					#E0E0E0
+				</td>
+				<td bgcolor="#e066ff" height="30" width="30">
+				</td>
+				<td>
+					#E066FF
+				</td>
+				<td bgcolor="#dedede" height="30" width="30">
+				</td>
+				<td>
+					#DEDEDE
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#deb887" height="30" width="30">
+				</td>
+				<td>
+					#DEB887
+				</td>
+				<td bgcolor="#dda0dd" height="30" width="30">
+				</td>
+				<td>
+					#DDA0DD
+				</td>
+				<td bgcolor="#dcdcdc" height="30" width="30">
+				</td>
+				<td>
+					#DCDCDC
+				</td>
+				<td bgcolor="#dc143c" height="30" width="30">
+				</td>
+				<td>
+					#DC143C
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#dbdbdb" height="30" width="30">
+				</td>
+				<td>
+					#DBDBDB
+				</td>
+				<td bgcolor="#db7093" height="30" width="30">
+				</td>
+				<td>
+					#DB7093
+				</td>
+				<td bgcolor="#daa520" height="30" width="30">
+				</td>
+				<td>
+					#DAA520
+				</td>
+				<td bgcolor="#da70d6" height="30" width="30">
+				</td>
+				<td>
+					#DA70D6
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#d9d9d9" height="30" width="30">
+				</td>
+				<td>
+					#D9D9D9
+				</td>
+				<td bgcolor="#d8bfd8" height="30" width="30">
+				</td>
+				<td>
+					#D8BFD8
+				</td>
+				<td bgcolor="#d6d6d6" height="30" width="30">
+				</td>
+				<td>
+					#D6D6D6
+				</td>
+				<td bgcolor="#d4d4d4" height="30" width="30">
+				</td>
+				<td>
+					#D4D4D4
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#d3d3d3" height="30" width="30">
+				</td>
+				<td>
+					#D3D3D3
+				</td>
+				<td bgcolor="#d2b48c" height="30" width="30">
+				</td>
+				<td>
+					#D2B48C
+				</td>
+				<td bgcolor="#d2691e" height="30" width="30">
+				</td>
+				<td>
+					#D2691E
+				</td>
+				<td bgcolor="#d1eeee" height="30" width="30">
+				</td>
+				<td>
+					#D1EEEE
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#d1d1d1" height="30" width="30">
+				</td>
+				<td>
+					#D1D1D1
+				</td>
+				<td bgcolor="#d15fee" height="30" width="30">
+				</td>
+				<td>
+					#D15FEE
+				</td>
+				<td bgcolor="#d02090" height="30" width="30">
+				</td>
+				<td>
+					#D02090
+				</td>
+				<td bgcolor="#cfcfcf" height="30" width="30">
+				</td>
+				<td>
+					#CFCFCF
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#cdcdc1" height="30" width="30">
+				</td>
+				<td>
+					#CDCDC1
+				</td>
+				<td bgcolor="#cdcdb4" height="30" width="30">
+				</td>
+				<td>
+					#CDCDB4
+				</td>
+				<td bgcolor="#cdcd00" height="30" width="30">
+				</td>
+				<td>
+					#CDCD00
+				</td>
+				<td bgcolor="#cdc9c9" height="30" width="30">
+				</td>
+				<td>
+					#CDC9C9
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#cdc9a5" height="30" width="30">
+				</td>
+				<td>
+					#CDC9A5
+				</td>
+				<td bgcolor="#cdc8b1" height="30" width="30">
+				</td>
+				<td>
+					#CDC8B1
+				</td>
+				<td bgcolor="#cdc673" height="30" width="30">
+				</td>
+				<td>
+					#CDC673
+				</td>
+				<td bgcolor="#cdc5bf" height="30" width="30">
+				</td>
+				<td>
+					#CDC5BF
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#cdc1c5" height="30" width="30">
+				</td>
+				<td>
+					#CDC1C5
+				</td>
+				<td bgcolor="#cdc0b0" height="30" width="30">
+				</td>
+				<td>
+					#CDC0B0
+				</td>
+				<td bgcolor="#cdbe70" height="30" width="30">
+				</td>
+				<td>
+					#CDBE70
+				</td>
+				<td bgcolor="#cdba96" height="30" width="30">
+				</td>
+				<td>
+					#CDBA96
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#cdb7b5" height="30" width="30">
+				</td>
+				<td>
+					#CDB7B5
+				</td>
+				<td bgcolor="#cdb79e" height="30" width="30">
+				</td>
+				<td>
+					#CDB79E
+				</td>
+				<td bgcolor="#cdb5cd" height="30" width="30">
+				</td>
+				<td>
+					#CDB5CD
+				</td>
+				<td bgcolor="#cdb38b" height="30" width="30">
+				</td>
+				<td>
+					#CDB38B
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#cdaf95" height="30" width="30">
+				</td>
+				<td>
+					#CDAF95
+				</td>
+				<td bgcolor="#cdad00" height="30" width="30">
+				</td>
+				<td>
+					#CDAD00
+				</td>
+				<td bgcolor="#cdaa7d" height="30" width="30">
+				</td>
+				<td>
+					#CDAA7D
+				</td>
+				<td bgcolor="#cd9b9b" height="30" width="30">
+				</td>
+				<td>
+					#CD9B9B
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#cd9b1d" height="30" width="30">
+				</td>
+				<td>
+					#CD9B1D
+				</td>
+				<td bgcolor="#cd96cd" height="30" width="30">
+				</td>
+				<td>
+					#CD96CD
+				</td>
+				<td bgcolor="#cd950c" height="30" width="30">
+				</td>
+				<td>
+					#CD950C
+				</td>
+				<td bgcolor="#cd919e" height="30" width="30">
+				</td>
+				<td>
+					#CD919E
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#cd8c95" height="30" width="30">
+				</td>
+				<td>
+					#CD8C95
+				</td>
+				<td bgcolor="#cd853f" height="30" width="30">
+				</td>
+				<td>
+					#CD853F
+				</td>
+				<td bgcolor="#cd8500" height="30" width="30">
+				</td>
+				<td>
+					#CD8500
+				</td>
+				<td bgcolor="#cd8162" height="30" width="30">
+				</td>
+				<td>
+					#CD8162
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#cd7054" height="30" width="30">
+				</td>
+				<td>
+					#CD7054
+				</td>
+				<td bgcolor="#cd69c9" height="30" width="30">
+				</td>
+				<td>
+					#CD69C9
+				</td>
+				<td bgcolor="#cd6889" height="30" width="30">
+				</td>
+				<td>
+					#CD6889
+				</td>
+				<td bgcolor="#cd6839" height="30" width="30">
+				</td>
+				<td>
+					#CD6839
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#cd661d" height="30" width="30">
+				</td>
+				<td>
+					#CD661D
+				</td>
+				<td bgcolor="#cd6600" height="30" width="30">
+				</td>
+				<td>
+					#CD6600
+				</td>
+				<td bgcolor="#cd6090" height="30" width="30">
+				</td>
+				<td>
+					#CD6090
+				</td>
+				<td bgcolor="#cd5c5c" height="30" width="30">
+				</td>
+				<td>
+					#CD5C5C
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#cd5b45" height="30" width="30">
+				</td>
+				<td>
+					#CD5B45
+				</td>
+				<td bgcolor="#cd5555" height="30" width="30">
+				</td>
+				<td>
+					#CD5555
+				</td>
+				<td bgcolor="#cd4f39" height="30" width="30">
+				</td>
+				<td>
+					#CD4F39
+				</td>
+				<td bgcolor="#cd3700" height="30" width="30">
+				</td>
+				<td>
+					#CD3700
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#cd3333" height="30" width="30">
+				</td>
+				<td>
+					#CD3333
+				</td>
+				<td bgcolor="#cd3278" height="30" width="30">
+				</td>
+				<td>
+					#CD3278
+				</td>
+				<td bgcolor="#cd2990" height="30" width="30">
+				</td>
+				<td>
+					#CD2990
+				</td>
+				<td bgcolor="#cd2626" height="30" width="30">
+				</td>
+				<td>
+					#CD2626
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#cd1076" height="30" width="30">
+				</td>
+				<td>
+					#CD1076
+				</td>
+				<td bgcolor="#cd00cd" height="30" width="30">
+				</td>
+				<td>
+					#CD00CD
+				</td>
+				<td bgcolor="#cd0000" height="30" width="30">
+				</td>
+				<td>
+					#CD0000
+				</td>
+				<td bgcolor="#cccccc" height="30" width="30">
+				</td>
+				<td>
+					#CCCCCC
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#caff70" height="30" width="30">
+				</td>
+				<td>
+					#CAFF70
+				</td>
+				<td bgcolor="#cae1ff" height="30" width="30">
+				</td>
+				<td>
+					#CAE1FF
+				</td>
+				<td bgcolor="#c9c9c9" height="30" width="30">
+				</td>
+				<td>
+					#C9C9C9
+				</td>
+				<td bgcolor="#c7c7c7" height="30" width="30">
+				</td>
+				<td>
+					#C7C7C7
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#c71585" height="30" width="30">
+				</td>
+				<td>
+					#C71585
+				</td>
+				<td bgcolor="#c6e2ff" height="30" width="30">
+				</td>
+				<td>
+					#C6E2FF
+				</td>
+				<td bgcolor="#c67171" height="30" width="30">
+				</td>
+				<td>
+					#C67171
+				</td>
+				<td bgcolor="#c5c1aa" height="30" width="30">
+				</td>
+				<td>
+					#C5C1AA
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#c4c4c4" height="30" width="30">
+				</td>
+				<td>
+					#C4C4C4
+				</td>
+				<td bgcolor="#c2c2c2" height="30" width="30">
+				</td>
+				<td>
+					#C2C2C2
+				</td>
+				<td bgcolor="#c1ffc1" height="30" width="30">
+				</td>
+				<td>
+					#C1FFC1
+				</td>
+				<td bgcolor="#c1cdcd" height="30" width="30">
+				</td>
+				<td>
+					#C1CDCD
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#c1cdc1" height="30" width="30">
+				</td>
+				<td>
+					#C1CDC1
+				</td>
+				<td bgcolor="#c1c1c1" height="30" width="30">
+				</td>
+				<td>
+					#C1C1C1
+				</td>
+				<td bgcolor="#c0ff3e" height="30" width="30">
+				</td>
+				<td>
+					#C0FF3E
+				</td>
+				<td bgcolor="#bfefff" height="30" width="30">
+				</td>
+				<td>
+					#BFEFFF
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#bfbfbf" height="30" width="30">
+				</td>
+				<td>
+					#BFBFBF
+				</td>
+				<td bgcolor="#bf3eff" height="30" width="30">
+				</td>
+				<td>
+					#BF3EFF
+				</td>
+				<td bgcolor="#bebebe" height="30" width="30">
+				</td>
+				<td>
+					#BEBEBE
+				</td>
+				<td bgcolor="#bdbdbd" height="30" width="30">
+				</td>
+				<td>
+					#BDBDBD
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#bdb76b" height="30" width="30">
+				</td>
+				<td>
+					#BDB76B
+				</td>
+				<td bgcolor="#bcee68" height="30" width="30">
+				</td>
+				<td>
+					#BCEE68
+				</td>
+				<td bgcolor="#bcd2ee" height="30" width="30">
+				</td>
+				<td>
+					#BCD2EE
+				</td>
+				<td bgcolor="#bc8f8f" height="30" width="30">
+				</td>
+				<td>
+					#BC8F8F
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#bbffff" height="30" width="30">
+				</td>
+				<td>
+					#BBFFFF
+				</td>
+				<td bgcolor="#bababa" height="30" width="30">
+				</td>
+				<td>
+					#BABABA
+				</td>
+				<td bgcolor="#ba55d3" height="30" width="30">
+				</td>
+				<td>
+					#BA55D3
+				</td>
+				<td bgcolor="#b9d3ee" height="30" width="30">
+				</td>
+				<td>
+					#B9D3EE
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#b8b8b8" height="30" width="30">
+				</td>
+				<td>
+					#B8B8B8
+				</td>
+				<td bgcolor="#b8860b" height="30" width="30">
+				</td>
+				<td>
+					#B8860B
+				</td>
+				<td bgcolor="#b7b7b7" height="30" width="30">
+				</td>
+				<td>
+					#B7B7B7
+				</td>
+				<td bgcolor="#b5b5b5" height="30" width="30">
+				</td>
+				<td>
+					#B5B5B5
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#b4eeb4" height="30" width="30">
+				</td>
+				<td>
+					#B4EEB4
+				</td>
+				<td bgcolor="#b4cdcd" height="30" width="30">
+				</td>
+				<td>
+					#B4CDCD
+				</td>
+				<td bgcolor="#b452cd" height="30" width="30">
+				</td>
+				<td>
+					#B452CD
+				</td>
+				<td bgcolor="#b3ee3a" height="30" width="30">
+				</td>
+				<td>
+					#B3EE3A
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#b3b3b3" height="30" width="30">
+				</td>
+				<td>
+					#B3B3B3
+				</td>
+				<td bgcolor="#b2dfee" height="30" width="30">
+				</td>
+				<td>
+					#B2DFEE
+				</td>
+				<td bgcolor="#b23aee" height="30" width="30">
+				</td>
+				<td>
+					#B23AEE
+				</td>
+				<td bgcolor="#b22222" height="30" width="30">
+				</td>
+				<td>
+					#B22222
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#b0e2ff" height="30" width="30">
+				</td>
+				<td>
+					#B0E2FF
+				</td>
+				<td bgcolor="#b0e0e6" height="30" width="30">
+				</td>
+				<td>
+					#B0E0E6
+				</td>
+				<td bgcolor="#b0c4de" height="30" width="30">
+				</td>
+				<td>
+					#B0C4DE
+				</td>
+				<td bgcolor="#b0b0b0" height="30" width="30">
+				</td>
+				<td>
+					#B0B0B0
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#b03060" height="30" width="30">
+				</td>
+				<td>
+					#B03060
+				</td>
+				<td bgcolor="#aeeeee" height="30" width="30">
+				</td>
+				<td>
+					#AEEEEE
+				</td>
+				<td bgcolor="#adff2f" height="30" width="30">
+				</td>
+				<td>
+					#ADFF2F
+				</td>
+				<td bgcolor="#add8e6" height="30" width="30">
+				</td>
+				<td>
+					#ADD8E6
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#adadad" height="30" width="30">
+				</td>
+				<td>
+					#ADADAD
+				</td>
+				<td bgcolor="#ababab" height="30" width="30">
+				</td>
+				<td>
+					#ABABAB
+				</td>
+				<td bgcolor="#ab82ff" height="30" width="30">
+				</td>
+				<td>
+					#AB82FF
+				</td>
+				<td bgcolor="#aaaaaa" height="30" width="30">
+				</td>
+				<td>
+					#AAAAAA
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#a9a9a9" height="30" width="30">
+				</td>
+				<td>
+					#A9A9A9
+				</td>
+				<td bgcolor="#a8a8a8" height="30" width="30">
+				</td>
+				<td>
+					#A8A8A8
+				</td>
+				<td bgcolor="#a6a6a6" height="30" width="30">
+				</td>
+				<td>
+					#A6A6A6
+				</td>
+				<td bgcolor="#a52a2a" height="30" width="30">
+				</td>
+				<td>
+					#A52A2A
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#a4d3ee" height="30" width="30">
+				</td>
+				<td>
+					#A4D3EE
+				</td>
+				<td bgcolor="#a3a3a3" height="30" width="30">
+				</td>
+				<td>
+					#A3A3A3
+				</td>
+				<td bgcolor="#a2cd5a" height="30" width="30">
+				</td>
+				<td>
+					#A2CD5A
+				</td>
+				<td bgcolor="#a2b5cd" height="30" width="30">
+				</td>
+				<td>
+					#A2B5CD
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#a1a1a1" height="30" width="30">
+				</td>
+				<td>
+					#A1A1A1
+				</td>
+				<td bgcolor="#a0522d" height="30" width="30">
+				</td>
+				<td>
+					#A0522D
+				</td>
+				<td bgcolor="#a020f0" height="30" width="30">
+				</td>
+				<td>
+					#A020F0
+				</td>
+				<td bgcolor="#9fb6cd" height="30" width="30">
+				</td>
+				<td>
+					#9FB6CD
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#9f79ee" height="30" width="30">
+				</td>
+				<td>
+					#9F79EE
+				</td>
+				<td bgcolor="#9e9e9e" height="30" width="30">
+				</td>
+				<td>
+					#9E9E9E
+				</td>
+				<td bgcolor="#9c9c9c" height="30" width="30">
+				</td>
+				<td>
+					#9C9C9C
+				</td>
+				<td bgcolor="#9bcd9b" height="30" width="30">
+				</td>
+				<td>
+					#9BCD9B
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#9b30ff" height="30" width="30">
+				</td>
+				<td>
+					#9B30FF
+				</td>
+				<td bgcolor="#9aff9a" height="30" width="30">
+				</td>
+				<td>
+					#9AFF9A
+				</td>
+				<td bgcolor="#9acd32" height="30" width="30">
+				</td>
+				<td>
+					#9ACD32
+				</td>
+				<td bgcolor="#9ac0cd" height="30" width="30">
+				</td>
+				<td>
+					#9AC0CD
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#9a32cd" height="30" width="30">
+				</td>
+				<td>
+					#9A32CD
+				</td>
+				<td bgcolor="#999999" height="30" width="30">
+				</td>
+				<td>
+					#999999
+				</td>
+				<td bgcolor="#9932cc" height="30" width="30">
+				</td>
+				<td>
+					#9932CC
+				</td>
+				<td bgcolor="#98fb98" height="30" width="30">
+				</td>
+				<td>
+					#98FB98
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#98f5ff" height="30" width="30">
+				</td>
+				<td>
+					#98F5FF
+				</td>
+				<td bgcolor="#97ffff" height="30" width="30">
+				</td>
+				<td>
+					#97FFFF
+				</td>
+				<td bgcolor="#96cdcd" height="30" width="30">
+				</td>
+				<td>
+					#96CDCD
+				</td>
+				<td bgcolor="#969696" height="30" width="30">
+				</td>
+				<td>
+					#969696
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#949494" height="30" width="30">
+				</td>
+				<td>
+					#949494
+				</td>
+				<td bgcolor="#9400d3" height="30" width="30">
+				</td>
+				<td>
+					#9400D3
+				</td>
+				<td bgcolor="#9370db" height="30" width="30">
+				</td>
+				<td>
+					#9370DB
+				</td>
+				<td bgcolor="#919191" height="30" width="30">
+				</td>
+				<td>
+					#919191
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#912cee" height="30" width="30">
+				</td>
+				<td>
+					#912CEE
+				</td>
+				<td bgcolor="#90ee90" height="30" width="30">
+				</td>
+				<td>
+					#90EE90
+				</td>
+				<td bgcolor="#8fbc8f" height="30" width="30">
+				</td>
+				<td>
+					#8FBC8F
+				</td>
+				<td bgcolor="#8f8f8f" height="30" width="30">
+				</td>
+				<td>
+					#8F8F8F
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#8ee5ee" height="30" width="30">
+				</td>
+				<td>
+					#8EE5EE
+				</td>
+				<td bgcolor="#8e8e8e" height="30" width="30">
+				</td>
+				<td>
+					#8E8E8E
+				</td>
+				<td bgcolor="#8e8e38" height="30" width="30">
+				</td>
+				<td>
+					#8E8E38
+				</td>
+				<td bgcolor="#8e388e" height="30" width="30">
+				</td>
+				<td>
+					#8E388E
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#8deeee" height="30" width="30">
+				</td>
+				<td>
+					#8DEEEE
+				</td>
+				<td bgcolor="#8db6cd" height="30" width="30">
+				</td>
+				<td>
+					#8DB6CD
+				</td>
+				<td bgcolor="#8c8c8c" height="30" width="30">
+				</td>
+				<td>
+					#8C8C8C
+				</td>
+				<td bgcolor="#8b8b83" height="30" width="30">
+				</td>
+				<td>
+					#8B8B83
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#8b8b7a" height="30" width="30">
+				</td>
+				<td>
+					#8B8B7A
+				</td>
+				<td bgcolor="#8b8b00" height="30" width="30">
+				</td>
+				<td>
+					#8B8B00
+				</td>
+				<td bgcolor="#8b8989" height="30" width="30">
+				</td>
+				<td>
+					#8B8989
+				</td>
+				<td bgcolor="#8b8970" height="30" width="30">
+				</td>
+				<td>
+					#8B8970
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#8b8878" height="30" width="30">
+				</td>
+				<td>
+					#8B8878
+				</td>
+				<td bgcolor="#8b8682" height="30" width="30">
+				</td>
+				<td>
+					#8B8682
+				</td>
+				<td bgcolor="#8b864e" height="30" width="30">
+				</td>
+				<td>
+					#8B864E
+				</td>
+				<td bgcolor="#8b8386" height="30" width="30">
+				</td>
+				<td>
+					#8B8386
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#8b8378" height="30" width="30">
+				</td>
+				<td>
+					#8B8378
+				</td>
+				<td bgcolor="#8b814c" height="30" width="30">
+				</td>
+				<td>
+					#8B814C
+				</td>
+				<td bgcolor="#8b7e66" height="30" width="30">
+				</td>
+				<td>
+					#8B7E66
+				</td>
+				<td bgcolor="#8b7d7b" height="30" width="30">
+				</td>
+				<td>
+					#8B7D7B
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#8b7d6b" height="30" width="30">
+				</td>
+				<td>
+					#8B7D6B
+				</td>
+				<td bgcolor="#8b7b8b" height="30" width="30">
+				</td>
+				<td>
+					#8B7B8B
+				</td>
+				<td bgcolor="#8b795e" height="30" width="30">
+				</td>
+				<td>
+					#8B795E
+				</td>
+				<td bgcolor="#8b7765" height="30" width="30">
+				</td>
+				<td>
+					#8B7765
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#8b7500" height="30" width="30">
+				</td>
+				<td>
+					#8B7500
+				</td>
+				<td bgcolor="#8b7355" height="30" width="30">
+				</td>
+				<td>
+					#8B7355
+				</td>
+				<td bgcolor="#8b6969" height="30" width="30">
+				</td>
+				<td>
+					#8B6969
+				</td>
+				<td bgcolor="#8b6914" height="30" width="30">
+				</td>
+				<td>
+					#8B6914
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#8b668b" height="30" width="30">
+				</td>
+				<td>
+					#8B668B
+				</td>
+				<td bgcolor="#8b6508" height="30" width="30">
+				</td>
+				<td>
+					#8B6508
+				</td>
+				<td bgcolor="#8b636c" height="30" width="30">
+				</td>
+				<td>
+					#8B636C
+				</td>
+				<td bgcolor="#8b5f65" height="30" width="30">
+				</td>
+				<td>
+					#8B5F65
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#8b5a2b" height="30" width="30">
+				</td>
+				<td>
+					#8B5A2B
+				</td>
+				<td bgcolor="#8b5a00" height="30" width="30">
+				</td>
+				<td>
+					#8B5A00
+				</td>
+				<td bgcolor="#8b5742" height="30" width="30">
+				</td>
+				<td>
+					#8B5742
+				</td>
+				<td bgcolor="#8b4c39" height="30" width="30">
+				</td>
+				<td>
+					#8B4C39
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#8b4789" height="30" width="30">
+				</td>
+				<td>
+					#8B4789
+				</td>
+				<td bgcolor="#8b475d" height="30" width="30">
+				</td>
+				<td>
+					#8B475D
+				</td>
+				<td bgcolor="#8b4726" height="30" width="30">
+				</td>
+				<td>
+					#8B4726
+				</td>
+				<td bgcolor="#8b4513" height="30" width="30">
+				</td>
+				<td>
+					#8B4513
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#8b4500" height="30" width="30">
+				</td>
+				<td>
+					#8B4500
+				</td>
+				<td bgcolor="#8b3e2f" height="30" width="30">
+				</td>
+				<td>
+					#8B3E2F
+				</td>
+				<td bgcolor="#8b3a62" height="30" width="30">
+				</td>
+				<td>
+					#8B3A62
+				</td>
+				<td bgcolor="#8b3a3a" height="30" width="30">
+				</td>
+				<td>
+					#8B3A3A
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#8b3626" height="30" width="30">
+				</td>
+				<td>
+					#8B3626
+				</td>
+				<td bgcolor="#8b2500" height="30" width="30">
+				</td>
+				<td>
+					#8B2500
+				</td>
+				<td bgcolor="#8b2323" height="30" width="30">
+				</td>
+				<td>
+					#8B2323
+				</td>
+				<td bgcolor="#8b2252" height="30" width="30">
+				</td>
+				<td>
+					#8B2252
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#8b1c62" height="30" width="30">
+				</td>
+				<td>
+					#8B1C62
+				</td>
+				<td bgcolor="#8b1a1a" height="30" width="30">
+				</td>
+				<td>
+					#8B1A1A
+				</td>
+				<td bgcolor="#8b0a50" height="30" width="30">
+				</td>
+				<td>
+					#8B0A50
+				</td>
+				<td bgcolor="#8b008b" height="30" width="30">
+				</td>
+				<td>
+					#8B008B
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#8b0000" height="30" width="30">
+				</td>
+				<td>
+					#8B0000
+				</td>
+				<td bgcolor="#8a8a8a" height="30" width="30">
+				</td>
+				<td>
+					#8A8A8A
+				</td>
+				<td bgcolor="#8a2be2" height="30" width="30">
+				</td>
+				<td>
+					#8A2BE2
+				</td>
+				<td bgcolor="#8968cd" height="30" width="30">
+				</td>
+				<td>
+					#8968CD
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#87ceff" height="30" width="30">
+				</td>
+				<td>
+					#87CEFF
+				</td>
+				<td bgcolor="#87cefa" height="30" width="30">
+				</td>
+				<td>
+					#87CEFA
+				</td>
+				<td bgcolor="#87ceeb" height="30" width="30">
+				</td>
+				<td>
+					#87CEEB
+				</td>
+				<td bgcolor="#878787" height="30" width="30">
+				</td>
+				<td>
+					#878787
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#858585" height="30" width="30">
+				</td>
+				<td>
+					#858585
+				</td>
+				<td bgcolor="#848484" height="30" width="30">
+				</td>
+				<td>
+					#848484
+				</td>
+				<td bgcolor="#8470ff" height="30" width="30">
+				</td>
+				<td>
+					#8470FF
+				</td>
+				<td bgcolor="#838b8b" height="30" width="30">
+				</td>
+				<td>
+					#838B8B
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#838b83" height="30" width="30">
+				</td>
+				<td>
+					#838B83
+				</td>
+				<td bgcolor="#836fff" height="30" width="30">
+				</td>
+				<td>
+					#836FFF
+				</td>
+				<td bgcolor="#828282" height="30" width="30">
+				</td>
+				<td>
+					#828282
+				</td>
+				<td bgcolor="#7fffd4" height="30" width="30">
+				</td>
+				<td>
+					#7FFFD4
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#7fff00" height="30" width="30">
+				</td>
+				<td>
+					#7FFF00
+				</td>
+				<td bgcolor="#7f7f7f" height="30" width="30">
+				</td>
+				<td>
+					#7F7F7F
+				</td>
+				<td bgcolor="#7ec0ee" height="30" width="30">
+				</td>
+				<td>
+					#7EC0EE
+				</td>
+				<td bgcolor="#7d9ec0" height="30" width="30">
+				</td>
+				<td>
+					#7D9EC0
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#7d7d7d" height="30" width="30">
+				</td>
+				<td>
+					#7D7D7D
+				</td>
+				<td bgcolor="#7d26cd" height="30" width="30">
+				</td>
+				<td>
+					#7D26CD
+				</td>
+				<td bgcolor="#7cfc00" height="30" width="30">
+				</td>
+				<td>
+					#7CFC00
+				</td>
+				<td bgcolor="#7ccd7c" height="30" width="30">
+				</td>
+				<td>
+					#7CCD7C
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#7b68ee" height="30" width="30">
+				</td>
+				<td>
+					#7B68EE
+				</td>
+				<td bgcolor="#7ac5cd" height="30" width="30">
+				</td>
+				<td>
+					#7AC5CD
+				</td>
+				<td bgcolor="#7a8b8b" height="30" width="30">
+				</td>
+				<td>
+					#7A8B8B
+				</td>
+				<td bgcolor="#7a7a7a" height="30" width="30">
+				</td>
+				<td>
+					#7A7A7A
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#7a67ee" height="30" width="30">
+				</td>
+				<td>
+					#7A67EE
+				</td>
+				<td bgcolor="#7a378b" height="30" width="30">
+				</td>
+				<td>
+					#7A378B
+				</td>
+				<td bgcolor="#79cdcd" height="30" width="30">
+				</td>
+				<td>
+					#79CDCD
+				</td>
+				<td bgcolor="#787878" height="30" width="30">
+				</td>
+				<td>
+					#787878
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#778899" height="30" width="30">
+				</td>
+				<td>
+					#778899
+				</td>
+				<td bgcolor="#76eec6" height="30" width="30">
+				</td>
+				<td>
+					#76EEC6
+				</td>
+				<td bgcolor="#76ee00" height="30" width="30">
+				</td>
+				<td>
+					#76EE00
+				</td>
+				<td bgcolor="#757575" height="30" width="30">
+				</td>
+				<td>
+					#757575
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#737373" height="30" width="30">
+				</td>
+				<td>
+					#737373
+				</td>
+				<td bgcolor="#71c671" height="30" width="30">
+				</td>
+				<td>
+					#71C671
+				</td>
+				<td bgcolor="#7171c6" height="30" width="30">
+				</td>
+				<td>
+					#7171C6
+				</td>
+				<td bgcolor="#708090" height="30" width="30">
+				</td>
+				<td>
+					#708090
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#707070" height="30" width="30">
+				</td>
+				<td>
+					#707070
+				</td>
+				<td bgcolor="#6e8b3d" height="30" width="30">
+				</td>
+				<td>
+					#6E8B3D
+				</td>
+				<td bgcolor="#6e7b8b" height="30" width="30">
+				</td>
+				<td>
+					#6E7B8B
+				</td>
+				<td bgcolor="#6e6e6e" height="30" width="30">
+				</td>
+				<td>
+					#6E6E6E
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#6ca6cd" height="30" width="30">
+				</td>
+				<td>
+					#6CA6CD
+				</td>
+				<td bgcolor="#6c7b8b" height="30" width="30">
+				</td>
+				<td>
+					#6C7B8B
+				</td>
+				<td bgcolor="#6b8e23" height="30" width="30">
+				</td>
+				<td>
+					#6B8E23
+				</td>
+				<td bgcolor="#6b6b6b" height="30" width="30">
+				</td>
+				<td>
+					#6B6B6B
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#6a5acd" height="30" width="30">
+				</td>
+				<td>
+					#6A5ACD
+				</td>
+				<td bgcolor="#698b69" height="30" width="30">
+				</td>
+				<td>
+					#698B69
+				</td>
+				<td bgcolor="#698b22" height="30" width="30">
+				</td>
+				<td>
+					#698B22
+				</td>
+				<td bgcolor="#696969" height="30" width="30">
+				</td>
+				<td>
+					#696969
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#6959cd" height="30" width="30">
+				</td>
+				<td>
+					#6959CD
+				</td>
+				<td bgcolor="#68838b" height="30" width="30">
+				</td>
+				<td>
+					#68838B
+				</td>
+				<td bgcolor="#68228b" height="30" width="30">
+				</td>
+				<td>
+					#68228B
+				</td>
+				<td bgcolor="#66cdaa" height="30" width="30">
+				</td>
+				<td>
+					#66CDAA
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#66cd00" height="30" width="30">
+				</td>
+				<td>
+					#66CD00
+				</td>
+				<td bgcolor="#668b8b" height="30" width="30">
+				</td>
+				<td>
+					#668B8B
+				</td>
+				<td bgcolor="#666666" height="30" width="30">
+				</td>
+				<td>
+					#666666
+				</td>
+				<td bgcolor="#6495ed" height="30" width="30">
+				</td>
+				<td>
+					#6495ED
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#63b8ff" height="30" width="30">
+				</td>
+				<td>
+					#63B8FF
+				</td>
+				<td bgcolor="#636363" height="30" width="30">
+				</td>
+				<td>
+					#636363
+				</td>
+				<td bgcolor="#616161" height="30" width="30">
+				</td>
+				<td>
+					#616161
+				</td>
+				<td bgcolor="#607b8b" height="30" width="30">
+				</td>
+				<td>
+					#607B8B
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#5f9ea0" height="30" width="30">
+				</td>
+				<td>
+					#5F9EA0
+				</td>
+				<td bgcolor="#5e5e5e" height="30" width="30">
+				</td>
+				<td>
+					#5E5E5E
+				</td>
+				<td bgcolor="#5d478b" height="30" width="30">
+				</td>
+				<td>
+					#5D478B
+				</td>
+				<td bgcolor="#5cacee" height="30" width="30">
+				</td>
+				<td>
+					#5CACEE
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#5c5c5c" height="30" width="30">
+				</td>
+				<td>
+					#5C5C5C
+				</td>
+				<td bgcolor="#5b5b5b" height="30" width="30">
+				</td>
+				<td>
+					#5B5B5B
+				</td>
+				<td bgcolor="#595959" height="30" width="30">
+				</td>
+				<td>
+					#595959
+				</td>
+				<td bgcolor="#575757" height="30" width="30">
+				</td>
+				<td>
+					#575757
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#556b2f" height="30" width="30">
+				</td>
+				<td>
+					#556B2F
+				</td>
+				<td bgcolor="#555555" height="30" width="30">
+				</td>
+				<td>
+					#555555
+				</td>
+				<td bgcolor="#551a8b" height="30" width="30">
+				</td>
+				<td>
+					#551A8B
+				</td>
+				<td bgcolor="#54ff9f" height="30" width="30">
+				</td>
+				<td>
+					#54FF9F
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#548b54" height="30" width="30">
+				</td>
+				<td>
+					#548B54
+				</td>
+				<td bgcolor="#545454" height="30" width="30">
+				</td>
+				<td>
+					#545454
+				</td>
+				<td bgcolor="#53868b" height="30" width="30">
+				</td>
+				<td>
+					#53868B
+				</td>
+				<td bgcolor="#528b8b" height="30" width="30">
+				</td>
+				<td>
+					#528B8B
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#525252" height="30" width="30">
+				</td>
+				<td>
+					#525252
+				</td>
+				<td bgcolor="#515151" height="30" width="30">
+				</td>
+				<td>
+					#515151
+				</td>
+				<td bgcolor="#4f94cd" height="30" width="30">
+				</td>
+				<td>
+					#4F94CD
+				</td>
+				<td bgcolor="#4f4f4f" height="30" width="30">
+				</td>
+				<td>
+					#4F4F4F
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#4eee94" height="30" width="30">
+				</td>
+				<td>
+					#4EEE94
+				</td>
+				<td bgcolor="#4d4d4d" height="30" width="30">
+				</td>
+				<td>
+					#4D4D4D
+				</td>
+				<td bgcolor="#4b0082" height="30" width="30">
+				</td>
+				<td>
+					#4B0082
+				</td>
+				<td bgcolor="#4a708b" height="30" width="30">
+				</td>
+				<td>
+					#4A708B
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#4a4a4a" height="30" width="30">
+				</td>
+				<td>
+					#4A4A4A
+				</td>
+				<td bgcolor="#48d1cc" height="30" width="30">
+				</td>
+				<td>
+					#48D1CC
+				</td>
+				<td bgcolor="#4876ff" height="30" width="30">
+				</td>
+				<td>
+					#4876FF
+				</td>
+				<td bgcolor="#483d8b" height="30" width="30">
+				</td>
+				<td>
+					#483D8B
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#474747" height="30" width="30">
+				</td>
+				<td>
+					#474747
+				</td>
+				<td bgcolor="#473c8b" height="30" width="30">
+				</td>
+				<td>
+					#473C8B
+				</td>
+				<td bgcolor="#4682b4" height="30" width="30">
+				</td>
+				<td>
+					#4682B4
+				</td>
+				<td bgcolor="#458b74" height="30" width="30">
+				</td>
+				<td>
+					#458B74
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#458b00" height="30" width="30">
+				</td>
+				<td>
+					#458B00
+				</td>
+				<td bgcolor="#454545" height="30" width="30">
+				</td>
+				<td>
+					#454545
+				</td>
+				<td bgcolor="#43cd80" height="30" width="30">
+				</td>
+				<td>
+					#43CD80
+				</td>
+				<td bgcolor="#436eee" height="30" width="30">
+				</td>
+				<td>
+					#436EEE
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#424242" height="30" width="30">
+				</td>
+				<td>
+					#424242
+				</td>
+				<td bgcolor="#4169e1" height="30" width="30">
+				</td>
+				<td>
+					#4169E1
+				</td>
+				<td bgcolor="#40e0d0" height="30" width="30">
+				</td>
+				<td>
+					#40E0D0
+				</td>
+				<td bgcolor="#404040" height="30" width="30">
+				</td>
+				<td>
+					#404040
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#3d3d3d" height="30" width="30">
+				</td>
+				<td>
+					#3D3D3D
+				</td>
+				<td bgcolor="#3cb371" height="30" width="30">
+				</td>
+				<td>
+					#3CB371
+				</td>
+				<td bgcolor="#3b3b3b" height="30" width="30">
+				</td>
+				<td>
+					#3B3B3B
+				</td>
+				<td bgcolor="#3a5fcd" height="30" width="30">
+				</td>
+				<td>
+					#3A5FCD
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#388e8e" height="30" width="30">
+				</td>
+				<td>
+					#388E8E
+				</td>
+				<td bgcolor="#383838" height="30" width="30">
+				</td>
+				<td>
+					#383838
+				</td>
+				<td bgcolor="#36648b" height="30" width="30">
+				</td>
+				<td>
+					#36648B
+				</td>
+				<td bgcolor="#363636" height="30" width="30">
+				</td>
+				<td>
+					#363636
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#333333" height="30" width="30">
+				</td>
+				<td>
+					#333333
+				</td>
+				<td bgcolor="#32cd32" height="30" width="30">
+				</td>
+				<td>
+					#32CD32
+				</td>
+				<td bgcolor="#303030" height="30" width="30">
+				</td>
+				<td>
+					#303030
+				</td>
+				<td bgcolor="#2f4f4f" height="30" width="30">
+				</td>
+				<td>
+					#2F4F4F
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#2e8b57" height="30" width="30">
+				</td>
+				<td>
+					#2E8B57
+				</td>
+				<td bgcolor="#2e2e2e" height="30" width="30">
+				</td>
+				<td>
+					#2E2E2E
+				</td>
+				<td bgcolor="#2b2b2b" height="30" width="30">
+				</td>
+				<td>
+					#2B2B2B
+				</td>
+				<td bgcolor="#292929" height="30" width="30">
+				</td>
+				<td>
+					#292929
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#282828" height="30" width="30">
+				</td>
+				<td>
+					#282828
+				</td>
+				<td bgcolor="#27408b" height="30" width="30">
+				</td>
+				<td>
+					#27408B
+				</td>
+				<td bgcolor="#262626" height="30" width="30">
+				</td>
+				<td>
+					#262626
+				</td>
+				<td bgcolor="#242424" height="30" width="30">
+				</td>
+				<td>
+					#242424
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#228b22" height="30" width="30">
+				</td>
+				<td>
+					#228B22
+				</td>
+				<td bgcolor="#218868" height="30" width="30">
+				</td>
+				<td>
+					#218868
+				</td>
+				<td bgcolor="#212121" height="30" width="30">
+				</td>
+				<td>
+					#212121
+				</td>
+				<td bgcolor="#20b2aa" height="30" width="30">
+				</td>
+				<td>
+					#20B2AA
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#1f1f1f" height="30" width="30">
+				</td>
+				<td>
+					#1F1F1F
+				</td>
+				<td bgcolor="#1e90ff" height="30" width="30">
+				</td>
+				<td>
+					#1E90FF
+				</td>
+				<td bgcolor="#1e1e1e" height="30" width="30">
+				</td>
+				<td>
+					#1E1E1E
+				</td>
+				<td bgcolor="#1c86ee" height="30" width="30">
+				</td>
+				<td>
+					#1C86EE
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#1c1c1c" height="30" width="30">
+				</td>
+				<td>
+					#1C1C1C
+				</td>
+				<td bgcolor="#1a1a1a" height="30" width="30">
+				</td>
+				<td>
+					#1A1A1A
+				</td>
+				<td bgcolor="#191970" height="30" width="30">
+				</td>
+				<td>
+					#191970
+				</td>
+				<td bgcolor="#1874cd" height="30" width="30">
+				</td>
+				<td>
+					#1874CD
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#171717" height="30" width="30">
+				</td>
+				<td>
+					#171717
+				</td>
+				<td bgcolor="#141414" height="30" width="30">
+				</td>
+				<td>
+					#141414
+				</td>
+				<td bgcolor="#121212" height="30" width="30">
+				</td>
+				<td>
+					#121212
+				</td>
+				<td bgcolor="#104e8b" height="30" width="30">
+				</td>
+				<td>
+					#104E8B
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#0f0f0f" height="30" width="30">
+				</td>
+				<td>
+					#0F0F0F
+				</td>
+				<td bgcolor="#0d0d0d" height="30" width="30">
+				</td>
+				<td>
+					#0D0D0D
+				</td>
+				<td bgcolor="#0a0a0a" height="30" width="30">
+				</td>
+				<td>
+					#0A0A0A
+				</td>
+				<td bgcolor="#080808" height="30" width="30">
+				</td>
+				<td>
+					#080808
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#050505" height="30" width="30">
+				</td>
+				<td>
+					#050505
+				</td>
+				<td bgcolor="#030303" height="30" width="30">
+				</td>
+				<td>
+					#030303
+				</td>
+				<td bgcolor="#00ffff" height="30" width="30">
+				</td>
+				<td>
+					#00FFFF
+				</td>
+				<td bgcolor="#00ff7f" height="30" width="30">
+				</td>
+				<td>
+					#00FF7F
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#00ff00" height="30" width="30">
+				</td>
+				<td>
+					#00FF00
+				</td>
+				<td bgcolor="#00fa9a" height="30" width="30">
+				</td>
+				<td>
+					#00FA9A
+				</td>
+				<td bgcolor="#00f5ff" height="30" width="30">
+				</td>
+				<td>
+					#00F5FF
+				</td>
+				<td bgcolor="#00eeee" height="30" width="30">
+				</td>
+				<td>
+					#00EEEE
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#00ee76" height="30" width="30">
+				</td>
+				<td>
+					#00EE76
+				</td>
+				<td bgcolor="#00ee00" height="30" width="30">
+				</td>
+				<td>
+					#00EE00
+				</td>
+				<td bgcolor="#00e5ee" height="30" width="30">
+				</td>
+				<td>
+					#00E5EE
+				</td>
+				<td bgcolor="#00ced1" height="30" width="30">
+				</td>
+				<td>
+					#00CED1
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#00cdcd" height="30" width="30">
+				</td>
+				<td>
+					#00CDCD
+				</td>
+				<td bgcolor="#00cd66" height="30" width="30">
+				</td>
+				<td>
+					#00CD66
+				</td>
+				<td bgcolor="#00cd00" height="30" width="30">
+				</td>
+				<td>
+					#00CD00
+				</td>
+				<td bgcolor="#00c5cd" height="30" width="30">
+				</td>
+				<td>
+					#00C5CD
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#00bfff" height="30" width="30">
+				</td>
+				<td>
+					#00BFFF
+				</td>
+				<td bgcolor="#00b2ee" height="30" width="30">
+				</td>
+				<td>
+					#00B2EE
+				</td>
+				<td bgcolor="#009acd" height="30" width="30">
+				</td>
+				<td>
+					#009ACD
+				</td>
+				<td bgcolor="#008b8b" height="30" width="30">
+				</td>
+				<td>
+					#008B8B
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#008b45" height="30" width="30">
+				</td>
+				<td>
+					#008B45
+				</td>
+				<td bgcolor="#008b00" height="30" width="30">
+				</td>
+				<td>
+					#008B00
+				</td>
+				<td bgcolor="#00868b" height="30" width="30">
+				</td>
+				<td>
+					#00868B
+				</td>
+				<td bgcolor="#00688b" height="30" width="30">
+				</td>
+				<td>
+					#00688B
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#006400" height="30" width="30">
+				</td>
+				<td>
+					#006400
+				</td>
+				<td bgcolor="#0000ff" height="30" width="30">
+				</td>
+				<td>
+					#0000FF
+				</td>
+				<td bgcolor="#0000ee" height="30" width="30">
+				</td>
+				<td>
+					#0000EE
+				</td>
+				<td bgcolor="#0000cd" height="30" width="30">
+				</td>
+				<td>
+					#0000CD
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#0000aa" height="30" width="30">
+				</td>
+				<td>
+					#0000AA
+				</td>
+				<td bgcolor="#00008b" height="30" width="30">
+				</td>
+				<td>
+					#00008B
+				</td>
+				<td bgcolor="#000080" height="30" width="30">
+				</td>
+				<td>
+					#000080
+				</td>
+				<td bgcolor="#000000" height="30" width="30">
+				</td>
+				<td>
+					#000000
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>					<div class="zhuanzai">
+						<p>转载请注明：<a href="http://www.itnetve.top/">九幽的博客</a>»<a href="">RGB颜色查询</a></p>
+						<p>本文地址：http://www.itnetve.top/Article/22.html</p>
+						<p style="color:#008b8b;">关键字：颜色，RGB</p>
+						<p style="color:red;">类型：本站原创</p>
+					</div>
+					<div class="move">
+						<a href="/Article/21.html"><span>上一篇</span>动画旋转效果</a>
+												<a href="/Article/94.html"><span>下一篇</span>URL中文乱码问题解决</a>
+											</div>
+				</div>
+				<div class="textfoot"><span></span></div>
+			</article>
+			<div id="comments">
+<div class="ds-thread" data-thread-key="22" data-title="RGB颜色查询" data-url="http://www.itnetve.top/Article/22.html"></div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div id="back-to-top" class="red" data-scroll="body" style="display:none;">
+	<svg id="point-up" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
+		<path d="M23.588 17.637c-0.359-0.643-0.34-1.056-2.507-3.057 0.012-7.232-4.851-12.247-5.152-12.55 0-0.010 0-0.015 0-0.015s-0.003 0.003-0.007 0.007l-0.007-0.007c0 0 0 0.005 0 0.015-0.299 0.305-5.141 5.342-5.097 12.575-2.158 2.010-2.138 2.423-2.493 3.068-0.65 1.178-0.481 5.888 0.132 6.957 0.613 1.069 1.629 0.293 1.977-0.004 0.348-0.298 1.885-2.264 2.263-2.176 0 0 0.465-0.090 0.989 0.414 0.518 0.498 1.462 0.966 2.27 1.033 0 0.001 0 0.002-0 0.003 0.005-0.001 0.010-0.001 0.015-0.002 0.005 0 0.010 0.001 0.015 0.001 0-0.001-0-0.002 0-0.003 0.808-0.070 1.749-0.543 2.265-1.043 0.522-0.507 0.988-0.419 0.988-0.419 0.378-0.090 1.923 1.869 2.272 2.165 0.35 0.296 1.369 1.067 1.977-0.005 0.608-1.072 0.756-5.783 0.101-6.958v0 0zM15.95 14.86c-1.349 0.003-2.445-1.112-2.448-2.492-0.003-1.38 1.088-2.5 2.437-2.503 1.349-0.003 2.445 1.112 2.448 2.492 0.003 1.379-1.088 2.5-2.437 2.503v0 0zM17.76 24.876c-0.615 0.474-1.236 0.633-1.801 0.626-0.566 0.009-1.187-0.147-1.804-0.617-0.553-0.403-1.047-0.348-1.308 0.003-0.261 0.351-0.169 2.481 0.152 2.939 0.321 0.458 0.697-0.298 1.249-0.327 0.552-0.028 1.011 1.103 1.221 1.75 0.107 0.331 0.274 0.633 0.5 0.654 0.226-0.023 0.392-0.326 0.497-0.657 0.207-0.648 0.661-1.781 1.213-1.756 0.553 0.026 0.932 0.78 1.251 0.321 0.319-0.459 0.401-2.59 0.139-2.94-0.262-0.35-0.757-0.403-1.308 0.003v0 0z" fill="#CCCCCC" />
+	</svg>
+</div>
+<div class="link">
+	<ul>
+		<h2>友情链接</h2>
+		<li><a href="https://ruke.xyz/" title="ruke驿站" target="_blank">ruke驿站</a></li><li><a href="http://images.itnetve.top/" title="九幽的图片" target="_blank">九幽的图片</a></li><li><a href="http://www.jhjlwang.com/" title="饥荒交流网 " target="_blank">饥荒交流网 </a></li><li><a href="http://www.hostusvps.com/" title="hostus优惠码" target="_blank">hostus优惠码</a></li>	</ul>
+</div>
+<footer>
+	<section class="visitor">
+		<h2>最近访客</h2>
+		<ul class="ds-recent-visitors" data-num-items="20"></ul>
+	</section>
+	<div class="Copyright">
+		<p>CopyRight &copy 2016 九幽IT 版权所有 <a href="http://www.miitbeian.gov.cn/" target="_blank">粤ICP备16060013号-1</a><span><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1259858691'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1259858691%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script></span></p>
+	</div>
+</footer>
+<div class="m-footer">
+	<div class="Copyright">
+		<p>CopyRight &copy 2016 九幽IT 版权所有 <a href="http://www.miitbeian.gov.cn/" target="_blank">粤ICP备16060013号-1</a><span><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1259858691'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1259858691%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script></span></p>
+	</div>
+</div>
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"itwoyou"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
+<script type="text/javascript" src="/APP/Modules/Blog/Tpl/Public/Js/niceScroll.js"></script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+<?php	return array ( 'cfg_name' => '九幽的系统', 'cfg_keywords' => '系统，后台系统，九幽，JIUYOU', 'cfg_log' => 'Y', 'cfg_url' => 'http://www.itnetve.top', 'cfg_verify' => 'N', );?>

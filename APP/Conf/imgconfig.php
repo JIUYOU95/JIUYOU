@@ -1,0 +1,1 @@
+<?php	return array ( 'img_name' => '九幽的图片', 'img_keywords' => '图片', 'img_description' => '这是一个基于ThinkPHP框架的博客', 'img_img' => 'jpg|gif|png', 'img_uploadpath' => 'Public/Uploads/Images/', );?>
