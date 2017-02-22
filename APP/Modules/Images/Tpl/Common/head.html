@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<title><{$img_name}></title>
+<meta name="keywords" content="<{$keywords}>">
+<meta name="description" content="<{$description}>">
+<meta name="author" content="JIUYOU">
+
+<css href="__PUBLIC__/Css/style.css" />
+<js href="__PUBLIC__/Js/jquery-1.8.2.min.js" />
+<js href="__PUBLIC__/Js/style.js" />
+<link href="__ROOT__/Public/Images.png" rel="icon" type="image/x-icon" />
+</head>
+<body class="body">
+    <header class="head" id="sidebar">
+		<div class="content" style="transform-origin: right top 0px;
+        transform: translate3d(0px,0px,0px);">
+        	<ul>
+        		<h3><{$img_name}></h3>
+                <li><a href="__GROUP__">首页</a></li>
+                <foreach name="cate" item="vo">
+        		<li><a href="<{:U('/cate/'.$vo['id'])}>"><{$vo.typename}></a>
+                    <ul>
+                        <foreach name='vo.child' item='v'>
+                        <li><a href="<{:U('/cate/'.$v['id'])}>"><{$v.typename}></a></li>
+                        </foreach>
+                    </ul>
+                </li>
+                </foreach>
+        	</ul>
+        	<address>CopyRight © 2016 九幽IT 版权所有</address>
+		</div>
+		<div class="button">
+			<span id="showLeftPush" class="open-close"></span>
+		</div>
+	</header>

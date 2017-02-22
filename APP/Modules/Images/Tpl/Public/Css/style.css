@@ -1,0 +1,105 @@
+@charset 'utf-8';
+*{padding:0;margin:0;}
+body{font-family:"Microsoft Yahei";font-size:14px;}
+a,span,time{text-decoration:none;color:#888;}
+ul{list-style:none;}
+img{border:0;vertical-align:middle;}
+input,textarea{border-radius:3px;border:1px solid #ccc;}
+input[type="text"]{height:25px;line-height:25px;}
+p{display:block;}
+/*
+ *header
+ */
+.body{overflow-x:hidden;position:relative;left:40px;}
+.head,.body{
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+#sidebar{width:300px;height:100%;position:fixed;top:0;background:#008080;}
+#sidebar .button{width:40px;position:absolute;right:0;height:140%;background:#198699;}
+#sidebar .content{width:300px;background:#2293a6;height:140%;position:absolute;
+    margin-top:-100px;padding:150px 0px 50px 0px;right:0;display:block;
+    -webkit-transform: rotateY( -90deg );
+    transform: rotateY( -90deg );
+    -webkit-perspective-origin: right top;
+    perspective-origin: right top;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+#sidebar .content h3{text-align:center;line-height:40px;font-weight:normal;color:#fff;font-size:16px;}
+#sidebar .content a{display:block;color:#fff;width:240px;line-height:30px;padding-left:20%;font-size:1em;}
+#sidebar .content a:hover{color:#ccc;}
+#sidebar .content ul li ul li a{padding-left:25%;}
+.open-close{cursor:pointer;}
+.open-close{width:40px;height:40px;display:block;text-indent:-99999px;background:url(../Images/open-close.png) no-repeat center center #2293a6;position:absolute;top:0;left:0;}
+
+.toright{left:300px;}
+.head {left:-260px;z-index:1000;}
+.head.open {left:0px;}
+address{font-style:normal;width:260px;color:#ccc;text-align:center;position:absolute;bottom:500px;}
+
+/*
+ *footer
+ */
+#back-to-top{display:none;cursor:pointer;position:fixed;right:50px;bottom:80px;width:48px;height:48px;z-index:999;border-radius:50%;background:rgba(255,255,255,0.6);box-shadow:0px 1px 8px 1.5px rgba(0,0,0,0.35),0px 20px 70px 8px rgba(0,0,0,0.25);-moz-box-shadow:0px 1px 8px 1.5px rgba(0,0,0,0.35),0px 20px 70px 8px rgba(0,0,0,0.25);}
+#back-to-top:hover{background:#FFF;}
+#back-to-top #point-up{margin:8px;}
+#back-to-top #point-up path{transition:.5s;-o-transition:.5s;-moz-transition:.5s;-webkit-transition:.5s;}
+#back-to-top.red:hover #point-up path{fill:#299982;}
+ /*
+  *Content
+  */
+#content{}
+
+#title{width:600px;margin:20px auto;text-align:center;}
+/* 定义关键帧 */
+@-webkit-keyframes shade{
+    from{opacity:1;}
+    15%{opacity:0.4;}
+    to{opacity:1;}
+}
+@-moz-keyframes shade{
+    from{opacity:1;}
+    15%{opacity:0.4;}
+    to{opacity:1;}
+}
+@-ms-keyframes shade{
+    from{opacity:1;}
+    15%{opacity:0.4;}
+    to{opacity:1;}
+}
+@-o-keyframes shade{
+    from{opacity:1;}
+    15%{opacity:0.4;}
+    to{opacity:1;}
+}
+@keyframes shade{
+    from{opacity:1;}
+    15%{opacity:0.4;}
+    to{opacity:1;}
+}
+/* wrap 
+#wrap{width:auto;height:auto;margin-left:5px;position:relative;}*/
+#wrap .box{width:280px;height:auto;padding:10px;border:none;position:relative;}
+#wrap .box .info{width:280px;height:auto;border-radius:8px;box-shadow:0 0 11px #666;background:#fff;}
+#wrap .box .info .pic{width:260px;height:auto;margin:0 auto;padding-top:10px;}
+#wrap .box .info .pic:hover{
+    -webkit-animation:shade 3s ease-in-out 1;
+    -moz-animation:shade 3s ease-in-out 1;
+    -ms-animation:shade 3s ease-in-out 1;
+    -o-animation:shade 3s ease-in-out 1;
+    animation:shade 3s ease-in-out 1;
+}
+#wrap .box .info .pic img{width:260px;border-radius:3px;}
+#wrap .box .info .title{width:260px;height:40px;margin:0 auto;line-height:40px;text-align:center;color:#666;font-size:16px;overflow:hidden;}
+
+.loading-wrap{bottom:50px;width:100%;height:52px;text-align:center;display:none;}
+.loading{padding:10px 10px 10px 52px;height:32px;line-height:28px;color:#FFF;font-size:16px;border-radius:5px;background:#008080;}
+.footer{background:#008080;color:#fff;line-height:40px;}
+
+
+.place{padding:10px;}
+.mgcon{width:90%;margin:20px auto;}

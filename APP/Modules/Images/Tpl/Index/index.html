@@ -1,0 +1,78 @@
+<include file="Common:head" />
+<js href="__PUBLIC__/Js/jquery.masonry.min.js" />
+<script type="text/javascript">
+$(function(){
+    //执行瀑布流
+    var $container = $('#wrap');
+	  $container.masonry({
+	    itemSelector : '.box',
+	    isAnimated: true
+	  });
+	var loading = $("#loading").data("on", false);
+	$(window).scroll(function(){
+		if(loading.data("on")) return;
+		if($(document).scrollTop() > 
+			$(document).height()-$(window).height()-$('.footer').height()){
+			//加载更多数据
+			loading.data("on", true).fadeIn();
+			$.get(
+				"<{:U('Index/getDbMore')}>", 
+				{"last_id" : $("#wrap>div:last>input").val()},
+				function(data){
+					var html = "";
+					if($.isArray(data)){
+						for(i in data){
+							var $uu=data[i]['pic'].split('|');
+							if($uu==undefined){
+								return false;
+							}
+							html+="<div class=\"box\"><div class=\"info\">";
+							html+="<a href='__APP__/Images/Img/index?id="+data[i]['id']+"'>";
+							html+="<div class=\"pic\"><img src=\"__ROOT__/Public/Uploads/Images/"+$uu[0]+"\" /></div>";
+							html+="<div class=\"title\">"+data[i]['title']+"</div></a></div>";
+							html+="	<input type=\"hidden\" value=\""+data[i]['id']+"\"/></div>";
+						}
+						var $newElems = $(html).css({ opacity: 0 }).appendTo($container);
+						$newElems.imagesLoaded(function(){
+							$newElems.animate({ opacity: 1 });
+							$container.masonry( 'appended', $newElems, true ); 
+				        });
+				        loading.data("on", false);
+					}
+					loading.fadeOut();
+				},
+				"json"
+			);
+		}
+	});
+});
+</script>
+	<div id="content">
+
+		<div id="wrap">
+			<foreach name='img' item='vo'>
+				<?php 
+				$img=explode("|",$vo['pic']); 
+				?>
+			<div class="box">
+				<div class="info">
+					<a href="<{:U('/Img/'.$vo['id'])}>">
+					<div class="pic"><img src="__ROOT__/Public/Uploads/Images/<{$img[0]}>" /></div>
+					<div class="title"><{$vo.title}></div>
+					</a>
+				</div>
+				<input type="hidden" value="<{$vo.id}>"/>
+			</div>
+			
+			</foreach>
+		</div>
+		<div id="loading" class="loading-wrap">
+			<span class="loading">加载中，请稍后...</span>
+		</div>
+		<div class="footer"><center>没有啦！</center></div>
+
+
+
+	</div>
+
+<include file="Common:foot" />

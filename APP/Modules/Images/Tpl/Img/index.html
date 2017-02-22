@@ -1,0 +1,49 @@
+<include file="Common:head" />
+<css href="__PUBLIC__/Css/demo1.css" />
+<css href="__PUBLIC__/Css/demo2.css" />
+<js href="__PUBLIC__/Js/ipresenter.packed.js" />
+<script>
+	$(document).ready(function(){
+		$('#ipresenter').iPresenter({
+			animSpeed: 1000, // 动画时间
+			timer: '360Bar', // 计时器主题: "Pie", "360Bar" or "Bar"
+			timerDiameter: 60, // 计时器直径
+			timerStroke: 5, // 计时器扫笔宽度
+			timerPadding: 5, // 计时器内边距
+			timerColor: '#000', // 计时器颜色
+			timerBg: '#FFF', // 计时器背景色
+			timerOpacity: 0.4, // T计时器透明透
+			directionNav: false,  // 方向导航按钮
+			controlNav: true, // 1,2,3,4... 数字导航
+			timerPosition: 'top-left', // 计时器位置 
+		});
+	});
+</script>
+	<div id="content">
+		<div class="place"><a href="__GROUP__">首页</a>&nbsp>
+		<php>$last=count($parent)-1;</php>
+			<foreach name='parent' item='vo'>
+			<a href="<{:U('/cate/'.$vo['id'])}>"><{$vo.typename}></a>&nbsp>&nbsp
+			</foreach><span><{$title}></span>
+		</div>
+		<div class="container">
+		<div id="ipresenter">
+			<foreach name="p" item="vo" key="o">
+<?php 
+for($i=0;$i<1;$i++){
+	$b=$b+1500;
+}
+?>
+			<div class="step" data-x="<if condition="$b eq 1500">0<else/><?=$b;?></if>" data-y="<if condition="$b eq 1500">0<else/><?=rand(-1500,6000);?></if>" data-rotatex="<if condition="$b eq 1500">0<else/>180</if>" data-thumbnail="__ROOT__/Public/Uploads/Images/thumb_<{$vo}>">
+				<img src="__ROOT__/Public/Uploads/Images/<{$vo}>" /><{$o}>
+			</div>
+			</foreach>			
+		</div>
+		</div>
+		<foreach name="img" item="vo">
+		<div class="mgcon">
+			<p><{$vo.content}></p>
+		</div>
+		</foreach>
+	</div>
+<include file="Common:foot" />
