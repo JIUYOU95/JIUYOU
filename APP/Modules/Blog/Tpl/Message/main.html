@@ -1,0 +1,85 @@
+<div class="m-header">
+	<a class="m-menu" id="showLeftPush"></a>
+	<a href="">九幽的博客</a>
+	<a href="" class="m-admin"></a>
+</div>
+<script type="text/javascript">
+$(function(){
+	$("form :input.required").each(function(){
+            var $required = $("<strong style='color:red;padding:0 10px;'>*</strong>"); //创建元素
+            $(this).parent().append($required); //然后将它追加到文档中
+    });
+             //文本框失去焦点后
+    $('form :input').blur(function(){
+         var $parent = $(this).parent();
+         $parent.find(".formtips").remove();
+         //验证用户名
+         if( $(this).is('#username') ){
+                if( this.value=="" || this.value.length < 6 ){
+                    var errorMsg = '请输入至少6位的用户名.';
+                    $parent.append('<span class="formtips onError">'+errorMsg+'</span>');
+                }else{
+                    var okMsg = '输入正确.';
+                    $parent.append('<span class="formtips onSuccess">'+okMsg+'</span>');
+                }
+         }
+         //验证邮件
+         if( $(this).is('#email') ){
+            if( this.value=="" || ( this.value!="" && !/.+@.+\.[a-zA-Z]{2,4}$/.test(this.value) ) ){
+                  var errorMsg = '请输入正确的E-Mail地址.';
+                  $parent.append('<span class="formtips onError">'+errorMsg+'</span>');
+            }else{
+                  var okMsg = '输入正确.';
+                  $parent.append('<span class="formtips onSuccess">'+okMsg+'</span>');
+            }
+         }
+    }).keyup(function(){
+       $(this).triggerHandler("blur");
+    }).focus(function(){
+         $(this).triggerHandler("blur");
+    });//end blur
+	$("#submit").click(function(){
+		 var title = $("#title").val();
+		var userName = $("#username").val();
+		var email = $("#email").val();
+		if (title == "" || title == null){
+			alert("标题不能为空");
+			return false;
+		}else if (userName == "" || userName == null) {
+			alert("昵称不能为空");
+			return false;
+		} else if (email == "" || email == null) {
+		alert("邮箱不能为空");
+			return false;
+		} else {
+			return true;
+		}
+
+	})
+
+})
+</script>
+<div class="blogitem">
+	<div class="place">
+		<a href="__GROUP__"><i class="icon-home"></i>&nbsp首页</a>&nbsp<i class="icon-angle-right"></i>
+留言
+		
+	</div>
+	<article>
+		<div class="message">
+			<div>
+				如有对本网站有什么建议和问题，请在下面留言，谢谢！
+			</div>
+			<form action="" method="post">
+				<div><label>留言标题</label><input type="text" name="title" id="title" class="required" placeholder="请输入留言标题" /></div>
+				<div><label>昵称</label><input type="text" name="username" id="username" class="required" placeholder="请输入昵称" /></div>
+				<div><label>邮箱</label><input type="text" name="email" id="email" class="required" placeholder="请输入邮箱" /></div>
+				<div><label>留言内容</label>
+					<textarea rows="4" cols="80" name="content" id="content" class="required" placeholder="请输入留言内容"></textarea>
+				</div>
+				<div class="submit"><input type="submit" id="submit" value="留言" /></div>
+				
+			</form>
+		</div>
+	</article>
+</div>

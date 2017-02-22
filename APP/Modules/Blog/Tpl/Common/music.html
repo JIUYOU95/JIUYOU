@@ -1,0 +1,55 @@
+ <!DOCTYPE html>  
+<html>  
+<head>  
+<meta charset="UTF-8">  
+<title>HTML5环形音乐播放器</title>    
+</head>
+<style type="text/css">
+@keyframes spin{
+    0%{transform:rotate(0deg);}
+    100%{transform:rotate(-360deg);}
+}
+button:hover{color: #26C5CB;}
+#container:hover .cover{opacity: .9;  }  
+#container{margin:0 auto 15px;width:180px;height:180px;perspective:550px;
+    -webkit-perspective:550px;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+}
+#player{width:180px;height:180px;background:#fff;border-radius:50%;overflow:hidden;
+    box-shadow:2px 2px 20px 0 rgba(0,0,0,.3);z-index:300;backface-visibility:hidden;
+    -webkit-backface-visibility: hidden;
+    transition: transform .5s ease-in-out;
+    -webkit-transition: -webkit-transform .5s ease-in-out;}
+#player img{width:180px;height:180px;}
+ #player,.cover{position:absolute; margin:auto;top:0;left:0;right:0;bottom:0;}
+}
+.cover{opacity: .3;transition:all .5s ease-in-out;-webkit-transition:all .5s ease-in-out;}
+.controls{position:relative;top:68px;width:100%;color:#fff;text-align:center;margin:auto;}
+#play-pause {width:46px;height:46px;
+    transition:all .5s ease-in-out;
+    -webkit-transition:all .5s ease-in-out;}
+button{color:#fff;background:transparent;border:0;outline:0;cursor:pointer;text-align:center;
+    text-shadow:1px 1px 3px #000;
+    transition:all .3s ease-in-out;
+    -webkit-transition:all .3s ease-in-out;}
+</style>
+<body>  
+<div id="container">  
+    <div id="player">  
+        <audio id="audio" controls loop>  
+            <source src="__ROOT__/Public/Music/嘲笑鸟.mp3" type="audio/mpeg" codecs="mp3"></source>
+            <source src="Here To Stay.mp3" type="audio/mpeg" codecs="mp3"></source>          
+        </audio>  
+        <img src="__ROOT__/Public/Uploads/thumb_<{$ava}>">   
+        <div class="cover">  
+            <div class="controls">               
+                <!-- 暂停 -->  
+                <button id="play-pause" title="暂停" onclick="togglePlayPause()"><i class="icon-play icon-3x"></i></button>  
+            </div>  
+        </div> 
+    </div>
+</div>  
+<js href="__PUBLIC__/Js/music.js" />
+</body>
+</html>  

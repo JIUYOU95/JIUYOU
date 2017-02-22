@@ -1,0 +1,30 @@
+<div class="blogitem">
+	<div class="place">
+		<a href="<{$URL}>"><i class="icon-home"></i>&nbsp首页</a>
+		<if condition="$tag neq ''">&nbsp<i class="icon-angle-right"></i>&nbsp<{$tags}></if>
+		
+		
+	</div>
+	<if condition="$tag neq ''">
+	<foreach name='blog' item='vo'>
+		<article>
+			<h2 class="btitle"><a href="<{:U('/Article/'.$vo['id'])}>" title="详细阅读<{$vo.title}>"><{$vo.title}></a></h2>
+			<div class="text">
+				<{$vo.content|msubstr=0,320,'utf-8',true}>
+			</div>
+			<div class="textfoot">
+				<p style="float:left;"><a href="<{:U('/nav'.$vo['typeid'])}>"><{$vo.typename}></a></p>
+				<span><time datetime=""><{$vo.time|date='Y/m/d',###}></time></span>
+				<span>浏览：<{$vo.hits}>人</span>
+				<a href="<{:U('/Article/'.$vo['id'])}>">阅读全文</a>
+				<span>评论<span class="ds-thread-count" data-thread-key="<{$vo['id']}>" data-count-type="comments"></span>
+			</div>
+		</article>
+	</foreach>
+	<div class="pages">
+	<{$page}>
+	</div>
+	<else/>
+		<div style="text-align:center;color:red;font-size:24px">对不起，没有你查询的内容！</div>
+	</if>
+</div>

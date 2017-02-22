@@ -1,0 +1,92 @@
+
+<aside class="left">
+	<!--头部名称-->
+	<div class="cblogo">
+		<div class="avatar"><a href="<{$URL}>" title="<{$title}>"><span><{$blog_name}></span></a></div>
+	</div>
+	<div class="m-nav">
+		<ul class="nav">
+			<li><a href="<{$URL}>">首页</a></li>
+			<nav order='sort ASC'>
+			<li><a href="<{$url}>"><{$typename}></a>
+				<ul>
+					<foreach name='child' item='v'>
+					<li><a href="<{:U('/nav'.$v['id'])}>"><{$v.typename}></a></li>
+					</foreach>
+				</ul>
+			</li>
+			</nav>
+		</ul>
+	</div>
+	<div class="sidebar">
+		<!--座右铭-->
+		<section class="topspaceinfo">
+			<h1>我的座右铭</h1>
+			<p><{$motto}></p>
+		</section>
+		<!--公告-->
+		<div class="userinfo">
+			<p class="notice">公告：<{$notice}></p>
+		</div>
+		<!--搜索-->
+		<section class="widget widget_search">
+			<form role="search" id="search-form" action="<{:U('/keywords/')}>" method="get">
+				<div class="input-group">
+					<input type="text" id="s" name="keywords" placeholder />
+					<span class="input-group-btn">
+						<input type="submit" value="查询" class="so-input" style="margin-top:10px;" />
+					</span>
+				</div>
+			</form>
+		</section>
+		<!--近期文章-->
+		<section class="widget widget_recent_entries">
+
+			<h2><i class="icon-list"></i>近期文章</h2>
+			<ul>
+				<hot limit='15'>
+				<li><a href="<{$url}>" title="<{$title}>"><{$title}></a><time><{$time|date="Y/m/d",###}></time></li>
+				</hot>
+			</ul>
+		</section>
+		<section class="widget widget_recent_comments">
+			<h2><i class="icon-comment"></i>评论</h2>
+<!-- 多说最新评论 start -->
+	<div class="ds-recent-comments" data-num-items="10" data-show-avatars="0" data-show-time="1" data-show-title="1" data-show-admin="0" data-excerpt-length="20"></div>
+<!-- 多说最新评论 end -->
+		</section>
+		<!--文章归档-->
+		<section class="widget widget_archive">
+			<h2><i class="icon-list-alt"></i>文章归档</h2>
+			<ul>
+				<archiving limit='12'>
+				<li><a href="<{$url}>" title="<{$t}>(<{$num}>)"><{$t}>(<{$num}>)</a></li>
+				</archiving>
+			</ul>
+		</section>
+		<!--分类目录-->
+		<section class="widget widget_categories">
+			<h2><i class="icon-list-ul"></i>分类目录</h2>
+			<ul>
+				<menu sort="sort desc">
+				<li><a href="<{$url}>" title="<{$typename}>(<{$num}>)"><{$typename}>(<{$num}>)</a></li>
+				</menu>
+			</ul>
+		</section>
+		
+		<!--日历-->
+		<!--<section class="widget widget_calender">
+			<div class="calender-wrap"></div>
+		</section>-->
+		<!--标签-->
+		<section class="widget widget_tag_cloud">
+			<h2><i class="icon-bookmark"></i>标签</h2>
+			<div class="tagcloud" id="tagcloud">
+				<tag limit='200'>
+				<a href="<{$url}>"><{$tag}></a>
+				</tag>
+			</div>
+		</section>
+		
+	</div>
+</aside>

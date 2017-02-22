@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>九幽的博客</title>
+<css href="__PUBLIC__/Css/base.css" />
+<css href="__PUBLIC__/Css/style.css" />
+<js href="__PUBLIC__/Js/jquery-1.8.2.min.js" />
+</head>
+<body>
+
+<header>
+	<div class="hdbg"></div>
+	<div class="hdbg2"></div>
+	<div class="head_about">
+		<div class="logo">
+			<div class="player">
+				<div id="pic"></div>
+			</div>
+		</div>
+		<div class="title"><a href=""><{$title}></a></div>
+		<div class="about">分享音乐，分享心情</div>
+	</div>
+	<div class="head_nav">
+		<ul class="nav">
+			<li><a href="__GROUP__">首页</a></li>
+			<nav order='sort ASC'>
+				<li><a href="<{$url}>"><{$typename}></a>
+					<ul>
+						<foreach name='child' item='v'>
+						<li><a href="<{:U(GROUP_NAME.'/Index/blog',array('id'=>$v['id']))}>"><{$v.typename}></a></li>
+						</foreach>
+					</ul>
+				</li>
+				</foreach>
+			</nav>
+		</ul>
+	</div>
+</header>
+

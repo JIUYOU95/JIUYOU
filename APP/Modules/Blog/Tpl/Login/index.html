@@ -1,0 +1,375 @@
+<?php
+session_start();
+?>
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>登录注册</title>
+<js href="__PUBLIC__/Js/jquery-1.8.2.min.js" />
+<js href="__PUBLIC__/Js/md5-min.js" />
+<css href="__PUBLIC__/Css/login.css" />
+
+<script>
+
+$(function(){
+var uRes=false;
+var pRes=false;
+var repRes=false;
+var eRes=false;
+//用户名验证
+$('#uName').blur(function(e){
+   var username=$('#uName').val();
+	if(username==''){
+		$('.uName').html('请输入用户名');
+		uRes=false;return;
+	}
+	if(username.length<5 ||username.length>=16){
+		$('.uName').html('用户名长度必须在5-16位之间');
+		$('.uName').css('color','red');
+		uRes=false;return;
+	}else{
+		$.post('/Blog/Login/checkAccount',{'username':username},function(data){
+			if(data==1){
+			    $('.uName').html('该用户名已注册');
+			    $('.uName').css({'color':'red'});
+			    uRes=false;return;
+			}else{
+				$('.uName').html('恭喜，此用户名可以使用。');
+				$('.uName').css('color','green');
+				uRes=true;
+			}
+		})
+	}
+})
+//密码验证
+$('#uPwd').blur(function(e) {
+	if($(this).val()==''){ $('.uPwd').html('请输入密码'); }
+	if($(this).val().length<5 || $(this).val().length>=16){
+    	$('.uPwd').html('密码长度必须在5-16位之间');
+    	pRes=false;return;
+	}else{
+	    $('.uPwd').html('密码正确');
+		$('.uPwd').css({'color':'green'});
+		pRes=true;
+	  }
+})
+
+$('#uPwd1').blur(function(e) {
+ 	if($(this).val()==''){ $('.uPwd1').html('请输入确认密码');}
+ 	if($(this).val().length<5 || $(this).val().length>=16){
+    $('.uPwd1').html('密码长度必须在5-16位之间');
+   	repRes=false;;return;
+}else{
+	if($('#uPwd').val()!=$('#uPwd1').val()){
+	  	$('.uPwd1').html('两次密码不一致');
+	   	$('.uPwd1').css({'color':'red'});
+	   	repRes=false;return;
+	}else{
+	 	$('.uPwd1').html('密码正确');
+	    $('.uPwd1').css({'color':'green'});
+	    repRes=true;
+		}
+	}
+})
+
+//邮箱验证
+$('#email').blur(function(e){
+    var email=$('#email').val();
+	var reg=/^[a-z0-9](\w|\.|-)*@\w{2,}\.(com|cn|net|com.cn|net.cn)$/i;
+    if(!reg.test(email)){
+	   	$('.email').html('邮箱格式不正确');
+		eRes=false;return;
+	 }else{
+	 	$.post('/Blog/Login/checkEmail',{'email':email},function(data){
+		if(data=='1'){
+			$('.email').html('邮箱已注册');
+	   		$('.email').css({'color':'red'});
+			eRes=false;return;
+ 		}else{
+ 			$('.email').html('邮箱可以使用');
+			$('.email').css({'color':'green'});
+			eRes=true;
+ 		}
+	})  	
+ 	}
+	
+})
+//注册
+$('#userLogin').click(function(e){
+	$('#uName').blur();
+	$('#uPwd').blur();
+	$('#uPwd1').blur();
+	$('#email').blur();
+	console.log(uRes);
+	console.log(pRes);
+	console.log(repRes);
+	console.log(eRes);
+	if(uRes && pRes &&repRes && eRes){
+		$("#frm").submit();alert('注册成功，可以登录了！');return true;
+
+	}
+}) 
+
+//登录
+//邮箱验证
+$('#do_email').blur(function(){
+    var email=$('#do_email').val();
+	var reg=/^[a-z0-9](\w|\.|-)*@\w{2,}\.(com|cn|net|com.cn|net.cn)$/i;
+    if(!reg.test(email)){
+	   	$('.do_email').html('邮箱格式不正确');
+		return false;
+	 }else{
+	 	$.post('/Blog/Login/docheckEmail',{'email':email},function(data){
+		if(data==1){
+			$('.do_email').html('邮箱正确');
+			$('.do_email').css({'color':'green'});
+ 		}else{
+ 			$('.do_email').html('邮箱不存在');
+			$('.do_email').css({'color':'red'});
+			return false;
+ 		}
+	})  	
+ 	}
+})
+//密码验证
+$('#dopwd').blur(function(){
+	var pwd=hex_md5($('#dopwd').val());
+	var email=$('#do_email').val();
+	if($(this).is('#dopwd')){
+		if($(this).val()==''){ $('.dopwd').html('请输入密码'); }
+		if($(this).val().length<5 || $(this).val().length>=16){
+		    $('.dopwd').html('密码长度必须在5-16位之间');
+		}else{
+		    $.post('/Blog/Login/docheckpwd',{'email':email,'password':pwd},function(data){
+				if(data){
+					$('.dopwd').html('密码正确');
+					$('.dopwd').css({'color':'green'});
+		 		}else{
+		 			$('.dopwd').html('密码错误');
+					$('.dopwd').css({'color':'red'});
+					return false;
+		 		}
+		  	})
+		}
+	}
+})
+$("#do_login").click(function(){
+	 //阻止表单默认提交事件
+    event.preventDefault();
+    var email=$("#do_email").val();
+    var pwd=hex_md5($("#dopwd").val());
+    if(pwd==""||email==""){
+        alert('登录名与密码不能为空 ');
+        $("#user_name").focus();
+        return false;
+    }else{
+        var url = "<{:U('Blog/Login/chack')}>";
+        $.post(url, { email:email, password:pwd}, function(msg){
+        if(msg.info == 'ok') {
+          //alert('登录成功，正在转向后台主页！');
+          window.location.href = msg.callback;
+        } else {
+          confirm(msg.info);
+        }
+      }, 'json');
+    }
+
+})
+
+})
+</script>
+</head>
+<body>
+<div class="login-box">
+	<div><a href="<{$URL}>">首页</a></div>
+	<div class="box-con tran">
+		<div class="login-con f-l">
+		<!--登录-->
+			<div class="form-group"><center>欢迎使用JIUYOU账号登录</center></div>
+			<div class="form-group">
+				<input type="text" id="do_email" placeholder="邮箱"/><span class="do_email"></span>
+			</div>
+			<div class="form-group">
+				<input type="password" id="dopwd" placeholder="密码"><span class="dopwd"></span>
+			</div>
+			<div class="form-group">
+				<button type="submit" class="tran pr">
+					<a href="javascript:;" class="tran" id="do_login">登录</a>
+				</button>
+			</div>
+			<div class="from-line"></div>
+			<div class="form-group">
+				<a href="javascript:;" class="move-signup a-tag tran blue-border">还没有帐号？免费注册</a>
+			</div>
+			<!-- <div class="form-group">
+				<a href="javascript:;" class="move-reset a-tag tran">忘记密码？重置</a>
+			</div> -->
+			<div class="form-group">
+				<a href="javascript:;" class="move-other a-tag tran">使用第三方帐号登录</a>
+			</div>
+
+		</div>
+		<!-- END登录 -->
+
+		<!-- 注册 -->
+		<div class="signup f-l">
+			<div class="form-group"><center>欢迎注册JIUYOU账号</center></div>
+<!-- 				<div class="form-group">
+				<div class="signup-form">
+					<input type="text" placeholder="邮箱" class="email-mobile" onBlur="verify.verifyEmail(this)">
+					<a href="javascript:;" class="signup-select">手机注册</a>
+				</div>
+			</div> -->
+			<div class="signup-email">
+				<form action="/user" method="post" id="frm">
+				<div class="form-group">
+					<input type="text" id="uName" name="username" placeholder="用户名"><span class="uName"></span>
+				</div>
+				<div class="form-group">
+					<input type="text" id="email" name="email"  placeholder="邮箱" class="email-mobile" ><span class="email"></span>
+				</div>
+				<div class="form-group">
+					<input type="password"  id="uPwd" name="password" placeholder="密码（字母、数字，至少5位）" ><span class="uPwd"></span>
+				</div>
+				<div class="form-group">
+					<input type="password"  id="uPwd1" placeholder="确认密码" ><span class="uPwd1"></span>
+				</div>
+				<div class="form-group">
+					<input type="button" class="tran pr" id="userLogin" value="注册">
+				</div>
+				</form>
+				<!--<p class="view-clause">点击注册，即同意我们的 <a href="#">用户隐私条款</a></p> -->
+			</div><!-- 邮箱注册 -->
+
+			<div class="signup-tel" style="display:none">
+				<div class="signup-form" id="message-inf" style="display:none">
+					<input type="text" placeholder="短信验证码" style="width:180px;" >
+					<a href="javascript:;" class="reacquire">重新获取（59）</a>
+					<span class="error-notic">验证码输入错误</span>
+				</div>
+				<div class="form-group">
+					<button type="submit" class="tran get-message pr">
+						<a href="javascript:;" class="tran">获取短信验证码</a>
+					</button>
+				</div>
+			</div><!-- 手机号码注册 -->
+			<div class="from-line"></div>
+			<div class="form-group">
+				<a href="javascript:;" class="move-login a-tag tran blue-border">已有帐号？登录</a>
+			</div>
+			<div class="form-group">
+				<a href="javascript:;" class="move-other a-tag tran">使用第三方帐号登录</a>
+			</div>
+		</div>
+		<!-- END注册 -->
+
+		<div class="other-way f-l">
+			<div class="form-group"><center>欢迎使用第三方账号登录</center></div>
+			<div class="form-group">
+				<button type="submit" class="tran pr">
+					<a href="<{:U('/sign?type=qq')}>" class="tran">QQ帐号登录</a>
+				</button>
+			</div>
+			<div class="form-group">
+				<button type="submit" class="tran pr">
+					<a href="<{:U('/sign?type=sina')}>" class="tran">新浪微博帐号登录</a>
+				</button>
+			</div>
+			<!-- 
+			<div class="form-group">
+				<button type="submit" class="tran pr">
+					<a href="javascript:;" class="tran">微信帐号登录</a>
+				</button>
+			</div>
+			<div class="form-group">
+				<button type="submit" class="tran pr">
+					<a href="javascript:;" class="tran">网易帐号登录</a>
+				</button>
+			</div> -->
+			<div class="from-line"></div>
+			<div class="form-group">
+				<a href="javascript:;" class="move-signup a-tag tran blue-border">还没有帐号？免费注册</a>
+			</div>
+			<div class="form-group">
+				<a href="javascript:;" class="move-login a-tag tran">已有帐号？登录</a>
+			</div>
+		</div>
+		<!-- 第三方登录 -->
+
+		<div class="mimachongzhi f-l">
+			<div class="form-group">
+				<input type="text" placeholder="请输入您的邮箱地址">
+				<span class="error-notic">邮箱格式不正确</span>
+			</div>
+			<div class="form-group">
+				<button type="submit" class="tran pr">
+					<a href="javascript:;" class="tran">发送重置密码邮件</a>
+				</button>
+			</div>
+			<div class="from-line"></div>
+			<div class="form-group">
+				<a href="javascript:;" class="move-signup	a-tag tran blue-border">还没有帐号？免费注册</a>
+			</div>
+			<div class="form-group">
+				<a href="javascript:;" class="move-login a-tag tran">已有帐号？登录</a>
+			</div>
+		</div>
+		<!-- 密码重置 -->
+		<div class="mobile-success f-l">
+			<p>手机号 <span>186****7580</span> 验证成功</p>
+			<p>请完善您的账号信息，您也可以<a href="#">绑定现有账号</a></p>
+			<div class="form-group">
+				<input type="text" placeholder="邮箱" class="email-mobile" onBlur="verify.verifyEmail(this)"/>
+				<span class="error-notic">邮箱格式不正确</span>
+			</div>
+			<div class="form-group">
+				<input type="text" placeholder="您的名字">
+			</div>
+			<div class="form-group">
+				<input type="password" placeholder="密码（字母、数字，至少6位）" onBlur="verify.PasswordLenght(this)"/>
+				<span class="error-notic">密码长度不够</span>
+			</div>
+			<div class="form-group">
+				<button type="submit" class="tran pr">
+					<a href="javascript:;" class="tran">注册</a>
+				</button>
+			</div>
+			<p class="view-clause">点击注册，即同意我们的 <a href="#">用户隐私条款</a></p>
+		</div>
+		<!-- 手机注册成功添补信息 -->
+	</div>
+	</div>
+	<script>
+		$(function(){
+			//步骤切换
+			var _boxCon=$(".box-con");
+			$(".move-login").on("click",function(){
+				$(_boxCon).css({
+					'marginLeft':0
+				})
+			});
+			$(".move-signup").on("click",function(){
+				$(_boxCon).css({
+					'marginLeft':-320
+				})
+			});
+			$(".move-other").on("click",function(){
+				$(_boxCon).css({
+					'marginLeft':-640
+				})
+			});
+			$(".move-reset").on("click",function(){
+				$(_boxCon).css({
+					'marginLeft':-960
+				})
+			});
+			$("body").on("click",".move-addinf",function(){
+				$(_boxCon).css({
+					'marginLeft':-1280
+				})
+			});
+		});
+	</script>	
+</body>
+</html>

@@ -1,0 +1,44 @@
+<include file="Common:head" />
+<css href='__ROOT__/Public/kindeditor/plugins/code/shCoreDefault.css' />
+<js href='__ROOT__/Public/kindeditor/plugins/code/shCoreDefault.js' />
+<script type="text/javascript">
+	SyntaxHighlighter.all();
+</script>
+<div class="content">
+	<include file="Common:side" />
+	<div class="right">
+		<div class="m-header">
+			<a class="m-menu jsc-sidebar-trigger" id="showLeftPush"></a>
+			<a href="">九幽的博客</a>
+			<a href="" class="m-admin"></a>
+		</div>
+		<div class="blogitem">
+			<div class="place">
+				<a href=""><i class="icon-home"></i>&nbsp首页</a>&nbsp<i class="icon-angle-right"></i><{$year}>
+				
+			</div>
+
+			<foreach name='list' item='vo'>
+			<if condition="$year eq date('Ym',$vo['time'])">
+				<article>
+					<h2 class="btitle"><a href="<{:U('/Article/'.$vo['id'])}>" title="详细阅读<{$vo.title}>"><{$vo.title}></a></h2>
+					<div class="text">
+						<{$vo.content|msubstr=0,320,'utf-8',true}>
+					</div>
+					<div class="textfoot">
+						<p style="float:left;"><a href="<{:U('/nav'.$vo['typeid'])}>"><{$vo.typename}></a></p>
+						<span><time datetime=""><{$vo.time|date='Y/m/d',###}></time></span>
+						<span href="">浏览：<{$vo.hits}>人</span>
+						<a href="<{:U('/Article/'.$vo['id'])}>">阅读全文</a>
+						<span href="">评论</span>
+					</div>
+				</article>
+			</if>
+			</foreach>
+			<div class="pages"><{$page}></div>
+		</div>
+
+	</div>
+</div>
+
+<include file="Common:foot" />

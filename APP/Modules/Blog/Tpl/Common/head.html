@@ -1,0 +1,110 @@
+<?php
+session_start();
+?>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<title><{$blog_name}></title>
+<meta property="wb:webmaster" content="012433c3abb5c9f4" />
+<meta name="keywords" content="<{$keywords}>,<{$blog.keywords}>">
+<meta name="description" content="<{$description}>">
+<meta name="author" content="JIUYOU">
+
+<css href="__PUBLIC__/Css/base.css" />
+<!--<css href="__PUBLIC__/Css/style.css" />-->
+<css href="__PUBLIC__/Css/font-awesome.min.css" />
+<js href="__PUBLIC__/Js/jquery-1.8.2.min.js" />
+<js href="__PUBLIC__/Js/jquery.nicescroll.js" />
+<js href="__PUBLIC__/Js/style.js" />
+<link href="__ROOT__/Public/favicon.png" rel="icon" type="image/x-icon" />
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+</head>
+<body>
+<header>
+	<div class="hdbg"></div>
+	<div class="hdbg2"></div>
+	<div class="head_about">
+		<div class="logo">
+			<!-- <div class="player">
+				<div id="pic" center="center"></div>
+
+			</div>
+			<audio src="__ROOT__/Pulic/Music/嘲笑鸟.mp3" controls="controls" preload="auto"></audio> -->
+			<include file="Common:music" />
+		</div>
+		<div class="title"><a href="<{$URL}>"><{$blog_name}></a></div>
+		<div class="about"><{$purpose}></div>
+	</div>
+	<div class="head_nav" id="head_nav">
+		<ul class="nav">
+			<li><a href="<{$URL}>">首页</a></li>
+			<nav order='sort ASC'>
+				<li><a href="<{$url}>"><{$typename}></a>
+					<ul>
+						<foreach name='child' item='v'>
+						<li><a href="<{:U('/nav'.$v['id'])}>"><{$v.typename}></a></li>
+						</foreach>
+					</ul>
+				</li>
+			</nav>
+			<li><a href="<{:U('/Message/')}>">留言板</a></li>
+		</ul>
+		<!-- <div class="sign">
+			<empty name="name">
+				<span><a href="<{:U('/login/')}>" style="color:#fff;">登录&nbsp;<i class="icon-signin"></i></a></span>
+				</li>
+			<else/>
+				<span><a><i class="icon-user"></i>&nbsp;<{$name}><a><a href="<{:U(GROUP_NAME.'/Login/loginout')}>"><i class="icon-signout"></i></a></span>
+			</empty>
+		</div> -->
+	</div>
+</header>
+<script type="text/javascript">
+$.fn.smartFloat = function() {
+	var position = function(element) {
+		var top = element.position().top, pos = element.css("position");
+		$(window).scroll(function() {
+			var scrolls = $(this).scrollTop();
+			if (scrolls > top) {
+				if (window.XMLHttpRequest) {
+					element.css({
+						position:"fixed",
+						top:0,
+						width:"100%",
+					});	
+				} else {
+					element.css({
+						top:scrolls,
+
+
+					});	
+				}
+			}else {
+				element.css({
+					position:pos,				
+				});	
+			}
+		});
+};
+	return $(this).each(function() {
+		position($(this));						 
+	});
+};
+//绑定
+$("#head_nav").smartFloat();
+</script>

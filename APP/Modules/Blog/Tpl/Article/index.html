@@ -1,0 +1,82 @@
+<include file="Common:head" />
+<css href='__ROOT__/Public/kindeditor/plugins/code/shCoreDefault.css' />
+<js href='__ROOT__/Public/kindeditor/plugins/code/shCoreDefault.js' />
+<script type="text/javascript">
+	SyntaxHighlighter.all();
+</script>
+<?php
+// 说明：获取完整URL
+function curPageURL() {
+    $pageURL = 'http';
+    if ($_SERVER["HTTPS"] == "on"){
+        $pageURL .= "s";
+    }
+    $pageURL .= "://";
+    if ($_SERVER["SERVER_PORT"] != "80") {
+        $pageURL .= $_SERVER["SERVER_NAME"] . ":" . $_SERVER["SERVER_PORT"] . $_SERVER["REQUEST_URI"];
+    }else{
+        $pageURL .= $_SERVER["SERVER_NAME"] . $_SERVER["REQUEST_URI"];
+    }
+    return $pageURL;
+}
+?>
+
+
+<div class="content">
+	<include file="Common:side" />
+	<div class="right">
+		<div class="m-header">
+			<a class="m-menu jsc-sidebar-trigger" id="showLeftPush"></a>
+			<a href="">九幽的博客</a>
+			<a href="" class="m-admin"></a>
+		</div>
+		<div class="blogitem">
+			<div class="place">
+				<a href="__GROUP__"><i class="icon-home"></i>&nbsp首页</a>&nbsp<i class="icon-angle-right"></i>
+				<php>$last=count($parent)-1;</php>
+				<foreach name='parent' item='vo'>
+					<a href="<{:U('/nav'.$vo['id'])}>"><{$vo.typename}></a>&nbsp<if condition='$key neq $last'><i class="icon-angle-right"></i></if>
+				</foreach>
+			</div>
+			<article>
+				<h2 class="btitle"><{$blog.title}></h2>
+				<div class="textfoot">
+					<p style="float:left;"><i class=" icon-user"></i><span><{$blog.author}></span></p>
+					<span><time datetime=""><{$blog.time|date='Y/m/d',###}></time></span>
+					<span>浏览：<script type="text/javascript" src="<{:U(GROUP_NAME.'/Article/ClinkNum',array('id'=>$blog['id']))}>"></script>人</span>
+					<span>评论<span class="ds-thread-count" data-thread-key="<{$blog['id']}>" data-count-type="comments"></span>
+				</div>
+				<div class="text">
+					<{$blog.content}>
+					<div class="zhuanzai">
+						<p>转载请注明：<a href="<{$URL}>"><{$blog_name}></a>»<a href=""><{$blog.title}></a></p>
+						<p>本文地址：<?php echo curPageURL(); ?></p>
+						<p style="color:#008b8b;">关键字：<{$blog.keywords}></p>
+						<p style="color:red;">类型：<{$blog.resources}></p>
+					</div>
+					<div class="move">
+						<if condition="$front">
+							<a href="<{:U('/Article/'.$front['id'])}>"><span>上一篇</span><{$front['title']}></a>
+						<else/>
+							<a><span>上一篇</span>上面没有了！<a>
+						</if>
+						<if condition="$after">
+							<a href="<{:U('/Article/'.$after['id'])}>"><span>下一篇</span><{$after['title']}></a>
+						<else/>
+							<a><span>下一篇</span>下面没有了！<a>
+						</if>
+					</div>
+				</div>
+				<div class="textfoot"><span></span></div>
+			</article>
+			<div id="comments">
+<div class="ds-thread" data-thread-key="<{$blog.id}>" data-title="<{$blog.title}>" data-url="<?php
+  echo curPageURL();
+?>"></div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+<include file="Common:foot" />

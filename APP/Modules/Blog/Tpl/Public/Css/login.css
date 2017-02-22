@@ -1,0 +1,67 @@
+*{padding: 0;margin:0;}
+body{font-family:"Microsoft YaHei";font-size: 14px;}
+input, textarea{outline:none;}
+input[type="button"]:focus{box-shadow:none!important;}
+li{list-style:none;}
+a{text-decoration:none;color:inherit;}
+button{cursor:pointer;}
+img{border:0;}
+.pr{position:relative;}
+.pa{position:absolute;}
+.pf{position:fixed;}
+.f-l{float:left;}
+li, div, ul{*zoom:1;}
+li:after, div:after, ul:after{content:'';display:table;clear:both;}
+.tran{
+	transition:all 0.3s ease-out;
+	-webkit-transition:all 0.3s ease-out;
+	-moz-transition:all 0.3s ease-out;
+	-o-transition:all 0.3s ease-out;
+}
+.container{width: 1000px;margin: 0 auto;}
+/*--------------样式重置------------*/
+/***********/
+
+.login-box{width:320px;margin:40px auto;overflow-x:hidden;}
+.box-con{width:1600px;}
+.login-con{width:300px;margin:0 10px; }
+.login-box .form-group{margin:20px auto;text-align:center;}
+.login-box input, .signup-form{width: 300px;height:40px;line-height:40px;padding-left: 10px;border: 1px #d9d9d9 solid;border-radius: 5px;font-size: 14px;box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	transition:all 0.3s ease-out;
+	-webkit-transition:all 0.3s ease-out;
+	-moz-transition:all 0.3s ease-out;
+}
+.login-box input:focus{border-color: #03a9f4;box-shadow: 0 0 15px #03a9f4;
+	-webkit-box-shadow: 0 0 15px #03a9f4;
+	-moz-box-shadow: 0 0 15px #03a9f4;}
+.login-box button,input[type="button"]{width:300px;height:40px;line-height:40px;font-size:16px;border:0;background-color:#03a9f4;color:#fff;border-radius:5px;padding:0px;cursor:pointer;}
+.login-box button a{display: block;}
+.login-box button:hover,input[type="button"]:hover{background-color: #0096da;}
+.from-line{height: 0;overflow: hidden;border-top: 1px #c2c2c2 solid;margin-top: 20px;}
+.a-tag{position:relative;display:block;height:40px;border:1px #c2c2c2 solid;text-align:center;line-height:40px;color:#c2c2c2;border-radius: 5px;background-color: #fff;}
+.blue-border{border:1px #03a9f4 solid;color: #03a9f4;}
+.a-tag:hover{background-color: #aaa;color: #fff;}
+.blue-border:hover{background-color: #03a9f4;color: #fff;}
+.signup, .other-way, .mimachongzhi, .mobile-success{width: 300px;margin: 0 10px;}
+.signup-form {margin-top: 20px;}
+.signup-form input{border:0;height:36px;width:220px;}
+.signup-form input:focus{box-shadow:0 0 0 #fff;}
+.signup-form.border{border-color: #03a9f4;box-shadow: 0 0 15px #03a9f4;
+	-webkit-box-shadow: 0 0 15px #03a9f4;
+	-moz-box-shadow: 0 0 15px #03a9f4;}
+.signup-form a{color: #03a9f4;}
+.view-clause{padding-top: 20px;line-height: 14px;text-align: center;color: #808080;}
+.view-clause a{color: #03a9f4;}
+.view-clause a:hover{text-decoration: underline;}
+a.reacquire{color:#c1c1c1;}
+.error-notic{color:#ff4e00;display:none;}
+.login-footer{position: fixed;left: 0;bottom: 0;width: 100%;padding: 10px 0;border-top: 1px #c1c1c1 solid;text-align: center;font-size: 12px;background-color: #fff;line-height: 20px;}
+.login-footer h1{font-size: 18px;font-weight: normal;}
+.mobile-success{padding-top: 20px;}
+.mobile-success p{text-align: center;color: #666;}
+.mobile-success p span{font-weight: bold;padding: 0 10px;}
+.mobile-success p a{color: #03a9f4;padding-left: 5px;}
+.mobile-success p a:hover{text-decoration: underline;}
+.loading{position: absolute;top: 10px;right: 20px;display: none;}
